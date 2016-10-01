@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="" basedir="." default="compile">
+    <property name="version" value="0.9"/>
+    <property name="directory.source" value="."/>
+    <property name="directory.binary" value="bin"/>
+    <property name="directory.distribuition" value="dist"/>
+    <property name="directory.documentation" value="doc"/>
+    <property name="directory.javalibs" value="libs"/>
+    <property name="documentation.title" value=""/>
+    <property name="jarfile" value="${directory.distribuition}/magento-${version}.jar"/>
+
+    <property name="directory.erp" value="C:/Bematech/dhandara/javalibs"/>
+
+    <target name="compile">
+        <mkdir dir="${directory.binary}"/>
+        <javac destdir="${directory.binary}" srcdir="${directory.source}">
+            <classpath>
+                <fileset dir="${directory.javalibs}"/>
+            </classpath>
+        </javac>
+    </target>
+    
+    <target name="makeDocumentation">
+        <mkdir dir="${directory.documentation}"/>
+        <javadoc windowtitle="${documentation.title}" sourcepath="${directory.source}" destdir="${directory.documentation}"></javadoc>
+    </target>
+
+
+    <target name="makeDistribuition" depends="compile">
+        <mkdir dir="${directory.distribuition}"/>
+        <jar destfile="${jarfile}" basedir="${directory.binary}"></jar>
+    	<copy file="${jarfile}" toDir="${directory.erp}" overwrite="true"></copy>
+    </target>
+            
+    <target name="clean">
+        <delete dir="${directory.binary}"/>
+        <delete dir="${directory.distribuition}"/>
+    </target>
+</project> 

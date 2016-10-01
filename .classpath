@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_80"/>
+	<classpathentry kind="lib" path="libs/axis.jar"/>
+	<classpathentry kind="lib" path="libs/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="libs/gson-2.7.jar"/>
+	<classpathentry kind="lib" path="libs/javax.wsdl_1.6.2.v201012040545.jar"/>
+	<classpathentry kind="lib" path="libs/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="libs/org.apache.commons.logging_1.1.1.v201101211721.jar"/>
+	<classpathentry kind="lib" path="libs/saaj.jar"/>
+	<classpathentry kind="lib" path="libs/enginelet-2.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
