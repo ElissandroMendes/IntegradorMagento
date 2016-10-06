@@ -1,74 +1,57 @@
 package br.com.mind.integrador;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.rmi.RemoteException;
-
-import com.google.gson.Gson;
+import java.util.ArrayList;
 
 import br.com.inteq.engine.enginelet.Enginelet;
-import br.com.mind.magento.client.CatalogCategoryEntityCreate;
 import br.com.mind.magento.client.CatalogProductEntity;
 
 public class MageBemaErpBridge extends Enginelet {
-	{
-		this.json = new Gson();
-	}
-	
-	public Gson json;
-	
-	private String StackTraceToString(Exception e) {
-		StringWriter sw = new StringWriter();
-		PrintWriter pw = new PrintWriter(sw);
-		e.printStackTrace(pw);
-		return sw.toString();				
-	}
-	
 	@Override
 	public String handleCommand(String command, String[] commandArgs) {
-		String result = ""; 
-		System.out.println("Processando: " + command);
-		System.out.println("   comando: " + command);
-		if(commandArgs != null) {
-			for (String string : commandArgs) {
-				System.out.println("   params: " + string);
-			}
-		}
-		
-		MageAPI magento = new MageAPI();
-		
-		if (command.equals("createCategory")) {
+		ArrayList<String> jsonResult = new ArrayList<>();
 
-			try {
-				int parentId = Integer.parseInt(commandArgs[0]);
-				String jsonData = commandArgs[1];
+		String jsonResultTemplate = "{status:%s, message:%s, data:%s}";
 				
-				CatalogCategoryEntityCreate categoryData = json.fromJson(jsonData, CatalogCategoryEntityCreate.class);
-				
-				result = magento.createCategory(parentId, categoryData);
-			} catch (Exception e) {
-				result = StackTraceToString(e);
+		System.out.println("Inicializando Magento SOAP API");
+		ConnectionData connData = Command.json.fromJson(commandArgs[0], ConnectionData.class);
+		MageAPI magento = new MageAPI(connData);
+		
+		System.out.println("Executando: " + command);
+		if (command.equals("createCategories")) {
+			
+			
+			for (String cmd : commandArgs) {
+				try {
+					CategoryCreateCommand ccc = CategoryCreateCommand.createFromJson(cmd);
+					String id = magento.createCategory(ccc.getParentId(), ccc.getCategoryData());
+					jsonResult.add(String.format(jsonResultTemplate, "OK", "", id));
+					
+				} catch (Exception e) {
+					jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
+				}
 			}
+				
+		} else if (command.equals("createProduct")) {
+
 		} else if (command.equals("listAllProducts")) {
 			try {
 				CatalogProductEntity[] products = magento.listAllProducts();
-				result = json.toJson(products);
+				String p = Command.json.toJson(products);
+				jsonResult.add(String.format(jsonResultTemplate, "OK", "", p));
+				
 			} catch (RemoteException e) {
-				result = StackTraceToString(e);			
+				jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
 			}
 		}
-		return result;
+		return Command.json.toJson(jsonResult);
 	}
 	
 	public static void main(String[] args) {
-		MageBemaErpBridge magentoBridge = new MageBemaErpBridge();
-		
+//		MageBemaErpBridge magentoBridge = new MageBemaErpBridge();
 //		String [] commandArgs = {"51", "{\"name\": \"Roupa de Frio Barata\",\"description\":\"XXXXX\",\"is_active\":1,\"include_in_menu\":0, \"available_sort_by\":[\"Posição\", \"Nome do produto\", \"Preço\"], \"default_sort_by\":\"Posição\"}"};
 //		System.out.println(bridge.handleCommand("createCategory", commandArgs));
-
-		System.out.println(magentoBridge.handleCommand("listAllProducts", null));
-		
-		
+//		System.out.println(magentoBridge.handleCommand("listAllProducts", null));
 	}
 
 }

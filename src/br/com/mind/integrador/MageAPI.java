@@ -14,33 +14,44 @@ import br.com.mind.magento.client.MagentoServiceLocator;
 
 public class MageAPI {
 	
+	private String user;
+	private String password;
+	private String endpointUrl;
+	
 	private static Mage_Api_Model_Server_V2_HandlerPortType mageService;
 	private static String sessionId;
 	
-	{
+	
+	
+	public MageAPI(ConnectionData connData) {
+		
+		this.user = connData.getSoapApiUser();
+		this.password = connData.getSoapApiPassword();
+		this.endpointUrl = connData.getSoapApiEndpointUrl();
+
 		try {
-			MageAPI.getMageService();
-			MageAPI.mageLogin();
+			this.getMageService();
+			this.mageLogin();
 		} catch (ServiceException e) {
 			e.printStackTrace();
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
 	}
-	
-	private static void getMageService() throws ServiceException {
+
+	private void getMageService() throws ServiceException {
 		System.out.println("Getting locator and server.");
 		MagentoServiceLocator locator = new MagentoServiceLocator();
-		locator.setMage_Api_Model_Server_V2_HandlerPortEndpointAddress("http://handara.signashop.com.br/api/v2_soap");
+		locator.setMage_Api_Model_Server_V2_HandlerPortEndpointAddress(this.endpointUrl);
 		MageAPI.mageService = locator.getMage_Api_Model_Server_V2_HandlerPort(); 
 		System.out.println("Getting locator and server. DONE.");
 	}
 	
-	private static void mageLogin() throws ServiceException, RemoteException {
+	private void mageLogin() throws ServiceException, RemoteException {
 		System.out.println("Logging...");
-		MageAPI.sessionId = MageAPI.mageService.login("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
+		MageAPI.sessionId = MageAPI.mageService.login(this.user, this.password);
 		System.out.println("Logging... DONE. Session ID: " + MageAPI.sessionId);
-	}
+	}	
 
 	public String createCategory(int parentId2, CatalogCategoryEntityCreate categoryData) throws RemoteException {
 		System.out.println("Creating category.");
@@ -49,6 +60,9 @@ public class MageAPI {
 		return result;
 	}
 
+//	public String createProduct(int sku, CatalogProductCreateEntity productData) throws RemoteException {
+//	}
+	
 	public CatalogProductEntity[] listAllProducts() throws RemoteException {
 		return MageAPI.mageService.catalogProductList(MageAPI.sessionId, null, null);
 	}
