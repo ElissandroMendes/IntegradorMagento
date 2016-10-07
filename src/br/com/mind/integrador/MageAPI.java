@@ -8,9 +8,12 @@ import javax.xml.rpc.ServiceException;
 import com.google.gson.Gson;
 
 import br.com.mind.magento.client.CatalogCategoryEntityCreate;
+import br.com.mind.magento.client.CatalogProductAttributeSetEntity;
 import br.com.mind.magento.client.CatalogProductEntity;
+import br.com.mind.magento.client.CatalogProductTypeEntity;
 import br.com.mind.magento.client.Mage_Api_Model_Server_V2_HandlerPortType;
 import br.com.mind.magento.client.MagentoServiceLocator;
+import br.com.mind.magento.client.StoreEntity;
 
 public class MageAPI {
 	
@@ -21,13 +24,11 @@ public class MageAPI {
 	private static Mage_Api_Model_Server_V2_HandlerPortType mageService;
 	private static String sessionId;
 	
-	
-	
 	public MageAPI(ConnectionData connData) {
 		
-		this.user = connData.getSoapApiUser();
-		this.password = connData.getSoapApiPassword();
-		this.endpointUrl = connData.getSoapApiEndpointUrl();
+		this.user = connData.getUser();
+		this.password = connData.getPassword();
+		this.endpointUrl = connData.getEndpointUrl();
 
 		try {
 			this.getMageService();
@@ -60,6 +61,13 @@ public class MageAPI {
 		return result;
 	}
 
+	public String createProduct(ProductCreateCommand product) throws RemoteException {
+		System.out.println("Creating product.");
+		String result = String.valueOf(MageAPI.mageService.catalogProductCreate(MageAPI.sessionId, product.type, product.set, product.sku, product.productData, product.storeView)); 
+		System.out.println("Creating product. DONE. Product ID: " + result);
+		return result;
+	}
+	
 //	public String createProduct(int sku, CatalogProductCreateEntity productData) throws RemoteException {
 //	}
 	
@@ -67,10 +75,18 @@ public class MageAPI {
 		return MageAPI.mageService.catalogProductList(MageAPI.sessionId, null, null);
 	}
 	
-	public void createProduct() {
-		
+	public CatalogProductTypeEntity[] listProductTypes() throws RemoteException {
+		return MageAPI.mageService.catalogProductTypeList(MageAPI.sessionId);
 	}
-	
+
+	public CatalogProductAttributeSetEntity[] listProductAttributeSet() throws RemoteException {
+		return MageAPI.mageService.catalogProductAttributeSetList(MageAPI.sessionId);
+	}
+
+	public StoreEntity[] listStore() throws RemoteException {
+		return MageAPI.mageService.storeList(MageAPI.sessionId);
+	}
+	 	 
 	public static void main(String[] args) throws RemoteException {
 //		MageAPI magento = new MageAPI();
 //		CatalogCategoryEntityCreate categoryData = new CatalogCategoryEntityCreate();

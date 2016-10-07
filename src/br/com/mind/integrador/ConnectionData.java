@@ -1,35 +1,44 @@
 package br.com.mind.integrador;
 
 public class ConnectionData {
-	private String soapApiUser;
-	private String soapApiPassword;
-	private String soapApiEndpointUrl;
+	private String user;
+	private String password;
+	private String endpointUrl;
 	
 	public ConnectionData() {
 		
 	}
 
-	public String getSoapApiUser() {
-		return soapApiUser;
+	public String getUser() {
+		return user;
 	}
 
-	public void setSoapApiUser(String soapApiUser) {
-		this.soapApiUser = soapApiUser;
+	public void setUser(String user) {
+		this.user = user;
 	}
 
-	public String getSoapApiPassword() {
-		return soapApiPassword;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setSoapApiPassword(String soapApiPassword) {
-		this.soapApiPassword = soapApiPassword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getSoapApiEndpointUrl() {
-		return soapApiEndpointUrl;
+	public String getEndpointUrl() {
+		return endpointUrl;
 	}
 
-	public void setSoapApiEndpointUrl(String soapApiEndpointUrl) {
-		this.soapApiEndpointUrl = soapApiEndpointUrl;
+	public void setEndpointUrl(String endpointUrl) {
+		this.endpointUrl = endpointUrl;
 	}
+	
+	@Override
+	public String toString() {
+		return "ConnectionData [soapApiUser=" + user + ", soapApiPassword=" + password
+				+ ", soapApiEndpointUrl=" + endpointUrl + "]";
+	}
+
+	
+	
 }
