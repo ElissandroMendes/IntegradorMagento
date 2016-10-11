@@ -48,6 +48,34 @@ public class MageBemaErpBridge extends Enginelet {
 				}
 			}
 
+		} else if (command.equals("createCustomers")) {
+			String c = commandArgs[1];
+			
+			CustomerCreateCommand[] customers = Command.json.fromJson(c, CustomerCreateCommand[].class);
+
+			for (CustomerCreateCommand customer : customers) {
+				try {
+					String id = magento.createCustomer(customer);
+					jsonResult.add(String.format(jsonResultTemplate, "OK", "", id));
+				} catch (Exception e) {
+					jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
+				}
+			}
+
+		} else if (command.equals("createCustomerAddress")) {
+			String c = commandArgs[1];
+			
+			CustomerAddressCreateCommand[] address = Command.json.fromJson(c, CustomerAddressCreateCommand[].class);
+
+			for (CustomerAddressCreateCommand addr : address) {
+				try {
+					String id = magento.createCustomerAddress(addr);
+					jsonResult.add(String.format(jsonResultTemplate, "OK", "", id));
+				} catch (Exception e) {
+					jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
+				}
+			}
+
 		} else if (command.equals("listAllProducts")) {
 			try {
 				CatalogProductEntity[] products = magento.listAllProducts();

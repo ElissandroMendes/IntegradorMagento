@@ -68,9 +68,20 @@ public class MageAPI {
 		return result;
 	}
 	
-//	public String createProduct(int sku, CatalogProductCreateEntity productData) throws RemoteException {
-//	}
-	
+	public String createCustomer(CustomerCreateCommand customer) throws RemoteException {
+		System.out.println("Creating customer.");
+		String result = String.valueOf(MageAPI.mageService.customerCustomerCreate(MageAPI.sessionId, customer.customerData)); 
+		System.out.println("Creating customer. DONE. Customer ID: " + result);
+		return result;
+	}
+
+	public String createCustomerAddress(CustomerAddressCreateCommand addr) throws RemoteException {
+		System.out.println("Creating Customer Address.");
+		String result = String.valueOf(MageAPI.mageService.customerAddressCreate(MageAPI.sessionId, addr.customerId, addr.addressdata[0])); 
+		System.out.println("Creating customer. DONE. Customer Addres ID: " + result);
+		return result;
+	}
+
 	public CatalogProductEntity[] listAllProducts() throws RemoteException {
 		return MageAPI.mageService.catalogProductList(MageAPI.sessionId, null, null);
 	}
