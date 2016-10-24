@@ -6,13 +6,15 @@ import java.util.ArrayList;
 import br.com.inteq.engine.enginelet.Enginelet;
 import br.com.mind.magento.client.CatalogProductAttributeSetEntity;
 import br.com.mind.magento.client.CatalogProductEntity;
+import br.com.mind.magento.client.CatalogProductReturnEntity;
 import br.com.mind.magento.client.CatalogProductTypeEntity;
+import br.com.mind.magento.client.Filters;
+import br.com.mind.magento.client.SalesOrderListEntity;
 import br.com.mind.magento.client.StoreEntity;
 
 public class MageBemaErpBridge extends Enginelet {
-	private ArrayList<String> jsonResult = new ArrayList<>();
-	private String jsonResultTemplate = "{status:%s, message:%s, data:%s}";
-
+	private ArrayList<CommandResult> jr = new ArrayList<>();
+	
 	@Override
 	public String handleCommand(String command, String[] commandArgs) {
 		System.out.println("Inicializando Magento SOAP API");
@@ -28,9 +30,9 @@ public class MageBemaErpBridge extends Enginelet {
 			for (CategoryCreateCommand category : categories) {
 				try {
 					String id = magento.createCategory(category.getParentId(), category.getCategoryData());
-					jsonResult.add(String.format(jsonResultTemplate, "OK", "", id));
-				} catch (Exception e) {
-					jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
+					jr.add(new CommandResult(id));
+				} catch (RemoteException e) {
+					jr.add(new CommandResult(Utils.StackTraceToString(e)));
 				}
 			}
 				
@@ -42,9 +44,9 @@ public class MageBemaErpBridge extends Enginelet {
 			for (ProductCreateCommand product : products) {
 				try {
 					String id = magento.createProduct(product);
-					jsonResult.add(String.format(jsonResultTemplate, "OK", "", id));
-				} catch (Exception e) {
-					jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
+					jr.add(new CommandResult(id));
+				} catch (RemoteException e) {
+					jr.add(new CommandResult(Utils.StackTraceToString(e)));
 				}
 			}
 
@@ -56,9 +58,9 @@ public class MageBemaErpBridge extends Enginelet {
 			for (CustomerCreateCommand customer : customers) {
 				try {
 					String id = magento.createCustomer(customer);
-					jsonResult.add(String.format(jsonResultTemplate, "OK", "", id));
-				} catch (Exception e) {
-					jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
+					jr.add(new CommandResult(id));
+				} catch (RemoteException e) {
+					jr.add(new CommandResult(Utils.StackTraceToString(e)));
 				}
 			}
 
@@ -70,51 +72,67 @@ public class MageBemaErpBridge extends Enginelet {
 			for (CustomerAddressCreateCommand addr : address) {
 				try {
 					String id = magento.createCustomerAddress(addr);
-					jsonResult.add(String.format(jsonResultTemplate, "OK", "", id));
-				} catch (Exception e) {
-					jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
+					jr.add(new CommandResult(id));
+				} catch (RemoteException e) {
+					jr.add(new CommandResult(Utils.StackTraceToString(e)));
 				}
 			}
 
 		} else if (command.equals("listAllProducts")) {
 			try {
 				CatalogProductEntity[] products = magento.listAllProducts();
-				String p = Command.json.toJson(products);
-				jsonResult.add(String.format(jsonResultTemplate, "OK", "", p));
-				
+				jr.add(new CommandResult(products));
 			} catch (RemoteException e) {
-				jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
+				jr.add(new CommandResult(Utils.StackTraceToString(e)));
 			}
+			
+		} else if (command.equals("getProductInfo")) {
+			String c = commandArgs[1];
+			
+			try {
+				CatalogProductReturnEntity productInfo = magento.getProductInfo(c);
+				jr.add(new CommandResult(productInfo));
+			} catch (RemoteException e) {
+				jr.add(new CommandResult(Utils.StackTraceToString(e)));
+			}
+			
 		} else if (command.equals("listProductTypes")) {
 			try {
 				CatalogProductTypeEntity[] t = magento.listProductTypes();
-				String p = Command.json.toJson(t);
-				jsonResult.add(String.format(jsonResultTemplate, "OK", "", p));
-				
+				jr.add(new CommandResult(t));
 			} catch (RemoteException e) {
-				jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
+				jr.add(new CommandResult(Utils.StackTraceToString(e)));
 			}
 		} else if (command.equals("listProductAttributeSet")) {
 			try {
 				CatalogProductAttributeSetEntity[] t = magento.listProductAttributeSet();
-				String p = Command.json.toJson(t);
-				jsonResult.add(String.format(jsonResultTemplate, "OK", "", p));
-				
+				jr.add(new CommandResult(t));
 			} catch (RemoteException e) {
-				jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
+				jr.add(new CommandResult(Utils.StackTraceToString(e)));
 			}
 		} else if (command.equals("listStore")) {
 			try {
 				StoreEntity[] t = magento.listStore();
-				String p = Command.json.toJson(t);
-				jsonResult.add(String.format(jsonResultTemplate, "OK", "", p));
-				
+
+				jr.add(new CommandResult(t));
 			} catch (RemoteException e) {
-				jsonResult.add(String.format(jsonResultTemplate, "ERROR", Utils.StackTraceToString(e), ""));
+				jr.add(new CommandResult(Utils.StackTraceToString(e)));
+			}
+
+		} else if (command.equals("getOrderList")) {
+			String c = commandArgs[1];
+			
+			try {
+				Filters filters = Command.json.fromJson(c, Filters.class);
+				SalesOrderListEntity[] t = magento.getOrderList(filters);
+
+				jr.add(new CommandResult(t));
+			} catch (RemoteException e) {
+				jr.add(new CommandResult(Utils.StackTraceToString(e)));
 			}
 		}
 		
-		return Command.json.toJson(jsonResult);
+		return Command.json.toJson(jr);
 	}
 	
 	public static void main(String[] args) {
@@ -127,9 +145,23 @@ public class MageBemaErpBridge extends Enginelet {
 //		System.out.println(magentoBridge.handleCommand("listProductAttributeSet", commandArgs));
 //		System.out.println(magentoBridge.handleCommand("listStore", commandArgs));
 
+//		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}", 
+//        						 "[{\"sku\":\"YYYYY\", \"type\":\"simple\", \"set\":\"9\", \"storeView\":\"1\", \"productData\":{\"categories\":[56], \"name\":\"Produto Teste\", \"description\":\"Descricao Longa\", \"short_description\":\"Descricao Curta\", \"weight\":\"0.1\"}}]"};
+
+//		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}", 
+//								   "[{\"set\":\"9\",\"storeView\":\"1\",\"sku\":\"123456789\",\"type\":\"simple\",\"productData\":{\"status\":\"1\",\"description\":\"Descricao Longa\",\"stock_Data\":{\"min_qty\":1,\"use_config_manage_stock\":1,\"is_qty_decimal\":1,\"use_config_notify_stock_qty\":1,\"use_config_min_sale_qty\":1,\"max_sale_qty\":999,\"backorders\":1,\"min_sale_qty\":1,\"use_config_backorders\":1,\"qty\":10,\"is_in_stock\":1,\"manage_stock\":1,\"use_config_min_qty\":1,\"notify_stock_qty\":1,\"use_config_max_sale_qty\":1},\"weight\":\"1.0\",\"price\":20,\"visibility\":\"1\",\"websites\":[\"1\"],\"name\":\"Produto Teste\",\"short_description\":\"Descricao Curta\",\"categories\":[56]}}]"};
+//		System.out.println(magentoBridge.handleCommand("createProducts", commandArgs));
 		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}", 
-        						 "[{\"sku\":\"YYYYY\", \"type\":\"simple\", \"set\":\"9\", \"storeView\":\"1\", \"productData\":{\"categories\":[56], \"name\":\"Produto Teste\", \"description\":\"Descricao Longa\", \"short_description\":\"Descricao Curta\", \"weight\":\"0.1\"}}]"};
-		magentoBridge.handleCommand("createProducts", commandArgs);
+								 "{\"complex_filter\":[],\"filter\":[{\"value\":\"100000040\",\"key\":\"increment_id\"}]}"};
+		
+		String json = magentoBridge.handleCommand("getOrderList", commandArgs);
+//		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//	    String prettyJson = gson.toJson(jr);
+//	    
+//		System.out.println(prettyJson);
+		
+//		System.out.println(json);
+
 	}
 
 }

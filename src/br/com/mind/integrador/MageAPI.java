@@ -10,9 +10,12 @@ import com.google.gson.Gson;
 import br.com.mind.magento.client.CatalogCategoryEntityCreate;
 import br.com.mind.magento.client.CatalogProductAttributeSetEntity;
 import br.com.mind.magento.client.CatalogProductEntity;
+import br.com.mind.magento.client.CatalogProductReturnEntity;
 import br.com.mind.magento.client.CatalogProductTypeEntity;
+import br.com.mind.magento.client.Filters;
 import br.com.mind.magento.client.Mage_Api_Model_Server_V2_HandlerPortType;
 import br.com.mind.magento.client.MagentoServiceLocator;
+import br.com.mind.magento.client.SalesOrderListEntity;
 import br.com.mind.magento.client.StoreEntity;
 
 public class MageAPI {
@@ -81,9 +84,20 @@ public class MageAPI {
 		System.out.println("Creating customer. DONE. Customer Addres ID: " + result);
 		return result;
 	}
-
+	
+	public String uploadNewProductImage(UploadImagemCommand uploadImageInfo) throws RemoteException {
+		System.out.println("Uploading product image.");
+		String result = MageAPI.mageService.catalogProductAttributeMediaCreate(MageAPI.sessionId, uploadImageInfo.product, uploadImageInfo.data, null, "SKU");
+		System.out.println("Uploading product image. DONE. Image URL: " + result);
+		return result;
+	}
+	
 	public CatalogProductEntity[] listAllProducts() throws RemoteException {
 		return MageAPI.mageService.catalogProductList(MageAPI.sessionId, null, null);
+	}
+	
+	public CatalogProductReturnEntity getProductInfo(String idOrSku) throws RemoteException {
+		return MageAPI.mageService.catalogProductInfo(MageAPI.sessionId, idOrSku, null, null, null);
 	}
 	
 	public CatalogProductTypeEntity[] listProductTypes() throws RemoteException {
@@ -97,6 +111,14 @@ public class MageAPI {
 	public StoreEntity[] listStore() throws RemoteException {
 		return MageAPI.mageService.storeList(MageAPI.sessionId);
 	}
+	
+	public SalesOrderListEntity[] getOrderList( Filters filters ) throws RemoteException {
+		System.out.println("Getting Order List.");
+		SalesOrderListEntity[] result = MageAPI.mageService.salesOrderList(MageAPI.sessionId, filters);
+		System.out.println("Getting Order List. DONE.");
+		return result;
+	}
+	
 	 	 
 	public static void main(String[] args) throws RemoteException {
 //		MageAPI magento = new MageAPI();
