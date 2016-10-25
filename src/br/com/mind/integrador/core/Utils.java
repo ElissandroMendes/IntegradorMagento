@@ -1,4 +1,4 @@
-package br.com.mind.integrador;
+package br.com.mind.integrador.core;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

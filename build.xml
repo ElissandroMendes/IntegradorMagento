@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="" basedir="." default="compile">
-    <property name="version" value="0.9"/>
+    <property name="version" value="0.96"/>
     <property name="directory.source" value="."/>
     <property name="directory.binary" value="bin"/>
     <property name="directory.distribuition" value="dist"/>

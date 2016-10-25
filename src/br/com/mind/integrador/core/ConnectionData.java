@@ -1,4 +1,4 @@
-package br.com.mind.integrador;
+package br.com.mind.integrador.core;
 
 public class ConnectionData {
 	private String user;

@@ -1,4 +1,4 @@
-package br.com.mind.integrador;
+package br.com.mind.integrador.commands;
 
 import com.google.gson.Gson;
 

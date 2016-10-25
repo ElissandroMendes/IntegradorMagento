@@ -1,4 +1,4 @@
-package br.com.mind.integrador;
+package br.com.mind.integrador.core;
 
 import java.rmi.RemoteException;
 import java.util.Arrays;
@@ -7,6 +7,10 @@ import javax.xml.rpc.ServiceException;
 
 import com.google.gson.Gson;
 
+import br.com.mind.integrador.commands.CustomerAddressCreateCommand;
+import br.com.mind.integrador.commands.CustomerCreateCommand;
+import br.com.mind.integrador.commands.ProductCreateCommand;
+import br.com.mind.integrador.commands.UploadImagemCommand;
 import br.com.mind.magento.client.CatalogCategoryEntityCreate;
 import br.com.mind.magento.client.CatalogProductAttributeSetEntity;
 import br.com.mind.magento.client.CatalogProductEntity;
@@ -42,7 +46,7 @@ public class MageAPI {
 			e.printStackTrace();
 		}
 	}
-
+	
 	private void getMageService() throws ServiceException {
 		System.out.println("Getting locator and server.");
 		MagentoServiceLocator locator = new MagentoServiceLocator();
@@ -64,6 +68,10 @@ public class MageAPI {
 		return result;
 	}
 
+	/**
+	 * BEGIN - API´s relacionadas a PRODUTOS
+	 */
+
 	public String createProduct(ProductCreateCommand product) throws RemoteException {
 		System.out.println("Creating product.");
 		String result = String.valueOf(MageAPI.mageService.catalogProductCreate(MageAPI.sessionId, product.type, product.set, product.sku, product.productData, product.storeView)); 
@@ -71,23 +79,16 @@ public class MageAPI {
 		return result;
 	}
 	
-	public String createCustomer(CustomerCreateCommand customer) throws RemoteException {
-		System.out.println("Creating customer.");
-		String result = String.valueOf(MageAPI.mageService.customerCustomerCreate(MageAPI.sessionId, customer.customerData)); 
-		System.out.println("Creating customer. DONE. Customer ID: " + result);
+	public boolean createProductLink(String product, String linkedProduct) throws RemoteException {
+		System.out.println("Assign product link.");
+		boolean result = MageAPI.mageService.catalogProductLinkAssign(MageAPI.sessionId, "grouped", product, linkedProduct, null, null); 
+		System.out.println("Assign product link. DONE. Link created: " + result);
 		return result;
 	}
-
-	public String createCustomerAddress(CustomerAddressCreateCommand addr) throws RemoteException {
-		System.out.println("Creating Customer Address.");
-		String result = String.valueOf(MageAPI.mageService.customerAddressCreate(MageAPI.sessionId, addr.customerId, addr.addressdata[0])); 
-		System.out.println("Creating customer. DONE. Customer Addres ID: " + result);
-		return result;
-	}
-	
+		
 	public String uploadNewProductImage(UploadImagemCommand uploadImageInfo) throws RemoteException {
 		System.out.println("Uploading product image.");
-		String result = MageAPI.mageService.catalogProductAttributeMediaCreate(MageAPI.sessionId, uploadImageInfo.product, uploadImageInfo.data, null, "SKU");
+		String result = MageAPI.mageService.catalogProductAttributeMediaCreate(MageAPI.sessionId, uploadImageInfo.getProduct(), uploadImageInfo.getData(), null, "SKU");
 		System.out.println("Uploading product image. DONE. Image URL: " + result);
 		return result;
 	}
@@ -108,6 +109,27 @@ public class MageAPI {
 		return MageAPI.mageService.catalogProductAttributeSetList(MageAPI.sessionId);
 	}
 
+	/**
+	 * END - API´s relacionadas a PRODUTOS
+	 */
+
+	/**
+	 * BEGIN - API´s relacionadas a CLIENTES
+	 */
+	public String createCustomer(CustomerCreateCommand customer) throws RemoteException {
+		System.out.println("Creating customer.");
+		String result = String.valueOf(MageAPI.mageService.customerCustomerCreate(MageAPI.sessionId, customer.customerData)); 
+		System.out.println("Creating customer. DONE. Customer ID: " + result);
+		return result;
+	}
+
+	public String createCustomerAddress(CustomerAddressCreateCommand addr) throws RemoteException {
+		System.out.println("Creating Customer Address.");
+		String result = String.valueOf(MageAPI.mageService.customerAddressCreate(MageAPI.sessionId, addr.getCustomerId(), addr.getAddressdata()[0])); 
+		System.out.println("Creating customer. DONE. Customer Addres ID: " + result);
+		return result;
+	}
+	
 	public StoreEntity[] listStore() throws RemoteException {
 		return MageAPI.mageService.storeList(MageAPI.sessionId);
 	}
