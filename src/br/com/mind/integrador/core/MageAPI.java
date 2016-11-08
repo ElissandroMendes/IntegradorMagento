@@ -12,6 +12,7 @@ import br.com.mind.integrador.commands.CustomerCreateCommand;
 import br.com.mind.integrador.commands.ProductCreateCommand;
 import br.com.mind.integrador.commands.UploadImagemCommand;
 import br.com.mind.magento.client.CatalogCategoryEntityCreate;
+import br.com.mind.magento.client.CatalogCategoryTree;
 import br.com.mind.magento.client.CatalogProductAttributeSetEntity;
 import br.com.mind.magento.client.CatalogProductEntity;
 import br.com.mind.magento.client.CatalogProductReturnEntity;
@@ -67,6 +68,13 @@ public class MageAPI {
 		System.out.println("Creating category. DONE. Category ID: " + result);
 		return result;
 	}
+	
+	public CatalogCategoryTree listCategories() throws RemoteException {
+		System.out.println("Listing categories.");
+		CatalogCategoryTree result = MageAPI.mageService.catalogCategoryTree(MageAPI.sessionId, null, null); 
+		System.out.println("Listing categories. DONE.");
+		return result;
+	}
 
 	/**
 	 * BEGIN - API´s relacionadas a PRODUTOS
@@ -81,8 +89,10 @@ public class MageAPI {
 	
 	public boolean createProductLink(String product, String linkedProduct) throws RemoteException {
 		System.out.println("Assign product link.");
+		System.out.println(product);
+		System.out.println(linkedProduct);
 		boolean result = MageAPI.mageService.catalogProductLinkAssign(MageAPI.sessionId, "grouped", product, linkedProduct, null, null); 
-		System.out.println("Assign product link. DONE. Link created: " + result);
+		System.out.println("Assign product link. DONE. Link created (" + product + "-> + " + linkedProduct + "): " + result);
 		return result;
 	}
 		

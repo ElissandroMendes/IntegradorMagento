@@ -13,7 +13,7 @@ public class Utils {
 		PrintWriter pw = new PrintWriter(sw);
 		if (ExceptionUtils.indexOfThrowable(e, AxisFault.class) != -1) {
 			AxisFault ex = (AxisFault) e;
-			pw.print(ex.getFaultCode() + "\r\n" + ex.getFaultString()); 
+			pw.print(ex.getFaultCode() + ": " + ex.getFaultString()); 
 		} else {
 			e.printStackTrace(pw);
 		}

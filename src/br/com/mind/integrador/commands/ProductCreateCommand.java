@@ -8,6 +8,7 @@ public class ProductCreateCommand {
 	public String sku;
 	public String storeView;
 	public CatalogProductCreateEntity productData;
+//	public ProductCreateCommand[] children;
 	
 	public ProductCreateCommand() {
 		
