@@ -7,10 +7,13 @@ import javax.xml.rpc.ServiceException;
 
 import com.google.gson.Gson;
 
+import br.com.mind.integrador.commands.AttributeAddOptionCommand;
 import br.com.mind.integrador.commands.CustomerAddressCreateCommand;
 import br.com.mind.integrador.commands.CustomerCreateCommand;
 import br.com.mind.integrador.commands.ProductCreateCommand;
+import br.com.mind.integrador.commands.ProductUpdateCommand;
 import br.com.mind.integrador.commands.UploadImagemCommand;
+import br.com.mind.magento.client.CatalogAttributeOptionEntity;
 import br.com.mind.magento.client.CatalogCategoryEntityCreate;
 import br.com.mind.magento.client.CatalogCategoryTree;
 import br.com.mind.magento.client.CatalogProductAttributeSetEntity;
@@ -80,13 +83,20 @@ public class MageAPI {
 	 * BEGIN - API´s relacionadas a PRODUTOS
 	 */
 
-	public String createProduct(ProductCreateCommand product) throws RemoteException {
-		System.out.println("Creating product.");
+	public String createProducts(ProductCreateCommand product) throws RemoteException {
+		System.out.println("Creating product. SKU " + product.sku);
 		String result = String.valueOf(MageAPI.mageService.catalogProductCreate(MageAPI.sessionId, product.type, product.set, product.sku, product.productData, product.storeView)); 
 		System.out.println("Creating product. DONE. Product ID: " + result);
 		return result;
 	}
 	
+	public String updateProducts(ProductUpdateCommand product) throws RemoteException {
+		System.out.println("Updating product. ID " + product.sku);
+		String result = String.valueOf(MageAPI.mageService.catalogProductUpdate(MageAPI.sessionId, product.sku, product.productData, product.storeView, "")); 
+		System.out.println("Updating product. DONE. " + result);
+		return result;
+	}
+
 	public boolean createProductLink(String product, String linkedProduct) throws RemoteException {
 		System.out.println("Assign product link.");
 		System.out.println(product);
@@ -103,6 +113,13 @@ public class MageAPI {
 		return result;
 	}
 	
+	public boolean addAttributeOption(AttributeAddOptionCommand attributeOption) throws RemoteException {
+		System.out.println("Adding Attribute Option.");
+		boolean result = MageAPI.mageService.catalogProductAttributeAddOption(MageAPI.sessionId, attributeOption.getAttribute(), attributeOption.getData());
+		System.out.println("Adding Attribute Option. DONE. Attr: " + attributeOption.getAttribute() + " Option: " + attributeOption.getData().getLabel()[0].getValue());
+		return result;
+	}
+
 	public CatalogProductEntity[] listAllProducts() throws RemoteException {
 		return MageAPI.mageService.catalogProductList(MageAPI.sessionId, null, null);
 	}
@@ -118,7 +135,7 @@ public class MageAPI {
 	public CatalogProductAttributeSetEntity[] listProductAttributeSet() throws RemoteException {
 		return MageAPI.mageService.catalogProductAttributeSetList(MageAPI.sessionId);
 	}
-
+	
 	/**
 	 * END - API´s relacionadas a PRODUTOS
 	 */
@@ -151,6 +168,12 @@ public class MageAPI {
 		return result;
 	}
 	
+	public CatalogAttributeOptionEntity[] listAttributeOptions( String attribute, String storeView ) throws RemoteException {
+		System.out.println("Getting Attribute Options List.");
+		CatalogAttributeOptionEntity[] result = MageAPI.mageService.catalogProductAttributeOptions(MageAPI.sessionId, attribute, storeView);
+		System.out.println("Getting Attribute Options List. DONE. Attr: " + attribute);
+		return result;
+	}
 	 	 
 	public static void main(String[] args) throws RemoteException {
 //		MageAPI magento = new MageAPI();
