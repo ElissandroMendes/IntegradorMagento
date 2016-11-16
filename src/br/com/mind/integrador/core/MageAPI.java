@@ -114,9 +114,9 @@ public class MageAPI {
 	}
 	
 	public boolean addAttributeOption(AttributeAddOptionCommand attributeOption) throws RemoteException {
-		System.out.println("Adding Attribute Option.");
+		System.out.println("Adding Attribute Option. Attr: " + attributeOption.getAttribute() + " Option: " + attributeOption.getData().getLabel()[0].getValue());
 		boolean result = MageAPI.mageService.catalogProductAttributeAddOption(MageAPI.sessionId, attributeOption.getAttribute(), attributeOption.getData());
-		System.out.println("Adding Attribute Option. DONE. Attr: " + attributeOption.getAttribute() + " Option: " + attributeOption.getData().getLabel()[0].getValue());
+		System.out.println("Adding Attribute Option. DONE.");
 		return result;
 	}
 
@@ -136,6 +136,13 @@ public class MageAPI {
 		return MageAPI.mageService.catalogProductAttributeSetList(MageAPI.sessionId);
 	}
 	
+	public CatalogAttributeOptionEntity[] listAttributeOptions( String attribute, String storeView ) throws RemoteException {
+		System.out.println("Getting Attribute Options List. Attr: " + attribute);
+		CatalogAttributeOptionEntity[] result = MageAPI.mageService.catalogProductAttributeOptions(MageAPI.sessionId, attribute, storeView);
+		System.out.println("Getting Attribute Options List. DONE.");
+		return result;
+	}
+	 	 
 	/**
 	 * END - API´s relacionadas a PRODUTOS
 	 */
@@ -168,13 +175,6 @@ public class MageAPI {
 		return result;
 	}
 	
-	public CatalogAttributeOptionEntity[] listAttributeOptions( String attribute, String storeView ) throws RemoteException {
-		System.out.println("Getting Attribute Options List.");
-		CatalogAttributeOptionEntity[] result = MageAPI.mageService.catalogProductAttributeOptions(MageAPI.sessionId, attribute, storeView);
-		System.out.println("Getting Attribute Options List. DONE. Attr: " + attribute);
-		return result;
-	}
-	 	 
 	public static void main(String[] args) throws RemoteException {
 //		MageAPI magento = new MageAPI();
 //		CatalogCategoryEntityCreate categoryData = new CatalogCategoryEntityCreate();

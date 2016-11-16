@@ -41,6 +41,8 @@ public class MageBemaErpBridge extends Enginelet {
 				String c = commandArgs[1];
 				
 				CategoryCreateCommand[] categories = Command.json.fromJson(c, CategoryCreateCommand[].class);
+				
+				System.out.println(categories.length + " Time(s).");
 	
 				for (CategoryCreateCommand category : categories) {
 					String id = magento.createCategory(category.getParentId(), category.getCategoryData());
@@ -56,6 +58,8 @@ public class MageBemaErpBridge extends Enginelet {
 				String c = commandArgs[1];
 				
 				ProductCreateCommand[] products = Command.json.fromJson(c, ProductCreateCommand[].class);
+				
+				System.out.println(products.length + " Time(s).");
 	
 				for (ProductCreateCommand product : products) {
 					String id = magento.createProducts(product);
@@ -71,6 +75,8 @@ public class MageBemaErpBridge extends Enginelet {
 				String c = commandArgs[1];
 				
 				ProductUpdateCommand[] products = Command.json.fromJson(c, ProductUpdateCommand[].class);
+				
+				System.out.println(products.length + " Time(s).");
 	
 				for (ProductUpdateCommand product : products) {
 					String ok = magento.updateProducts(product);
@@ -86,6 +92,8 @@ public class MageBemaErpBridge extends Enginelet {
 				String c = commandArgs[1];
 				
 				CustomerCreateCommand[] customers = Command.json.fromJson(c, CustomerCreateCommand[].class);
+				
+				System.out.println(customers.length + " Time(s).");
 	
 				for (CustomerCreateCommand customer : customers) {
 					String id = magento.createCustomer(customer);
@@ -96,6 +104,8 @@ public class MageBemaErpBridge extends Enginelet {
 				String c = commandArgs[1];
 				
 				CustomerAddressCreateCommand[] address = Command.json.fromJson(c, CustomerAddressCreateCommand[].class);
+				
+				System.out.println(address.length + " Time(s).");
 	
 				for (CustomerAddressCreateCommand addr : address) {
 					String id = magento.createCustomerAddress(addr);
@@ -106,6 +116,8 @@ public class MageBemaErpBridge extends Enginelet {
 				String l = commandArgs[1];
 				
 				ProductLinkCreateCommand[] linkDefs = Command.json.fromJson(l, ProductLinkCreateCommand[].class);
+				
+				System.out.println(linkDefs.length + " Time(s).");
 
 				for (ProductLinkCreateCommand linkDef : linkDefs) {
 					for(String linkTo : linkDef.getLinkTo()) {
@@ -149,6 +161,8 @@ public class MageBemaErpBridge extends Enginelet {
 				String c = commandArgs[1];
 				
 				AttributeAddOptionCommand[] attributeOptions = Command.json.fromJson(c, AttributeAddOptionCommand[].class);
+				
+				System.out.println(attributeOptions.length + " Time(s).");
 	
 				for (AttributeAddOptionCommand attributeOption : attributeOptions) {
 					boolean r = magento.addAttributeOption(attributeOption);
@@ -156,6 +170,7 @@ public class MageBemaErpBridge extends Enginelet {
 				}
 
 			} else if (command.equals("listAttributeOptions")) {
+
 				String attributeCode = commandArgs[1];
 				String storeView = commandArgs[2];
 				
