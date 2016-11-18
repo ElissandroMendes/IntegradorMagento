@@ -8,6 +8,7 @@
     <property name="directory.javalibs" value="libs"/>
     <property name="documentation.title" value=""/>
     <property name="jarfile" value="${directory.distribuition}/magento-${version}.jar"/>
+    <property name="propsfile" value="${directory.source}/magento.properties"/>
 
     <property name="directory.erp" value="C:/Bematech/dhandara/javalibs"/>
 
@@ -30,6 +31,7 @@
         <mkdir dir="${directory.distribuition}"/>
         <jar destfile="${jarfile}" basedir="${directory.binary}"></jar>
     	<copy file="${jarfile}" toDir="${directory.erp}" overwrite="true"></copy>
+    	<copy file="${propsfile}" toDir="${directory.erp}" overwrite="true"></copy>
     </target>
             
     <target name="clean">

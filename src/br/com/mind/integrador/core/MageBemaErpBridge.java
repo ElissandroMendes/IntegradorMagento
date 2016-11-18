@@ -1,6 +1,6 @@
 package br.com.mind.integrador.core;
 
-import java.rmi.RemoteException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import br.com.inteq.engine.enginelet.Enginelet;
@@ -11,6 +11,7 @@ import br.com.mind.integrador.commands.CommandResult;
 import br.com.mind.integrador.commands.CustomerAddressCreateCommand;
 import br.com.mind.integrador.commands.CustomerCreateCommand;
 import br.com.mind.integrador.commands.ProductCreateCommand;
+import br.com.mind.integrador.commands.ProductImageUploadCommand;
 import br.com.mind.integrador.commands.ProductLinkCreateCommand;
 import br.com.mind.integrador.commands.ProductUpdateCommand;
 import br.com.mind.integrador.commands.ResultERROR;
@@ -31,12 +32,24 @@ public class MageBemaErpBridge extends Enginelet {
 	@Override
 	public String handleCommand(String command, String[] commandArgs) {
 		System.out.println("Initializing Magento SOAP API");
-		ConnectionData connData = Command.json.fromJson(commandArgs[0], ConnectionData.class);
-		MageAPI magento = new MageAPI(connData);
 
+		System.out.println(" ");
 		System.out.println("Executing: " + command);
 		
 		try {
+			MageOptions options = Command.json.fromJson(commandArgs[0], MageOptions.class);
+			String sessionId = null;
+			MageAPI magento = new MageAPI(options);
+			
+			if (command.equals("getSessionId")) {
+				String id = magento.mageLogin();
+				result.add(new ResultOK(id));
+				
+			} else {
+				sessionId = commandArgs[0];
+			}
+			
+			
 			if (command.equals("createCategories")) {
 				String c = commandArgs[1];
 				
@@ -88,6 +101,18 @@ public class MageBemaErpBridge extends Enginelet {
 					result.add(new ResultOK(ok, product.sku));
 				}
 
+			} else if (command.equals("uploadProductImages")) {
+				String c = commandArgs[1];
+				
+				ProductImageUploadCommand[] images = Command.json.fromJson(c, ProductImageUploadCommand[].class);
+				
+				System.out.println(images.length + " Time(s).");
+	
+				for (ProductImageUploadCommand image : images) {
+					boolean ok = magento.uploadProductImages(image);
+					result.add(new ResultOK(ok));
+				}
+
 			} else if (command.equals("createCustomers")) {
 				String c = commandArgs[1];
 				
@@ -131,6 +156,14 @@ public class MageBemaErpBridge extends Enginelet {
 				CatalogProductEntity[] products = magento.listAllProducts();
 				result.add(new ResultOK(products));
 
+			} else if (command.equals("listProducts")) {
+				String c = commandArgs[1];
+				
+				Filters filters = Command.json.fromJson(c, Filters.class);
+				CatalogProductEntity[] t = magento.getProductList(filters);
+
+				result.add(new ResultOK(t));
+
 			} else if (command.equals("getProductInfo")) {
 				String c = commandArgs[1];
 				
@@ -149,7 +182,7 @@ public class MageBemaErpBridge extends Enginelet {
 					StoreEntity[] t = magento.listStore();
 					result.add(new ResultOK(t));
 	
-			} else if (command.equals("salesOrderList")) {
+			} else if (command.equals("listSalesOrders")) {
 				String c = commandArgs[1];
 				
 				Filters filters = Command.json.fromJson(c, Filters.class);
@@ -177,8 +210,14 @@ public class MageBemaErpBridge extends Enginelet {
 				CatalogAttributeOptionEntity[] t = magento.listAttributeOptions(attributeCode, storeView);
 
 				result.add(new ResultOK(t));
+
+			} else if (command.equals("getSessionId")) {
+
+				String id = magento.mageLogin();
+
+				result.add(new ResultOK(id));
 			}
-		} catch (RemoteException e) {
+		} catch (IOException e) {
 			result.add(new ResultERROR(Utils.StackTraceToString(e)));
 		}
 		
@@ -186,7 +225,7 @@ public class MageBemaErpBridge extends Enginelet {
 	}
 	
 	public static void main(String[] args) {
-		MageBemaErpBridge magentoBridge = new MageBemaErpBridge();
+//		MageBemaErpBridge magentoBridge = new MageBemaErpBridge();
 //		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}", 
 //				                 "[{\"product\":\"1751492\",\"linkedTo\":[147573346,147573348,147573347,147573349,147573350]},{\"product\":\"1751494\",\"linkedTo\":[147573358,147573357,147573355]}]"};
 //		System.out.println(magentoBridge.handleCommand("createProductLink", commandArgs));
@@ -196,16 +235,15 @@ public class MageBemaErpBridge extends Enginelet {
 //		System.out.println(magentoBridge.handleCommand("listProductAttributeSet", commandArgs));
 //		System.out.println(magentoBridge.handleCommand("listStore", commandArgs));
 
-		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}", 
-								 "[{\"sku\":407,\"stock_data\":{\"qty\":999},\"productData\":{\"price\":299}}]"};
+//		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}", 
+//								 "[{\"sku\":407,\"stock_data\":{\"qty\":999},\"productData\":{\"price\":299}}]"};
 
-		System.out.println(magentoBridge.handleCommand("updateProducts", commandArgs));
+//		System.out.println(magentoBridge.handleCommand("updateProducts", commandArgs));
 		
 //		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}", 
 //								 "{\"complex_filter\":[],\"filter\":[{\"value\":\"100000040\",\"key\":\"increment_id\"}]}"};
 		
 //		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}"}; 
-//
 //		String json = magentoBridge.handleCommand("listCategories", commandArgs);
 //		
 //		System.out.println(json);
