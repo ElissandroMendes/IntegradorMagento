@@ -31,24 +31,23 @@ public class MageBemaErpBridge extends Enginelet {
 	
 	@Override
 	public String handleCommand(String command, String[] commandArgs) {
-		System.out.println("Initializing Magento SOAP API");
-
-		System.out.println(" ");
-		System.out.println("Executing: " + command);
-		
 		try {
-			MageOptions options = Command.json.fromJson(commandArgs[0], MageOptions.class);
 			String sessionId = null;
-			MageAPI magento = new MageAPI(options);
+
+			MageOptions options = Command.json.fromJson(commandArgs[0], MageOptions.class);
 			
+			System.out.println("Initializing Magento SOAP API");
+			MageAPI magento = new MageAPI(options.getEndpointUrl(), options.getSessionId());
+			
+			System.out.println("Executing: " + command);
+
 			if (command.equals("getSessionId")) {
-				String id = magento.mageLogin();
-				result.add(new ResultOK(id));
+				sessionId = magento.mageLogin(options.getUser(), options.getPassword());
+				result.add(new ResultOK(sessionId));
 				
 			} else {
 				sessionId = commandArgs[0];
 			}
-			
 			
 			if (command.equals("createCategories")) {
 				String c = commandArgs[1];
@@ -64,7 +63,6 @@ public class MageBemaErpBridge extends Enginelet {
 					
 			} else if (command.equals("listCategories")) {
 				CatalogCategoryTree categories = magento.listCategories();
-				//Command.json.toJson(categories)
 				result.add(new ResultOK(categories));
 
 			} else if (command.equals("createProducts")) {
@@ -146,8 +144,6 @@ public class MageBemaErpBridge extends Enginelet {
 
 				for (ProductLinkCreateCommand linkDef : linkDefs) {
 					for(String linkTo : linkDef.getLinkTo()) {
-						System.out.println(linkTo);
-						System.out.println(linkDef.getProduct()); 
 						result.add(new ResultOK(magento.createProductLink(linkDef.getProduct(), linkTo)));	
 					}
 				}
@@ -211,12 +207,10 @@ public class MageBemaErpBridge extends Enginelet {
 
 				result.add(new ResultOK(t));
 
-			} else if (command.equals("getSessionId")) {
-
-				String id = magento.mageLogin();
-
-				result.add(new ResultOK(id));
 			}
+
+			System.out.println(" ");
+			
 		} catch (IOException e) {
 			result.add(new ResultERROR(Utils.StackTraceToString(e)));
 		}
@@ -225,35 +219,10 @@ public class MageBemaErpBridge extends Enginelet {
 	}
 	
 	public static void main(String[] args) {
-//		MageBemaErpBridge magentoBridge = new MageBemaErpBridge();
-//		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}", 
-//				                 "[{\"product\":\"1751492\",\"linkedTo\":[147573346,147573348,147573347,147573349,147573350]},{\"product\":\"1751494\",\"linkedTo\":[147573358,147573357,147573355]}]"};
-//		System.out.println(magentoBridge.handleCommand("createProductLink", commandArgs));
+		MageBemaErpBridge magentoBridge = new MageBemaErpBridge();
+		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}"};
+		System.out.println(magentoBridge.handleCommand("getSessionId", commandArgs));
 		
-//		System.out.println(magentoBridge.handleCommand("listAllProducts", commandArgs));
-//		System.out.println(magentoBridge.handleCommand("listProductTypes", commandArgs));
-//		System.out.println(magentoBridge.handleCommand("listProductAttributeSet", commandArgs));
-//		System.out.println(magentoBridge.handleCommand("listStore", commandArgs));
-
-//		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}", 
-//								 "[{\"sku\":407,\"stock_data\":{\"qty\":999},\"productData\":{\"price\":299}}]"};
-
-//		System.out.println(magentoBridge.handleCommand("updateProducts", commandArgs));
-		
-//		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}", 
-//								 "{\"complex_filter\":[],\"filter\":[{\"value\":\"100000040\",\"key\":\"increment_id\"}]}"};
-		
-//		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}"}; 
-//		String json = magentoBridge.handleCommand("listCategories", commandArgs);
-//		
-//		System.out.println(json);
-
-//		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-//		String prettyJson = gson.toJson(json);
-//		System.out.println(prettyJson);
-		
-//		String json = magentoBridge.handleCommand("getOrderList", commandArgs);
-
 	}
 
 }

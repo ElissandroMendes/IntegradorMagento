@@ -10,7 +10,8 @@
     <property name="jarfile" value="${directory.distribuition}/magento-${version}.jar"/>
     <property name="propsfile" value="${directory.source}/magento.properties"/>
 
-    <property name="directory.erp" value="C:/Bematech/dhandara/javalibs"/>
+    <property name="directory.erp.d" value="C:/Bematech/dhandara/javalibs"/>
+    <property name="directory.erp.p" value="C:/Bematech/handara2012/javalibs"/>
 
     <target name="compile">
         <mkdir dir="${directory.binary}"/>
@@ -30,8 +31,8 @@
     <target name="makeDistribuition" depends="compile">
         <mkdir dir="${directory.distribuition}"/>
         <jar destfile="${jarfile}" basedir="${directory.binary}"></jar>
-    	<copy file="${jarfile}" toDir="${directory.erp}" overwrite="true"></copy>
-    	<copy file="${propsfile}" toDir="${directory.erp}" overwrite="true"></copy>
+    	<copy file="${jarfile}" toDir="${directory.erp.d}" overwrite="true"></copy>
+    	<copy file="${jarfile}" toDir="${directory.erp.p}" overwrite="true"></copy>
     </target>
             
     <target name="clean">
