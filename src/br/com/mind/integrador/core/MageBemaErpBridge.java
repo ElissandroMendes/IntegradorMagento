@@ -23,7 +23,7 @@ import br.com.mind.magento.client.CatalogProductEntity;
 import br.com.mind.magento.client.CatalogProductReturnEntity;
 import br.com.mind.magento.client.CatalogProductTypeEntity;
 import br.com.mind.magento.client.Filters;
-import br.com.mind.magento.client.SalesOrderListEntity;
+import br.com.mind.magento.client.SalesOrderEntity;
 import br.com.mind.magento.client.StoreEntity;
 
 public class MageBemaErpBridge extends Enginelet {
@@ -182,7 +182,7 @@ public class MageBemaErpBridge extends Enginelet {
 				String c = commandArgs[1];
 				
 				Filters filters = Command.json.fromJson(c, Filters.class);
-				SalesOrderListEntity[] t = magento.getOrderList(filters);
+				SalesOrderEntity[] t = magento.listSalesOrders(filters);
 
 				result.add(new ResultOK(t));
 
@@ -212,6 +212,9 @@ public class MageBemaErpBridge extends Enginelet {
 			System.out.println(" ");
 			
 		} catch (IOException e) {
+			System.out.println("Executing " + command + " - Error:");
+			System.out.println(Utils.StackTraceToString(e));
+			System.out.println(" ");
 			result.add(new ResultERROR(Utils.StackTraceToString(e)));
 		}
 		

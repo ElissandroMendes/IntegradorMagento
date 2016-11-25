@@ -5,6 +5,8 @@ import java.rmi.RemoteException;
 
 import javax.xml.rpc.ServiceException;
 
+import org.apache.axis.AxisFault;
+
 import com.google.gson.Gson;
 
 import br.com.mind.integrador.commands.AttributeAddOptionCommand;
@@ -23,11 +25,12 @@ import br.com.mind.magento.client.CatalogProductEntity;
 import br.com.mind.magento.client.CatalogProductImageEntity;
 import br.com.mind.magento.client.CatalogProductReturnEntity;
 import br.com.mind.magento.client.CatalogProductTypeEntity;
-import br.com.mind.magento.client.ComplexFilter;
 import br.com.mind.magento.client.CustomerCustomerEntity;
 import br.com.mind.magento.client.Filters;
 import br.com.mind.magento.client.Mage_Api_Model_Server_V2_HandlerPortType;
+import br.com.mind.magento.client.MagentoInfoEntity;
 import br.com.mind.magento.client.MagentoServiceLocator;
+import br.com.mind.magento.client.SalesOrderEntity;
 import br.com.mind.magento.client.SalesOrderListEntity;
 import br.com.mind.magento.client.StoreEntity;
 
@@ -37,12 +40,15 @@ public class MageAPI {
 	private String sessionId = null;
 	private Mage_Api_Model_Server_V2_HandlerPortType mageService;
 	
-	public MageAPI(String endpointUrl, String sessionId) {
+	public MageAPI(String endpointUrl, String sessionId) throws RemoteException {
 		this.endpointUrl = endpointUrl;
 		this.sessionId = sessionId;
 		
 		try {
 			this.getMageService();
+//			if ( !this.isValidSession() ) {
+//				this.sessionId = this.mageLogin("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
+//			}
 		} catch (ServiceException e) {
 			e.printStackTrace();
 		}
@@ -54,6 +60,22 @@ public class MageAPI {
 		this.mageService = locator.getMage_Api_Model_Server_V2_HandlerPort(); 
 	}
 	
+	private boolean isValidSession() throws RemoteException {
+		System.out.println("Validating Session");
+		boolean isValid = true;
+		try {
+			this.mageService.magentoInfo(sessionId);
+		} catch(AxisFault e) {
+			System.out.println(e.getFaultCode().toString());
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				System.out.println("Session Expired");
+				isValid = false;
+			} else {
+				e.printStackTrace();
+			}
+		}
+		return isValid;
+	}
 	public String mageLogin(String user, String password) throws RemoteException {
 		return this.mageService.login(user, password);
 	}	
@@ -220,13 +242,38 @@ public class MageAPI {
 		return this.mageService.storeList(this.getSessionId());
 	}
 	
-	public SalesOrderListEntity[] getOrderList( Filters filters ) throws RemoteException {
-		System.out.println("Getting Order List.");
-		SalesOrderListEntity[] result = this.mageService.salesOrderList(this.getSessionId(), filters);
-		System.out.println("Getting Order List. DONE.");
+	
+	/**
+	 * BEGIN - API´s relacionadas a VENDAS
+	 */
+	 
+	public SalesOrderEntity[] listSalesOrders( Filters filters ) throws RemoteException {
+		System.out.println("Getting Sales Orders List.");
+		SalesOrderListEntity[] orderList = this.mageService.salesOrderList(this.getSessionId(), filters);
+		
+		SalesOrderEntity[] result = new SalesOrderEntity[orderList.length];
+		for (int i = 0; i < orderList.length; i++) {
+			result[i] = this.mageService.salesOrderInfo(this.getSessionId(), orderList[i].getIncrement_id());
+		}
+		System.out.println("Getting Sales Orders List. DONE.");
 		return result;
 	}
 	
+	public  SalesOrderEntity listOrderInfo( String orderIncrementId ) throws RemoteException {
+		System.out.println("Getting Sales Orders List.");
+		SalesOrderEntity result = this.mageService.salesOrderInfo(this.getSessionId(), orderIncrementId);
+		System.out.println("Getting Sales Orders List. DONE.");
+		return result;
+	}
+	
+	public MagentoInfoEntity getMagentoInfo() throws RemoteException {
+		System.out.println("Getting Sales Orders List.");
+		MagentoInfoEntity result = this.mageService.magentoInfo(sessionId);
+		System.out.println("Getting Sales Orders List. DONE.");
+		return result;
+	}
+	 
+
 	public static void main(String[] args) throws IOException {
 //		MageOptions c = new MageOptions();
 //		
@@ -234,20 +281,26 @@ public class MageAPI {
 //		c.setPassword("YzU4ODZjNjQwYjI5NTc3YmZi");
 //		c.setUser("integrador.noix");
 //		 -> 
-		MageAPI magento = new MageAPI("http://handara.signashop.com.br/api/v2_soap", "bc207d6a69b6b8ac009039c0552e2ab2");
+		MageAPI magento = new MageAPI("http://handara.signashop.com.br/api/v2_soap", "84037dea55014d43d466240639f465e7");
+		MagentoInfoEntity c = magento.getMagentoInfo();
+//		Filters filters = new Filters();
+//		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("order_id", "1")});
+//		SalesOrderEntity[] c = magento.listSalesOrders(filters);
+		Gson json = new Gson();
+		System.out.println(json.toJson(c));
+		
 //		System.out.println(magento.createProductLink("476972944", 	"476972940"));
 //		CatalogProductImageEntity[] c = magento.getProductImageList("476972944");
 		
-		Filters filters = new Filters();
-		AssociativeEntity idx1 = new AssociativeEntity("gteq", "2016-06-01");
-		AssociativeEntity idx2 = new AssociativeEntity("lteq", "2016-06-30");
-		
-		filters.setComplex_filter(new ComplexFilter[] { new ComplexFilter("created_at", idx1), new ComplexFilter("created_at", idx2) });
+//		AssociativeEntity idx1 = new AssociativeEntity("gteq", "2016-06-01");
+//		AssociativeEntity idx2 = new AssociativeEntity("lteq", "2016-06-30");
+//		
+//		filters.setComplex_filter(new ComplexFilter[] { new ComplexFilter("created_at", idx1), new ComplexFilter("created_at", idx2) });
 //		filters.setFilter(new AssociativeEntity[] { new AssociativeEntity("created_at", "2016-03-17 23:52:35") });
 		
-		CustomerCustomerEntity[] c = magento.getCustomerList(filters);
-		Gson json = new Gson();
-		System.out.println(json.toJson(c));
+//		CustomerCustomerEntity[] c = magento.getCustomerList(filters);
+//		Gson json = new Gson();
+//		System.out.println(json.toJson(c));
 		
 //		[{"file":"/1/0/1060093_-1895818022.jpg_21.jpg","label":"1060093_-1895818022.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_-1895818022.jpg_21.jpg","types":[],"__hashCodeCalc":false},{"file":"/1/0/1060093_1_-1895818022.jpg_21.jpg","label":"1060093_1_-1895818022.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_1_-1895818022.jpg_21.jpg","types":[],"__hashCodeCalc":false},{"file":"/1/0/1060093_-1895818024.jpg_21.jpg","label":"1060093_-1895818024.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_-1895818024.jpg_21.jpg","types":[],"__hashCodeCalc":false},{"file":"/1/0/1060093_1_-1895818024.jpg_21.jpg","label":"1060093_1_-1895818024.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_1_-1895818024.jpg_21.jpg","types":["small_image"],"__hashCodeCalc":false},{"file":"/1/0/1060093_-1895818023.jpg_21.jpg","label":"1060093_-1895818023.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_-1895818023.jpg_21.jpg","types":[],"__hashCodeCalc":false},{"file":"/1/0/1060093_1_-1895818023.jpg_21.jpg","label":"1060093_1_-1895818023.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_1_-1895818023.jpg_21.jpg","types":["thumbnail"],"__hashCodeCalc":false}]
 
