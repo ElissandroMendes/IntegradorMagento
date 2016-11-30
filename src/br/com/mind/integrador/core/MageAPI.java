@@ -15,6 +15,7 @@ import br.com.mind.integrador.commands.CustomerCreateCommand;
 import br.com.mind.integrador.commands.ProductCreateCommand;
 import br.com.mind.integrador.commands.ProductImageUploadCommand;
 import br.com.mind.integrador.commands.ProductUpdateCommand;
+import br.com.mind.integrador.commands.SalesOrderInfo;
 import br.com.mind.magento.client.AssociativeEntity;
 import br.com.mind.magento.client.CatalogAttributeOptionEntity;
 import br.com.mind.magento.client.CatalogCategoryEntityCreate;
@@ -31,6 +32,7 @@ import br.com.mind.magento.client.Mage_Api_Model_Server_V2_HandlerPortType;
 import br.com.mind.magento.client.MagentoInfoEntity;
 import br.com.mind.magento.client.MagentoServiceLocator;
 import br.com.mind.magento.client.SalesOrderEntity;
+import br.com.mind.magento.client.SalesOrderInvoiceEntity;
 import br.com.mind.magento.client.SalesOrderListEntity;
 import br.com.mind.magento.client.StoreEntity;
 
@@ -238,6 +240,13 @@ public class MageAPI {
 		return result;
 	}
 	
+	public CustomerCustomerEntity getCustomerInfo( int customerId ) throws RemoteException {
+		System.out.println("Getting Customer Info. ID " + customerId);
+		CustomerCustomerEntity result = this.mageService.customerCustomerInfo(sessionId, customerId, null);
+		System.out.println("Getting Customer Info. DONE.");
+		return result;
+	}
+
 	public StoreEntity[] listStore() throws RemoteException {
 		return this.mageService.storeList(this.getSessionId());
 	}
@@ -247,22 +256,55 @@ public class MageAPI {
 	 * BEGIN - API´s relacionadas a VENDAS
 	 */
 	 
-	public SalesOrderEntity[] listSalesOrders( Filters filters ) throws RemoteException {
+	public SalesOrderInfo[] listSalesOrders( Filters filters ) throws RemoteException {
 		System.out.println("Getting Sales Orders List.");
 		SalesOrderListEntity[] orderList = this.mageService.salesOrderList(this.getSessionId(), filters);
-		
-		SalesOrderEntity[] result = new SalesOrderEntity[orderList.length];
+
+		SalesOrderInfo[] result = new SalesOrderInfo[orderList.length];
 		for (int i = 0; i < orderList.length; i++) {
-			result[i] = this.mageService.salesOrderInfo(this.getSessionId(), orderList[i].getIncrement_id());
+			SalesOrderListEntity saleEntity = orderList[i];
+			SalesOrderEntity s = getOrderInfo(saleEntity.getIncrement_id());
+			
+			SalesOrderInfo saleInfo = new SalesOrderInfo();  
+			
+			saleInfo.setOrder_id(saleEntity.getOrder_id());
+			saleInfo.setCreated_at(saleEntity.getCreated_at());
+			saleInfo.setUpdated_at(saleEntity.getUpdated_at());
+			saleInfo.setStatus(saleEntity.getStatus());
+			saleInfo.setIncrement_id(saleEntity.getIncrement_id());
+			saleInfo.setTax_amount(saleEntity.getTax_amount());
+			saleInfo.setShipping_amount(saleEntity.getShipping_amount());
+			saleInfo.setDiscount_amount(saleEntity.getDiscount_amount());
+			saleInfo.setSubtotal(saleEntity.getSubtotal());
+			saleInfo.setGrand_total(saleEntity.getGrand_total());
+			
+			CustomerCustomerEntity c = new CustomerCustomerEntity();
+			c.setCustomer_id(Integer.valueOf(saleEntity.getCustomer_id()));
+			c.setFirstname(saleEntity.getFirstname());
+			c.setLastname(saleEntity.getLastname());
+			c.setMiddlename(saleEntity.getCustomer_middlename());
+			c.setDob(saleEntity.getCustomer_dob());
+			c.setEmail(saleEntity.getCustomer_email());
+			c.setTaxvat(saleEntity.getCustomer_taxvat());
+			c.setGroup_id(Integer.valueOf(saleEntity.getCustomer_group_id()));
+			saleInfo.setCustomer(c);
+			
+			saleInfo.setShipping_address(s.getShipping_address());
+			saleInfo.setBilling_address(s.getBilling_address());
+
+			saleInfo.setItems(s.getItems());
+			saleInfo.setPayment(s.getPayment());
+			
+			result[i] = saleInfo; 
 		}
 		System.out.println("Getting Sales Orders List. DONE.");
 		return result;
 	}
 	
-	public  SalesOrderEntity listOrderInfo( String orderIncrementId ) throws RemoteException {
-		System.out.println("Getting Sales Orders List.");
+	public  SalesOrderEntity getOrderInfo( String orderIncrementId ) throws RemoteException {
+		System.out.println("Getting Sale Order Info. OrderIncrementId " + orderIncrementId);
 		SalesOrderEntity result = this.mageService.salesOrderInfo(this.getSessionId(), orderIncrementId);
-		System.out.println("Getting Sales Orders List. DONE.");
+		System.out.println("Getting Sale Order Info. DONE.");
 		return result;
 	}
 	
@@ -272,22 +314,30 @@ public class MageAPI {
 		System.out.println("Getting Sales Orders List. DONE.");
 		return result;
 	}
+	
+	public  SalesOrderInvoiceEntity getInvoceInfo( String orderIncrementId ) throws RemoteException {
+		System.out.println("Getting Invoice Info. OrderIncrementId " + orderIncrementId);
+		SalesOrderInvoiceEntity result = this.mageService.salesOrderInvoiceInfo(this.getSessionId(), orderIncrementId);
+		System.out.println("Getting Invoice Info. DONE.");
+		return result;
+	}
+	 
 	 
 
 	public static void main(String[] args) throws IOException {
-//		MageOptions c = new MageOptions();
-//		
-//		c.setEndpointUrl("http://handara.signashop.com.br/api/v2_soap");
-//		c.setPassword("YzU4ODZjNjQwYjI5NTc3YmZi");
-//		c.setUser("integrador.noix");
-//		 -> 
-		MageAPI magento = new MageAPI("http://handara.signashop.com.br/api/v2_soap", "84037dea55014d43d466240639f465e7");
-		MagentoInfoEntity c = magento.getMagentoInfo();
+		MageAPI magento = new MageAPI("http://handara.signashop.com.br/api/v2_soap", "1f883345f4104d7c27dc0c5656fa7eaf");
+//		String sessionId = magento.mageLogin("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
+//		System.out.println(sessionId);
+		
 //		Filters filters = new Filters();
-//		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("order_id", "1")});
-//		SalesOrderEntity[] c = magento.listSalesOrders(filters);
+////		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("status", "processing")});
+//		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("order_id", "55")});
+//		SalesOrderInfo[] c = magento.listSalesOrders(filters);
+//		
+		SalesOrderInvoiceEntity c = magento.getInvoceInfo("100000014");
 		Gson json = new Gson();
 		System.out.println(json.toJson(c));
+		
 		
 //		System.out.println(magento.createProductLink("476972944", 	"476972940"));
 //		CatalogProductImageEntity[] c = magento.getProductImageList("476972944");
@@ -302,7 +352,9 @@ public class MageAPI {
 //		Gson json = new Gson();
 //		System.out.println(json.toJson(c));
 		
-//		[{"file":"/1/0/1060093_-1895818022.jpg_21.jpg","label":"1060093_-1895818022.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_-1895818022.jpg_21.jpg","types":[],"__hashCodeCalc":false},{"file":"/1/0/1060093_1_-1895818022.jpg_21.jpg","label":"1060093_1_-1895818022.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_1_-1895818022.jpg_21.jpg","types":[],"__hashCodeCalc":false},{"file":"/1/0/1060093_-1895818024.jpg_21.jpg","label":"1060093_-1895818024.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_-1895818024.jpg_21.jpg","types":[],"__hashCodeCalc":false},{"file":"/1/0/1060093_1_-1895818024.jpg_21.jpg","label":"1060093_1_-1895818024.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_1_-1895818024.jpg_21.jpg","types":["small_image"],"__hashCodeCalc":false},{"file":"/1/0/1060093_-1895818023.jpg_21.jpg","label":"1060093_-1895818023.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_-1895818023.jpg_21.jpg","types":[],"__hashCodeCalc":false},{"file":"/1/0/1060093_1_-1895818023.jpg_21.jpg","label":"1060093_1_-1895818023.jpg","position":"0","exclude":"0","url":"http://handara.signashop.com.br/media/catalog/product/1/0/1060093_1_-1895818023.jpg_21.jpg","types":["thumbnail"],"__hashCodeCalc":false}]
+//		CustomerCustomerEntity c = magento.getCustomerInfo(20);
+//		Gson json = new Gson();
+//		System.out.println(json.toJson(c));
 
 		
 //		CatalogCategoryEntityCreate categoryData = new CatalogCategoryEntityCreate();

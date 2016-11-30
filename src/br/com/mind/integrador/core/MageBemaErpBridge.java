@@ -16,6 +16,7 @@ import br.com.mind.integrador.commands.ProductLinkCreateCommand;
 import br.com.mind.integrador.commands.ProductUpdateCommand;
 import br.com.mind.integrador.commands.ResultERROR;
 import br.com.mind.integrador.commands.ResultOK;
+import br.com.mind.integrador.commands.SalesOrderInfo;
 import br.com.mind.magento.client.CatalogAttributeOptionEntity;
 import br.com.mind.magento.client.CatalogCategoryTree;
 import br.com.mind.magento.client.CatalogProductAttributeSetEntity;
@@ -23,7 +24,6 @@ import br.com.mind.magento.client.CatalogProductEntity;
 import br.com.mind.magento.client.CatalogProductReturnEntity;
 import br.com.mind.magento.client.CatalogProductTypeEntity;
 import br.com.mind.magento.client.Filters;
-import br.com.mind.magento.client.SalesOrderEntity;
 import br.com.mind.magento.client.StoreEntity;
 
 public class MageBemaErpBridge extends Enginelet {
@@ -182,7 +182,7 @@ public class MageBemaErpBridge extends Enginelet {
 				String c = commandArgs[1];
 				
 				Filters filters = Command.json.fromJson(c, Filters.class);
-				SalesOrderEntity[] t = magento.listSalesOrders(filters);
+				SalesOrderInfo[] t = magento.listSalesOrders(filters);
 
 				result.add(new ResultOK(t));
 
