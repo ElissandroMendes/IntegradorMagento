@@ -10,6 +10,7 @@ import br.com.mind.integrador.commands.Command;
 import br.com.mind.integrador.commands.CommandResult;
 import br.com.mind.integrador.commands.CustomerAddressCreateCommand;
 import br.com.mind.integrador.commands.CustomerCreateCommand;
+import br.com.mind.integrador.commands.CustomerInfo;
 import br.com.mind.integrador.commands.ProductCreateCommand;
 import br.com.mind.integrador.commands.ProductImageUploadCommand;
 import br.com.mind.integrador.commands.ProductLinkCreateCommand;
@@ -113,14 +114,22 @@ public class MageBemaErpBridge extends Enginelet {
 
 			} else if (command.equals("createCustomers")) {
 				String c = commandArgs[1];
+				String e = commandArgs[2];
 				
 				CustomerCreateCommand[] customers = Command.json.fromJson(c, CustomerCreateCommand[].class);
+				CustomerAddressCreateCommand[] addresses = Command.json.fromJson(e, CustomerAddressCreateCommand[].class);
 				
 				System.out.println(customers.length + " Time(s).");
 	
-				for (CustomerCreateCommand customer : customers) {
+				for (int i = 0; i < customers.length; i++) {
+					CustomerCreateCommand customer = customers[i];
 					String id = magento.createCustomer(customer);
-					result.add(new ResultOK(id));
+
+					CustomerAddressCreateCommand address = addresses[i];
+					address.setCustomerId(Integer.valueOf(id));
+					magento.createCustomerAddress(address);
+					
+					result.add(new ResultOK(id, customer.customerData.getTaxvat()));
 				}
 	
 			} else if (command.equals("createCustomerAddress")) {
@@ -160,6 +169,14 @@ public class MageBemaErpBridge extends Enginelet {
 
 				result.add(new ResultOK(t));
 
+			} else if (command.equals("listConsumers")) {
+				String c = commandArgs[1];
+				
+				Filters filters = Command.json.fromJson(c, Filters.class);
+				CustomerInfo[] t = magento.getCustomerList(filters);
+
+				result.add(new ResultOK(t));
+
 			} else if (command.equals("getProductInfo")) {
 				String c = commandArgs[1];
 				
@@ -183,8 +200,10 @@ public class MageBemaErpBridge extends Enginelet {
 				
 				Filters filters = Command.json.fromJson(c, Filters.class);
 				SalesOrderInfo[] t = magento.listSalesOrders(filters);
-
-				result.add(new ResultOK(t));
+				
+				for (SalesOrderInfo salesOrderInfo : t) {
+					result.add(new ResultOK(salesOrderInfo));
+				}
 
 			} else if (command.equals("addAttributeOption")) {
 				String c = commandArgs[1];
@@ -224,6 +243,7 @@ public class MageBemaErpBridge extends Enginelet {
 	public static void main(String[] args) {
 		MageBemaErpBridge magentoBridge = new MageBemaErpBridge();
 		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}"};
+		
 		System.out.println(magentoBridge.handleCommand("getSessionId", commandArgs));
 		
 	}

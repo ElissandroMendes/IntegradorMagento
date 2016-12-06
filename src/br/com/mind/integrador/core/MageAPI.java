@@ -12,6 +12,7 @@ import com.google.gson.Gson;
 import br.com.mind.integrador.commands.AttributeAddOptionCommand;
 import br.com.mind.integrador.commands.CustomerAddressCreateCommand;
 import br.com.mind.integrador.commands.CustomerCreateCommand;
+import br.com.mind.integrador.commands.CustomerInfo;
 import br.com.mind.integrador.commands.ProductCreateCommand;
 import br.com.mind.integrador.commands.ProductImageUploadCommand;
 import br.com.mind.integrador.commands.ProductUpdateCommand;
@@ -26,6 +27,7 @@ import br.com.mind.magento.client.CatalogProductEntity;
 import br.com.mind.magento.client.CatalogProductImageEntity;
 import br.com.mind.magento.client.CatalogProductReturnEntity;
 import br.com.mind.magento.client.CatalogProductTypeEntity;
+import br.com.mind.magento.client.CustomerAddressEntityItem;
 import br.com.mind.magento.client.CustomerCustomerEntity;
 import br.com.mind.magento.client.Filters;
 import br.com.mind.magento.client.Mage_Api_Model_Server_V2_HandlerPortType;
@@ -174,8 +176,9 @@ public class MageAPI {
 
 	public CatalogProductReturnEntity getProductInfo(String idOrSku) throws RemoteException {
 		System.out.println("Getting product Info SKU: " + idOrSku);
+		CatalogProductReturnEntity result = this.mageService.catalogProductInfo(this.getSessionId(), idOrSku, null, null, "sku");
 		System.out.println("Getting product Info SKU: " + idOrSku + ". DONE.");
-		return this.mageService.catalogProductInfo(this.getSessionId(), idOrSku, null, null, "sku");
+		return result;
 	}
 	
 	public CatalogProductImageEntity[] getProductImageList(String skuOrIdProduct) throws RemoteException {
@@ -233,9 +236,18 @@ public class MageAPI {
 	}
 	
 	 
-	public CustomerCustomerEntity[] getCustomerList( Filters filters ) throws RemoteException {
+	public CustomerInfo[] getCustomerList( Filters filters ) throws RemoteException {
 		System.out.println("Getting Customer List.");
-		CustomerCustomerEntity[] result = this.mageService.customerCustomerList(getSessionId(), filters);
+		CustomerCustomerEntity[] customerList = this.mageService.customerCustomerList(getSessionId(), filters);
+		CustomerInfo[] result = new CustomerInfo[customerList.length];
+		
+		for (int i = 0; i < customerList.length; i++) {
+			result[i] = new CustomerInfo();
+			CustomerAddressEntityItem[] customerAddress = this.getCustomerAddress(customerList[i].getCustomer_id());
+			
+			result[i].setCustomerData(customerList[i]);
+			result[i].setCustomerAddress(customerAddress);
+		}
 		System.out.println("Getting Customer List. DONE.");
 		return result;
 	}
@@ -244,6 +256,13 @@ public class MageAPI {
 		System.out.println("Getting Customer Info. ID " + customerId);
 		CustomerCustomerEntity result = this.mageService.customerCustomerInfo(sessionId, customerId, null);
 		System.out.println("Getting Customer Info. DONE.");
+		return result;
+	}
+
+	public CustomerAddressEntityItem[] getCustomerAddress( int customerId ) throws RemoteException {
+		System.out.println("Getting Customer Address. ID " + customerId);
+		CustomerAddressEntityItem[] result = this.mageService.customerAddressList(sessionId, customerId);
+		System.out.println("Getting Customer Address. DONE.");
 		return result;
 	}
 
@@ -263,7 +282,7 @@ public class MageAPI {
 		SalesOrderInfo[] result = new SalesOrderInfo[orderList.length];
 		for (int i = 0; i < orderList.length; i++) {
 			SalesOrderListEntity saleEntity = orderList[i];
-			SalesOrderEntity s = getOrderInfo(saleEntity.getIncrement_id());
+			SalesOrderEntity saleEntityInfo = getOrderInfo(saleEntity.getIncrement_id());
 			
 			SalesOrderInfo saleInfo = new SalesOrderInfo();  
 			
@@ -277,6 +296,7 @@ public class MageAPI {
 			saleInfo.setDiscount_amount(saleEntity.getDiscount_amount());
 			saleInfo.setSubtotal(saleEntity.getSubtotal());
 			saleInfo.setGrand_total(saleEntity.getGrand_total());
+			saleInfo.setRemote_ip(saleEntity.getRemote_ip());
 			
 			CustomerCustomerEntity c = new CustomerCustomerEntity();
 			c.setCustomer_id(Integer.valueOf(saleEntity.getCustomer_id()));
@@ -289,11 +309,13 @@ public class MageAPI {
 			c.setGroup_id(Integer.valueOf(saleEntity.getCustomer_group_id()));
 			saleInfo.setCustomer(c);
 			
-			saleInfo.setShipping_address(s.getShipping_address());
-			saleInfo.setBilling_address(s.getBilling_address());
-
-			saleInfo.setItems(s.getItems());
-			saleInfo.setPayment(s.getPayment());
+//			saleInfo.setCustomer(getCustomerInfo(Integer.valueOf(saleEntity.getCustomer_id())));
+			saleInfo.setShipping_address(saleEntityInfo.getShipping_address());
+			saleInfo.setBilling_address(saleEntityInfo.getBilling_address());
+			saleInfo.setItems(saleEntityInfo.getItems());
+			saleInfo.setPayment(saleEntityInfo.getPayment());
+			
+			System.out.println(saleEntityInfo.getPayment().getSignativa_mundipagg_authorization_code());
 			
 			result[i] = saleInfo; 
 		}
@@ -325,28 +347,21 @@ public class MageAPI {
 	 
 
 	public static void main(String[] args) throws IOException {
-		MageAPI magento = new MageAPI("http://handara.signashop.com.br/api/v2_soap", "1f883345f4104d7c27dc0c5656fa7eaf");
+		MageAPI magento = new MageAPI("http://handara.signashop.com.br/api/v2_soap", "e175b11f625b6b4e2acf5e8ada629a22");
 //		String sessionId = magento.mageLogin("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
 //		System.out.println(sessionId);
 		
-//		Filters filters = new Filters();
-////		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("status", "processing")});
-//		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("order_id", "55")});
-//		SalesOrderInfo[] c = magento.listSalesOrders(filters);
-//		
-		SalesOrderInvoiceEntity c = magento.getInvoceInfo("100000014");
+		Filters filters = new Filters();
+		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("order_id", "58")});
+//		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("customer_id", "21")});
+//		CustomerInfo[] c = magento.getCustomerList(filters);
+		
+		SalesOrderInfo[] c = magento.listSalesOrders(filters);
+//		SalesOrderInvoiceEntity c = magento.getInvoceInfo("100000019");
+
 		Gson json = new Gson();
 		System.out.println(json.toJson(c));
-		
-		
-//		System.out.println(magento.createProductLink("476972944", 	"476972940"));
-//		CatalogProductImageEntity[] c = magento.getProductImageList("476972944");
-		
-//		AssociativeEntity idx1 = new AssociativeEntity("gteq", "2016-06-01");
-//		AssociativeEntity idx2 = new AssociativeEntity("lteq", "2016-06-30");
-//		
-//		filters.setComplex_filter(new ComplexFilter[] { new ComplexFilter("created_at", idx1), new ComplexFilter("created_at", idx2) });
-//		filters.setFilter(new AssociativeEntity[] { new AssociativeEntity("created_at", "2016-03-17 23:52:35") });
+//		System.out.println(json.toJson(magento.getCustomerInfo(21)));
 		
 //		CustomerCustomerEntity[] c = magento.getCustomerList(filters);
 //		Gson json = new Gson();
