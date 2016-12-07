@@ -123,10 +123,10 @@ public class MageBemaErpBridge extends Enginelet {
 	
 				for (int i = 0; i < customers.length; i++) {
 					CustomerCreateCommand customer = customers[i];
-					String id = magento.createCustomer(customer);
+					int id = magento.createCustomer(customer);
 
 					CustomerAddressCreateCommand address = addresses[i];
-					address.setCustomerId(Integer.valueOf(id));
+					address.setCustomerId(id);
 					magento.createCustomerAddress(address);
 					
 					result.add(new ResultOK(id, customer.customerData.getTaxvat()));

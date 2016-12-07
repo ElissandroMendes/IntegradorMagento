@@ -221,10 +221,25 @@ public class MageAPI {
 	/**
 	 * BEGIN - API´s relacionadas a CLIENTES
 	 */
-	public String createCustomer(CustomerCreateCommand customer) throws RemoteException {
-		System.out.println("Creating customer.");
-		String result = String.valueOf(this.mageService.customerCustomerCreate(this.getSessionId(), customer.customerData)); 
-		System.out.println("Creating customer. DONE. Customer ID: " + result);
+	public int createCustomer(CustomerCreateCommand customer) throws RemoteException {
+		System.out.println("Creating customer. Email " + customer.customerData.getEmail());
+		
+		Filters filters = new Filters();
+		AssociativeEntity filter = new AssociativeEntity();
+		filter.setKey("email");
+		filter.setValue(customer.customerData.getEmail());
+		filters.setFilter(new AssociativeEntity[]{ filter });
+		
+		CustomerCustomerEntity[] list = this.mageService.customerCustomerList(this.getSessionId(), filters);
+		int result;
+		
+		if( list.length == 0 ) {
+			result = this.mageService.customerCustomerCreate(this.getSessionId(), customer.customerData); 
+			System.out.println("Creating customer. DONE. Customer ID: " + result);
+		} else {
+			System.out.println("Customer already exists. Email " + customer.customerData.getEmail() + " - ID " + list[0].getCustomer_id());
+			result = list[0].getCustomer_id();
+		}
 		return result;
 	}
 
@@ -347,21 +362,21 @@ public class MageAPI {
 	 
 
 	public static void main(String[] args) throws IOException {
-		MageAPI magento = new MageAPI("http://handara.signashop.com.br/api/v2_soap", "e175b11f625b6b4e2acf5e8ada629a22");
+		MageAPI magento = new MageAPI("http://handara.signashop.com.br/api/v2_soap", "6127de996ab236b05b607f8770846fd7");
 //		String sessionId = magento.mageLogin("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
 //		System.out.println(sessionId);
 		
-		Filters filters = new Filters();
-		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("order_id", "58")});
-//		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("customer_id", "21")});
-//		CustomerInfo[] c = magento.getCustomerList(filters);
-		
-		SalesOrderInfo[] c = magento.listSalesOrders(filters);
-//		SalesOrderInvoiceEntity c = magento.getInvoceInfo("100000019");
+//		Filters filters = new Filters();
+//		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("order_id", "58")});
+////		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("customer_id", "21")});
+////		CustomerInfo[] c = magento.getCustomerList(filters);
+//		
+//		SalesOrderInfo[] c = magento.listSalesOrders(filters);
+////		SalesOrderInvoiceEntity c = magento.getInvoceInfo("100000019");
 
 		Gson json = new Gson();
-		System.out.println(json.toJson(c));
-//		System.out.println(json.toJson(magento.getCustomerInfo(21)));
+//		System.out.println(json.toJson(c));
+		System.out.println(json.toJson(magento.getCustomerInfo(36)));
 		
 //		CustomerCustomerEntity[] c = magento.getCustomerList(filters);
 //		Gson json = new Gson();
