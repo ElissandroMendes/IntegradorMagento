@@ -3,8 +3,25 @@ import br.com.mind.magento.client.CustomerCustomerEntityToCreate;
 
 public class CustomerCreateCommand {
 
-	public CustomerCustomerEntityToCreate customerData; 
+	private int customer_address_id;
+	private CustomerCustomerEntityToCreate customerData; 
 	
 	public CustomerCreateCommand() {
+	}
+
+	public int getCustomer_address_id() {
+		return customer_address_id;
+	}
+
+	public void setCustomer_address_id(int customer_address_id) {
+		this.customer_address_id = customer_address_id;
+	}
+
+	public CustomerCustomerEntityToCreate getCustomerData() {
+		return customerData;
+	}
+
+	public void setCustomerData(CustomerCustomerEntityToCreate customerData) {
+		this.customerData = customerData;
 	}
 }

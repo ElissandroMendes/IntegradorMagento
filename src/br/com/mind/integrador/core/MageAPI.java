@@ -11,8 +11,10 @@ import com.google.gson.Gson;
 
 import br.com.mind.integrador.commands.AttributeAddOptionCommand;
 import br.com.mind.integrador.commands.CustomerAddressCreateCommand;
+import br.com.mind.integrador.commands.CustomerAddressUpdateCommand;
 import br.com.mind.integrador.commands.CustomerCreateCommand;
 import br.com.mind.integrador.commands.CustomerInfo;
+import br.com.mind.integrador.commands.CustomerUpdateCommand;
 import br.com.mind.integrador.commands.ProductCreateCommand;
 import br.com.mind.integrador.commands.ProductImageUploadCommand;
 import br.com.mind.integrador.commands.ProductUpdateCommand;
@@ -222,39 +224,55 @@ public class MageAPI {
 	 * BEGIN - API´s relacionadas a CLIENTES
 	 */
 	public int createCustomer(CustomerCreateCommand customer) throws RemoteException {
-		System.out.println("Creating customer. Email " + customer.customerData.getEmail());
+		System.out.println("Creating customer. Email " + customer.getCustomerData().getEmail());
 		
 		Filters filters = new Filters();
 		AssociativeEntity filter = new AssociativeEntity();
 		filter.setKey("email");
-		filter.setValue(customer.customerData.getEmail());
+		filter.setValue(customer.getCustomerData().getEmail());
 		filters.setFilter(new AssociativeEntity[]{ filter });
 		
 		CustomerCustomerEntity[] list = this.mageService.customerCustomerList(this.getSessionId(), filters);
 		int result;
 		
 		if( list.length == 0 ) {
-			result = this.mageService.customerCustomerCreate(this.getSessionId(), customer.customerData); 
+			result = this.mageService.customerCustomerCreate(this.getSessionId(), customer.getCustomerData()); 
 			System.out.println("Creating customer. DONE. Customer ID: " + result);
 		} else {
-			System.out.println("Customer already exists. Email " + customer.customerData.getEmail() + " - ID " + list[0].getCustomer_id());
+			System.out.println("Customer already exists. Email " + customer.getCustomerData().getEmail() + " - ID " + list[0].getCustomer_id());
 			result = list[0].getCustomer_id();
 		}
 		return result;
 	}
 
-	public String createCustomerAddress(CustomerAddressCreateCommand addr) throws RemoteException {
+	public int createCustomerAddress(CustomerAddressCreateCommand addr) throws RemoteException {
 		System.out.println("Creating Customer Address.");
-		String result = String.valueOf(this.mageService.customerAddressCreate(this.getSessionId(), addr.getCustomerId(), addr.getAddressdata()[0])); 
+		int result = this.mageService.customerAddressCreate(this.getSessionId(), addr.getCustomerId(), addr.getAddressdata()[0]); 
 		System.out.println("Creating customer. DONE. Customer Addres ID: " + result);
 		return result;
 	}
 	
 	 
+	public boolean updateCustomer(CustomerUpdateCommand customer) throws RemoteException {
+		System.out.println("Updating customer. ID " + customer.getCustomer_id());
+		boolean result = this.mageService.customerCustomerUpdate(sessionId, customer.getCustomer_id(), customer.getCustomerData());
+		System.out.println("Updating customer. DONE.");
+		return result;
+	}
+
+	public boolean updateCustomerAddress(CustomerAddressUpdateCommand address) throws RemoteException {
+		System.out.println("Updating customer address.");
+		boolean result = this.mageService.customerAddressUpdate(sessionId, address.getAddressId(), address.getAddressdata());
+		System.out.println("Updating customer address. DONE.");
+		return result;
+	}
+
 	public CustomerInfo[] getCustomerList( Filters filters ) throws RemoteException {
 		System.out.println("Getting Customer List.");
 		CustomerCustomerEntity[] customerList = this.mageService.customerCustomerList(getSessionId(), filters);
 		CustomerInfo[] result = new CustomerInfo[customerList.length];
+		
+		System.out.println(customerList.length + " customer selected.");
 		
 		for (int i = 0; i < customerList.length; i++) {
 			result[i] = new CustomerInfo();
@@ -362,30 +380,24 @@ public class MageAPI {
 	 
 
 	public static void main(String[] args) throws IOException {
-		MageAPI magento = new MageAPI("http://handara.signashop.com.br/api/v2_soap", "6127de996ab236b05b607f8770846fd7");
+		MageAPI magento = new MageAPI("http://handara.signashop.com.br/api/v2_soap", "e37bb9e6d00f2141cde614662c55c9b1");
 //		String sessionId = magento.mageLogin("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
 //		System.out.println(sessionId);
 		
-//		Filters filters = new Filters();
-//		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("order_id", "58")});
-////		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("customer_id", "21")});
-////		CustomerInfo[] c = magento.getCustomerList(filters);
-//		
-//		SalesOrderInfo[] c = magento.listSalesOrders(filters);
-////		SalesOrderInvoiceEntity c = magento.getInvoceInfo("100000019");
-
 		Gson json = new Gson();
-//		System.out.println(json.toJson(c));
-		System.out.println(json.toJson(magento.getCustomerInfo(36)));
+		Filters filters = new Filters();
+		filters.setFilter(new AssociativeEntity[] {new AssociativeEntity("customer_id", "50")});
+		CustomerInfo[] c = magento.getCustomerList(filters);
+		System.out.println(json.toJson(c));
+
+//		SalesOrderInfo[] c = magento.listSalesOrders(filters);
+//		SalesOrderInvoiceEntity c = magento.getInvoceInfo("100000019");
+
+//		System.out.println(json.toJson(magento.getCustomerInfo(38)));
 		
 //		CustomerCustomerEntity[] c = magento.getCustomerList(filters);
-//		Gson json = new Gson();
 //		System.out.println(json.toJson(c));
 		
-//		CustomerCustomerEntity c = magento.getCustomerInfo(20);
-//		Gson json = new Gson();
-//		System.out.println(json.toJson(c));
-
 		
 //		CatalogCategoryEntityCreate categoryData = new CatalogCategoryEntityCreate();
 

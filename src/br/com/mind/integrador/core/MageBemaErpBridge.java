@@ -9,8 +9,10 @@ import br.com.mind.integrador.commands.CategoryCreateCommand;
 import br.com.mind.integrador.commands.Command;
 import br.com.mind.integrador.commands.CommandResult;
 import br.com.mind.integrador.commands.CustomerAddressCreateCommand;
+import br.com.mind.integrador.commands.CustomerAddressUpdateCommand;
 import br.com.mind.integrador.commands.CustomerCreateCommand;
 import br.com.mind.integrador.commands.CustomerInfo;
+import br.com.mind.integrador.commands.CustomerUpdateCommand;
 import br.com.mind.integrador.commands.ProductCreateCommand;
 import br.com.mind.integrador.commands.ProductImageUploadCommand;
 import br.com.mind.integrador.commands.ProductLinkCreateCommand;
@@ -127,11 +129,30 @@ public class MageBemaErpBridge extends Enginelet {
 
 					CustomerAddressCreateCommand address = addresses[i];
 					address.setCustomerId(id);
-					magento.createCustomerAddress(address);
+					int customer_address_id = magento.createCustomerAddress(address);
+					customer.setCustomer_address_id(customer_address_id);
 					
-					result.add(new ResultOK(id, customer.customerData.getTaxvat()));
+					result.add(new ResultOK(id, customer));
 				}
 	
+			} else if (command.equals("updateCustomers")) {
+				String c = commandArgs[1];
+				String e = commandArgs[2];
+				
+				CustomerUpdateCommand[] customers = Command.json.fromJson(c, CustomerUpdateCommand[].class);
+				CustomerAddressUpdateCommand[] addresses = Command.json.fromJson(e, CustomerAddressUpdateCommand[].class);
+				
+				System.out.println(customers.length + " Time(s).");
+	
+				for (int i = 0; i < customers.length; i++) {
+					CustomerUpdateCommand customer = customers[i];
+					boolean id = magento.updateCustomer(customer);
+
+					magento.updateCustomerAddress(addresses[i]);
+					
+					result.add(new ResultOK(id, customer.getCustomerData().getTaxvat()));
+				}
+
 			} else if (command.equals("createCustomerAddress")) {
 				String c = commandArgs[1];
 				
@@ -140,7 +161,7 @@ public class MageBemaErpBridge extends Enginelet {
 				System.out.println(address.length + " Time(s).");
 	
 				for (CustomerAddressCreateCommand addr : address) {
-					String id = magento.createCustomerAddress(addr);
+					int id = magento.createCustomerAddress(addr);
 					result.add(new ResultOK(id));
 				}
 	
@@ -240,12 +261,4 @@ public class MageBemaErpBridge extends Enginelet {
 		return Command.json.toJson(result);
 	}
 	
-	public static void main(String[] args) {
-		MageBemaErpBridge magentoBridge = new MageBemaErpBridge();
-		String [] commandArgs = {"{\"password\":\"YzU4ODZjNjQwYjI5NTc3YmZi\",\"user\":\"integrador.noix\",\"endpointUrl\":\"http://handara.signashop.com.br/api/v2_soap\"}"};
-		
-		System.out.println(magentoBridge.handleCommand("getSessionId", commandArgs));
-		
-	}
-
 }
