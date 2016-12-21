@@ -3,6 +3,8 @@ package br.com.mind.integrador.core;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.xml.rpc.ServiceException;
+
 import br.com.inteq.engine.enginelet.Enginelet;
 import br.com.mind.integrador.commands.AttributeAddOptionCommand;
 import br.com.mind.integrador.commands.CategoryCreateCommand;
@@ -20,14 +22,14 @@ import br.com.mind.integrador.commands.ProductUpdateCommand;
 import br.com.mind.integrador.commands.ResultERROR;
 import br.com.mind.integrador.commands.ResultOK;
 import br.com.mind.integrador.commands.SalesOrderInfo;
-import br.com.mind.magento.client.CatalogAttributeOptionEntity;
-import br.com.mind.magento.client.CatalogCategoryTree;
-import br.com.mind.magento.client.CatalogProductAttributeSetEntity;
-import br.com.mind.magento.client.CatalogProductEntity;
-import br.com.mind.magento.client.CatalogProductReturnEntity;
-import br.com.mind.magento.client.CatalogProductTypeEntity;
-import br.com.mind.magento.client.Filters;
-import br.com.mind.magento.client.StoreEntity;
+import br.com.mind.magento.Client.CatalogAttributeOptionEntity;
+import br.com.mind.magento.Client.CatalogCategoryTree;
+import br.com.mind.magento.Client.CatalogProductAttributeSetEntity;
+import br.com.mind.magento.Client.CatalogProductEntity;
+import br.com.mind.magento.Client.CatalogProductReturnEntity;
+import br.com.mind.magento.Client.CatalogProductTypeEntity;
+import br.com.mind.magento.Client.Filters;
+import br.com.mind.magento.Client.StoreEntity;
 
 public class MageBemaErpBridge extends Enginelet {
 	private ArrayList<CommandResult> result = new ArrayList<>();
@@ -40,7 +42,7 @@ public class MageBemaErpBridge extends Enginelet {
 			MageOptions options = Command.json.fromJson(commandArgs[0], MageOptions.class);
 			
 			System.out.println("Initializing Magento SOAP API");
-			MageAPI magento = new MageAPI(options.getEndpointUrl(), options.getSessionId());
+			MageAPI magento = new MageAPI(options.getSessionId());
 			
 			System.out.println("Executing: " + command);
 
@@ -60,7 +62,7 @@ public class MageBemaErpBridge extends Enginelet {
 				System.out.println(categories.length + " Time(s).");
 	
 				for (CategoryCreateCommand category : categories) {
-					String id = magento.createCategory(category.getParentId(), category.getCategoryData());
+					int id = magento.createCategory(category.getParentId(), category.getCategoryData());
 					result.add(new ResultOK(id));
 				}
 					
@@ -76,7 +78,7 @@ public class MageBemaErpBridge extends Enginelet {
 				System.out.println(products.length + " Time(s).");
 	
 				for (ProductCreateCommand product : products) {
-					String id = magento.createProducts(product);
+					int id = magento.createProducts(product);
 
 //					for (ProductCreateCommand child : product.children) {
 //						magento.createProduct(product);
@@ -251,7 +253,7 @@ public class MageBemaErpBridge extends Enginelet {
 
 			System.out.println(" ");
 			
-		} catch (IOException e) {
+		} catch (IOException | ServiceException e) {
 			System.out.println("Executing " + command + " - Error:");
 			System.out.println(Utils.StackTraceToString(e));
 			System.out.println(" ");

@@ -1,6 +1,6 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.client.CatalogCategoryEntityCreate;
+import br.com.mind.magento.Client.CatalogCategoryEntityCreate;
 
 public class CategoryCreateCommand extends Command {
 	private int parentId;

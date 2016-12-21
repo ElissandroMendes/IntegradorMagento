@@ -1,6 +1,6 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.client.CustomerAddressEntityCreate;
+import br.com.mind.magento.Client.CustomerAddressEntityCreate;
 
 public class CustomerAddressCreateCommand {
 

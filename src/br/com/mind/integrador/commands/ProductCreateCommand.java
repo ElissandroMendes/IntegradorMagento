@@ -1,6 +1,6 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.client.CatalogProductCreateEntity;
+import br.com.mind.magento.Client.CatalogProductCreateEntity;
 
 public class ProductCreateCommand {
 	public String type;

@@ -3,9 +3,6 @@ package br.com.mind.integrador.core;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import org.apache.axis.AxisFault;
-import org.apache.commons.lang.exception.ExceptionUtils;
-
 public class Utils {
 	
 	public static String StackTraceToString(Exception e) {
@@ -16,6 +13,7 @@ public class Utils {
 //			pw.print(ex.getFaultCode() + ": " + ex.getFaultString()); 
 //		} else {
 			e.printStackTrace(pw);
+			e.printStackTrace();
 //		}
 		return sw.toString();				
 	}
