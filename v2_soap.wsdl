@@ -1349,7 +1349,7 @@
             <xsd:complexType>
                <xsd:sequence>
                   <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
-                  <xsd:element minOccurs="1" maxOccurs="1" name="attributeId" type="xsd:string" />
+                  <xsd:element minOccurs="1" maxOccurs="1" name="attributeId" type="xsd:int" />
                   <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
                </xsd:sequence>
             </xsd:complexType>
@@ -2631,6 +2631,7 @@
                <xsd:element name="cc_ss_start_month" type="xsd:string" minOccurs="0" />
                <xsd:element name="cc_ss_start_year" type="xsd:string" minOccurs="0" />
                <xsd:element name="payment_id" type="xsd:string" minOccurs="0" />
+               <xsd:element name="additional_information" type="xsd:string" minOccurs="0"/>
                <xsd:element name="cc_installments" type="xsd:string" minOccurs="0" />
                <xsd:element name="signativa_mundipagg_authorization_code" type="xsd:string" minOccurs="0" />
                <xsd:element name="signativa_mundipagg_unique_sequential_number" type="xsd:string" minOccurs="0" />

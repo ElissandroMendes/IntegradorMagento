@@ -1,6 +1,6 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.Client.CustomerCustomerEntityToCreate;
+import br.com.mind.magento.ClientWithWSI.CustomerCustomerEntityToCreate;
 
 public class CustomerUpdateCommand {
 	private int customer_id;

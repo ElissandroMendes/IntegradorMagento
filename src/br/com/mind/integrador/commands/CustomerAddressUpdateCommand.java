@@ -1,6 +1,6 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.Client.CustomerAddressEntityCreate;
+import br.com.mind.magento.ClientWithWSI.CustomerAddressEntityCreate;
 
 public class CustomerAddressUpdateCommand {
 	private int customer_address_id;

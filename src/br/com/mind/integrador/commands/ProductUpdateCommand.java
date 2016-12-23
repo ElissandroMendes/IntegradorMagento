@@ -1,6 +1,6 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.Client.CatalogProductCreateEntity;
+import br.com.mind.magento.ClientWithWSI.CatalogProductCreateEntity;
 
 public class ProductUpdateCommand {
 	public String sku;

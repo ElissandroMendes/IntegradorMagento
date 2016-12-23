@@ -1,9 +1,9 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.Client.CustomerCustomerEntity;
-import br.com.mind.magento.Client.SalesOrderAddressEntity;
-import br.com.mind.magento.Client.SalesOrderItemEntity;
-import br.com.mind.magento.Client.SalesOrderPaymentEntity;
+import br.com.mind.magento.ClientWithWSI.CustomerCustomerEntity;
+import br.com.mind.magento.ClientWithWSI.SalesOrderAddressEntity;
+import br.com.mind.magento.ClientWithWSI.SalesOrderItemEntity;
+import br.com.mind.magento.ClientWithWSI.SalesOrderPaymentEntity;
 
 public class SalesOrderInfo {
 	private String order_id;
