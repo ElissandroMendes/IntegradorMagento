@@ -36,6 +36,7 @@ import br.com.mind.magento.ClientWithoutWSI.Filters;
 import br.com.mind.magento.ClientWithoutWSI.Mage_Api_Model_Server_V2_HandlerPortType;
 import br.com.mind.magento.ClientWithoutWSI.MagentoInfoEntity;
 import br.com.mind.magento.ClientWithoutWSI.MagentoServiceLocator;
+import br.com.mind.magento.ClientWithoutWSI.RewardpointsTransactionAdd;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderEntity;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderInvoiceEntity;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderListEntity;
@@ -249,6 +250,14 @@ public class MageAPIWithoutWSI {
 			System.out.println("Customer already exists. Email " + customer.getCustomerData().getEmail() + " - ID " + list[0].getCustomer_id());
 			result = list[0].getCustomer_id();
 		}
+		
+		if (customer.getRewardpoints() > 0) {
+			RewardpointsTransactionAdd data = new RewardpointsTransactionAdd();
+			data.setCustomerId(String.valueOf(result));
+			data.setPointAmount(String.valueOf(customer.getRewardpoints()));
+			data.setActionCode("api");
+			createCustomerRewardsPoints(data);
+		}
 		return result;
 	}
 
@@ -259,10 +268,25 @@ public class MageAPIWithoutWSI {
 		return result;
 	}
 	
+	public String createCustomerRewardsPoints(RewardpointsTransactionAdd transactionData) throws RemoteException {
+		System.out.println("Creating Customer Reward Points. Customer ID: ");
+		String result = this.mageService.rewardpointsTransactionAdd(sessionId, transactionData); 
+		System.out.println("Creating customer. DONE. Customer Addres ID: " + result);
+		return result;
+	}
 	 
 	public boolean updateCustomer(CustomerUpdateCommand customer) throws RemoteException {
 		System.out.println("Updating customer. ID " + customer.getCustomer_id());
 		boolean result = this.mageService.customerCustomerUpdate(sessionId, customer.getCustomer_id(), customer.getCustomerData());
+
+		if (customer.getRewardpoints() > 0) {
+			RewardpointsTransactionAdd data = new RewardpointsTransactionAdd();
+			data.setCustomerId(String.valueOf(customer.getCustomer_id()));
+			data.setPointAmount(String.valueOf(customer.getRewardpoints()));
+			data.setActionCode("api");
+			createCustomerRewardsPoints(data);
+		}
+
 		System.out.println("Updating customer. DONE.");
 		return result;
 	}
@@ -376,39 +400,52 @@ public class MageAPIWithoutWSI {
 		return result;
 	}
 	
-	public  SalesOrderInvoiceEntity getInvoceInfo( String orderIncrementId ) throws RemoteException {
+	public SalesOrderInvoiceEntity getInvoceInfo( String orderIncrementId ) throws RemoteException {
 		System.out.println("Getting Invoice Info. OrderIncrementId " + orderIncrementId);
 		SalesOrderInvoiceEntity result = this.mageService.salesOrderInvoiceInfo(sessionId, orderIncrementId);
 		System.out.println("Getting Invoice Info. DONE.");
 		return result;
 	}
+	
+	public boolean addSalesComment( String orderIncrementId, String status, String comment ) throws RemoteException {
+		System.out.println("Adding Sale Comment. OrderIncrementId " + orderIncrementId);
+		boolean result = this.mageService.salesOrderAddComment(sessionId, orderIncrementId, status, comment, null);
+		System.out.println("Adding Sale Comment. DONE.");
+		return result;
+	}
+	
 
 	public static void main(String[] args) throws IOException, ServiceException {
-		MageAPIWithoutWSI magento = new MageAPIWithoutWSI("2e64f09e2a661f2ff02a7389737d8757");
-		String sessionId = magento.mageLogin("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
-		System.out.println(sessionId);
-		magento.setSessionId(sessionId);
+		MageAPIWithoutWSI magento = new MageAPIWithoutWSI("4755c319b2e60f1dda41957b20ee8457");
+//		String sessionId = magento.mageLogin("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
+//		System.out.println(sessionId);
+//		magento.setSessionId(sessionId);
 
 		Gson json = new Gson();
-//
-//		CatalogProductReturnEntity c = magento.getProductInfo("480454154");
+
+//		CatalogProductReturnEntity c = magento.getProductInfo("409602336");
 //		System.out.println(json.toJson(c));
 		
 //		CatalogAttributeOptionEntity[] c = magento.listAttributeOptions(null, null);
 //		CatalogAttributeEntity[] c = magento.listAttributes();
 //		CustomerInfo[] c = magento.getCustomerList(filters);
 
-//		AssociativeEntity filter = new AssociativeEntity();
-//		filter.setKey("increment_id");
-//		filter.setValue("100000113");
-//		
-//		Filters filters = new Filters();
-//		filters.setFilter(new AssociativeEntity[] { filter });
-//		
-//		SalesOrderInfo[] c = magento.listSalesOrders(filters);
+//		AssociativeEntity filter1 = new AssociativeEntity();
+//		filter1.setKey("increment_id");
+//		filter1.setValue("100000097");
+		
+		AssociativeEntity filter2 = new AssociativeEntity();
+		filter2.setKey("status");
+		filter2.setValue("processing");
 
-		SalesOrderEntity b = magento.getOrderInfo("100000113");
-		System.out.println(json.toJson(b));
+		Filters filters = new Filters();
+		filters.setFilter(new AssociativeEntity[] { filter2 });
+		
+		SalesOrderInfo[] c = magento.listSalesOrders(filters);
+		System.out.println(json.toJson(c));
+
+//		SalesOrderEntity b = magento.getOrderInfo("100000097");
+//		System.out.println(json.toJson(b));
 
 //		System.out.println(json.toJson(magento.getCustomerInfo(38)));
 		
@@ -435,14 +472,6 @@ public class MageAPIWithoutWSI {
 //		
 //		int id = magento.createCategory(3, categoryData);
 //		System.out.println("Category ID: " + id);
-	}
-
-	public String getSessionId() {
-		return sessionId;
-	}
-
-	public void setSessionId(String sessionId) {
-		this.sessionId = sessionId;
 	}
 
 }

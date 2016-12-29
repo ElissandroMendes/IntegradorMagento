@@ -228,6 +228,13 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 					result.add(new ResultOK(salesOrderInfo));
 				}
 
+			} else if (command.equals("addSalesComment")) {
+				String incrementID = commandArgs[1];
+				String status = commandArgs[2];
+				String comentario = commandArgs[3];
+				boolean r = magento.addSalesComment(incrementID, status, comentario);
+				result.add(new ResultOK(r));
+
 			} else if (command.equals("addAttributeOption")) {
 				String c = commandArgs[1];
 				
