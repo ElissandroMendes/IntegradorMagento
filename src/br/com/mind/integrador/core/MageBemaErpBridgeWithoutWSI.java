@@ -228,12 +228,23 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 					result.add(new ResultOK(salesOrderInfo));
 				}
 
-			} else if (command.equals("addSalesComment")) {
+			} else if (command.equals("addOrderComment")) {
 				String incrementID = commandArgs[1];
 				String status = commandArgs[2];
-				String comentario = commandArgs[3];
-				boolean r = magento.addSalesComment(incrementID, status, comentario);
+				String comment = commandArgs[3];
+				boolean r = magento.addOrderComment(incrementID, status, comment);
 				result.add(new ResultOK(r));
+
+			} else if (command.equals("addOrderShipmentAndTrack")) {
+				String incrementID = commandArgs[1];
+				String courier = commandArgs[4];
+				String trackNumber = commandArgs[5];
+				String comment = commandArgs[3];
+
+				String shipmentId = magento.addOrderShipment(incrementID, comment);
+				int trackNumberId = magento.addOrderTrack(shipmentId, courier, trackNumber);
+				
+				result.add(new ResultOK(trackNumberId));
 
 			} else if (command.equals("addAttributeOption")) {
 				String c = commandArgs[1];

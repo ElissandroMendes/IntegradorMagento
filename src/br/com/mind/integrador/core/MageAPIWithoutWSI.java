@@ -407,21 +407,47 @@ public class MageAPIWithoutWSI {
 		return result;
 	}
 	
-	public boolean addSalesComment( String orderIncrementId, String status, String comment ) throws RemoteException {
-		System.out.println("Adding Sale Comment. OrderIncrementId " + orderIncrementId);
+	public boolean addOrderComment( String orderIncrementId, String status, String comment ) throws RemoteException {
+		System.out.println("Adding Order Comment. OrderIncrementId " + orderIncrementId);
 		boolean result = this.mageService.salesOrderAddComment(sessionId, orderIncrementId, status, comment, null);
-		System.out.println("Adding Sale Comment. DONE.");
+		System.out.println("Adding Order Comment. DONE.");
 		return result;
 	}
 	
+	public String addOrderShipment( String orderIncrementId, String comment ) throws RemoteException {
+		System.out.println("Adding Order Shipment. OrderIncrementId " + orderIncrementId);
+		String result = this.mageService.salesOrderShipmentCreate(sessionId, orderIncrementId, null, comment, 1, 1);
+		System.out.println("Adding Order Shipment. DONE.");
+		return result;
+	}
+
+	public int addOrderTrack( String shipmentId, String courier, String trackNumber ) throws RemoteException {
+		System.out.println("Adding Order Shipment Track. Shipment ID " + shipmentId);
+		int result = this.mageService.salesOrderShipmentAddTrack(sessionId, shipmentId, courier, courier, trackNumber);
+		System.out.println("Adding Order Shipment Track. DONE.");
+		return result;
+	}
+	
+	public AssociativeEntity[] getCarriersInfo( String orderIncrementId ) throws RemoteException {
+		System.out.println("Getting Carriers Info. OrderIncrementId " + orderIncrementId);
+		AssociativeEntity[] result = this.mageService.salesOrderShipmentGetCarriers(sessionId, orderIncrementId);
+		System.out.println("Getting Carriers Info. DONE.");
+		return result;
+	}
+	 
 
 	public static void main(String[] args) throws IOException, ServiceException {
-		MageAPIWithoutWSI magento = new MageAPIWithoutWSI("4755c319b2e60f1dda41957b20ee8457");
+		MageAPIWithoutWSI magento = new MageAPIWithoutWSI("08a543b1c66881275268151568bba9a3");
 //		String sessionId = magento.mageLogin("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
 //		System.out.println(sessionId);
-//		magento.setSessionId(sessionId);
 
 		Gson json = new Gson();
+		
+//		String c = magento.addOrderShipment("100000115", "Envio pedido 100000115");
+		int c = magento.addOrderTrack("100000008", "signativa_correios", "1000ABCD");
+//		AssociativeEntity[] c = magento.getCarriersInfo("100000115");
+		System.out.println(json.toJson(c));
+		
 
 //		CatalogProductReturnEntity c = magento.getProductInfo("409602336");
 //		System.out.println(json.toJson(c));
@@ -434,15 +460,15 @@ public class MageAPIWithoutWSI {
 //		filter1.setKey("increment_id");
 //		filter1.setValue("100000097");
 		
-		AssociativeEntity filter2 = new AssociativeEntity();
-		filter2.setKey("status");
-		filter2.setValue("processing");
-
-		Filters filters = new Filters();
-		filters.setFilter(new AssociativeEntity[] { filter2 });
-		
-		SalesOrderInfo[] c = magento.listSalesOrders(filters);
-		System.out.println(json.toJson(c));
+//		AssociativeEntity filter2 = new AssociativeEntity();
+//		filter2.setKey("status");
+//		filter2.setValue("processing");
+//
+//		Filters filters = new Filters();
+//		filters.setFilter(new AssociativeEntity[] { filter2 });
+//		
+//		SalesOrderInfo[] c = magento.listSalesOrders(filters);
+//		System.out.println(json.toJson(c));
 
 //		SalesOrderEntity b = magento.getOrderInfo("100000097");
 //		System.out.println(json.toJson(b));
