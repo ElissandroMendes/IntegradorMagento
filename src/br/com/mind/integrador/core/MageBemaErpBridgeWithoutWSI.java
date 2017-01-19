@@ -24,13 +24,10 @@ import br.com.mind.integrador.commandsWithoutWSI.ResultOK;
 import br.com.mind.integrador.commandsWithoutWSI.SalesOrderInfo;
 import br.com.mind.magento.ClientWithoutWSI.CatalogAttributeOptionEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogCategoryTree;
-import br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeSetEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogProductEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogProductReturnEntity;
-import br.com.mind.magento.ClientWithoutWSI.CatalogProductTypeEntity;
 import br.com.mind.magento.ClientWithoutWSI.Filters;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentEntity;
-import br.com.mind.magento.ClientWithoutWSI.StoreEntity;
 
 public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 //	{
@@ -48,8 +45,7 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 
 			MageOptions options = Command.json.fromJson(commandArgs[0], MageOptions.class);
 			
-			System.out.println("Initializing SOAP API");
-//			logger.debug("Initializing br.com.mind.magento.ClientWithoutWSI SOAP API");
+			System.out.println("Initializing Magento SOAP API");
 			MageAPIWithoutWSI magento = new MageAPIWithoutWSI(options.getUser(), options.getPassword());
 			
 			System.out.println("Executing: " + command);

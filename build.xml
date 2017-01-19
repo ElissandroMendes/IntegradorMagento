@@ -7,10 +7,11 @@
     <property name="directory.javalibs" value="libs"/>
     <property name="documentation.title" value=""/>
     <property name="jarfile" value="${directory.distribuition}/magento.jar"/>
-    <property name="propsfile" value="${directory.source}/magento.properties"/>
+    <property name="sessionFile" value="${directory.source}/session.txt"/>
 
     <property name="directory.erp.d" value="C:/Bematech/dhandara/javalibs"/>
     <property name="directory.erp.p" value="C:/Bematech/handara2012/javalibs"/>
+    <property name="temp" value="C:/temp/javalibs"/>
 
     <target name="compile">
         <mkdir dir="${directory.binary}"/>
@@ -32,6 +33,8 @@
         <jar destfile="${jarfile}" basedir="${directory.binary}"></jar>
     	<copy file="${jarfile}" toDir="${directory.erp.d}" overwrite="true"></copy>
     	<copy file="${jarfile}" toDir="${directory.erp.p}" overwrite="true"></copy>
+    	<copy file="${jarfile}" toDir="${temp}" overwrite="true"></copy>
+    	<copy file="${sessionFile}" toDir="${temp}" overwrite="true"></copy>
     </target>
             
     <target name="clean">
