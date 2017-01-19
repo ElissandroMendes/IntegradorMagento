@@ -196,7 +196,7 @@ public class SalesOrderInvoiceAddCommentRequestParam  implements java.io.Seriali
         new org.apache.axis.description.TypeDesc(SalesOrderInvoiceAddCommentRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">salesOrderInvoiceAddCommentRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">salesOrderInvoiceAddCommentRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));

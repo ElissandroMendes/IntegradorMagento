@@ -136,7 +136,7 @@ public class CatalogProductTagInfoRequestParam  implements java.io.Serializable 
         new org.apache.axis.description.TypeDesc(CatalogProductTagInfoRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductTagInfoRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductTagInfoRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));

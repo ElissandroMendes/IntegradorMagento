@@ -76,7 +76,7 @@ public class SalesOrderCreditmemoCancelResponseParam  implements java.io.Seriali
         new org.apache.axis.description.TypeDesc(SalesOrderCreditmemoCancelResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">salesOrderCreditmemoCancelResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">salesOrderCreditmemoCancelResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

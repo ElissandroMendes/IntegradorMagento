@@ -84,11 +84,11 @@ public class CatalogCategoryAssignedProductsResponseParam  implements java.io.Se
         new org.apache.axis.description.TypeDesc(CatalogCategoryAssignedProductsResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogCategoryAssignedProductsResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogCategoryAssignedProductsResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogAssignedProduct"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAssignedProduct"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

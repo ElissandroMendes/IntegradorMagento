@@ -72,7 +72,7 @@ public class ShoppingCartProductRemoveResponseParam  implements java.io.Serializ
         new org.apache.axis.description.TypeDesc(ShoppingCartProductRemoveResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">shoppingCartProductRemoveResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">shoppingCartProductRemoveResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

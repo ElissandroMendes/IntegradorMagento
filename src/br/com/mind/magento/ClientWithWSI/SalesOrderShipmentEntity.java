@@ -580,7 +580,7 @@ public class SalesOrderShipmentEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SalesOrderShipmentEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("increment_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "increment_id"));
@@ -682,7 +682,7 @@ public class SalesOrderShipmentEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("items");
         elemField.setXmlName(new javax.xml.namespace.QName("", "items"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentItemEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentItemEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
@@ -690,7 +690,7 @@ public class SalesOrderShipmentEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("tracks");
         elemField.setXmlName(new javax.xml.namespace.QName("", "tracks"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentTrackEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentTrackEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
@@ -698,7 +698,7 @@ public class SalesOrderShipmentEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("comments");
         elemField.setXmlName(new javax.xml.namespace.QName("", "comments"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentCommentEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentCommentEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));

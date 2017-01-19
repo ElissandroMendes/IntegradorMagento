@@ -144,7 +144,7 @@ public class ShoppingCartPaymentMethodResponseEntity  implements java.io.Seriali
         new org.apache.axis.description.TypeDesc(ShoppingCartPaymentMethodResponseEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentMethodResponseEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentMethodResponseEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("code");
         elemField.setXmlName(new javax.xml.namespace.QName("", "code"));
@@ -160,7 +160,7 @@ public class ShoppingCartPaymentMethodResponseEntity  implements java.io.Seriali
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("cc_types");
         elemField.setXmlName(new javax.xml.namespace.QName("", "cc_types"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "associativeEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

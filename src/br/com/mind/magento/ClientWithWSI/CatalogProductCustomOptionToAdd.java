@@ -204,7 +204,7 @@ public class CatalogProductCustomOptionToAdd  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogProductCustomOptionToAdd.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionToAdd"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionToAdd"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("title");
         elemField.setXmlName(new javax.xml.namespace.QName("", "title"));
@@ -234,7 +234,7 @@ public class CatalogProductCustomOptionToAdd  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("additional_fields");
         elemField.setXmlName(new javax.xml.namespace.QName("", "additional_fields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionAdditionalFieldsEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionAdditionalFieldsEntity"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

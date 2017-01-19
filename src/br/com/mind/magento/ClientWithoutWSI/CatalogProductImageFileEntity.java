@@ -136,7 +136,7 @@ public class CatalogProductImageFileEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogProductImageFileEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductImageFileEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductImageFileEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("content");
         elemField.setXmlName(new javax.xml.namespace.QName("", "content"));

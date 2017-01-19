@@ -136,7 +136,7 @@ public class CatalogCategoryTreeRequestParam  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogCategoryTreeRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogCategoryTreeRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogCategoryTreeRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));

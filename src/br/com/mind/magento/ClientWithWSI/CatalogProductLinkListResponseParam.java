@@ -84,11 +84,11 @@ public class CatalogProductLinkListResponseParam  implements java.io.Serializabl
         new org.apache.axis.description.TypeDesc(CatalogProductLinkListResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductLinkListResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductLinkListResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkEntity"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

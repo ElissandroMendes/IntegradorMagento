@@ -84,11 +84,11 @@ public class CatalogProductAttributeListResponseParam  implements java.io.Serial
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeListResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductAttributeListResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductAttributeListResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogAttributeEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeEntity"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

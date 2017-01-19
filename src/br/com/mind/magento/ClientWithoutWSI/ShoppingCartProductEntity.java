@@ -288,7 +288,7 @@ public class ShoppingCartProductEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ShoppingCartProductEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("product_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "product_id"));
@@ -313,21 +313,21 @@ public class ShoppingCartProductEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("options");
         elemField.setXmlName(new javax.xml.namespace.QName("", "options"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "associativeEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("bundle_option");
         elemField.setXmlName(new javax.xml.namespace.QName("", "bundle_option"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "associativeEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("bundle_option_qty");
         elemField.setXmlName(new javax.xml.namespace.QName("", "bundle_option_qty"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "associativeEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

@@ -162,7 +162,7 @@ public class ShoppingCartCustomerSetRequestParam  implements java.io.Serializabl
         new org.apache.axis.description.TypeDesc(ShoppingCartCustomerSetRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">shoppingCartCustomerSetRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">shoppingCartCustomerSetRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -178,7 +178,7 @@ public class ShoppingCartCustomerSetRequestParam  implements java.io.Serializabl
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("customerData");
         elemField.setXmlName(new javax.xml.namespace.QName("", "customerData"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartCustomerEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCustomerEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();

@@ -136,7 +136,7 @@ public class GiftMessageResponse  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(GiftMessageResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "giftMessageResponse"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageResponse"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("entityId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "entityId"));

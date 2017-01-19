@@ -106,7 +106,7 @@ public class IntegratorEstimateShippingItemEntity  implements java.io.Serializab
         new org.apache.axis.description.TypeDesc(IntegratorEstimateShippingItemEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingItemEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingItemEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sku");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sku"));

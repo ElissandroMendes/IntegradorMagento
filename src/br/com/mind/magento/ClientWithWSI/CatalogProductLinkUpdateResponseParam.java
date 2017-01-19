@@ -76,7 +76,7 @@ public class CatalogProductLinkUpdateResponseParam  implements java.io.Serializa
         new org.apache.axis.description.TypeDesc(CatalogProductLinkUpdateResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductLinkUpdateResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductLinkUpdateResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

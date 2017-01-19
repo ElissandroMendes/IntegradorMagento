@@ -84,7 +84,7 @@ public class RewardpointsTransactionCompleteResponseParam  implements java.io.Se
         new org.apache.axis.description.TypeDesc(RewardpointsTransactionCompleteResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">rewardpointsTransactionCompleteResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">rewardpointsTransactionCompleteResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

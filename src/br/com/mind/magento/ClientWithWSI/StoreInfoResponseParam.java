@@ -76,11 +76,11 @@ public class StoreInfoResponseParam  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(StoreInfoResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">storeInfoResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">storeInfoResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "storeEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "storeEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -72,7 +72,7 @@ public class CatalogProductAttributeGroupPriceUpdateResponseParam  implements ja
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeGroupPriceUpdateResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductAttributeGroupPriceUpdateResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductAttributeGroupPriceUpdateResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

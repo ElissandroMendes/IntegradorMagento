@@ -196,7 +196,7 @@ public class CatalogProductUpdateRequestParam  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogProductUpdateRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductUpdateRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductUpdateRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -212,7 +212,7 @@ public class CatalogProductUpdateRequestParam  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("productData");
         elemField.setXmlName(new javax.xml.namespace.QName("", "productData"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCreateEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCreateEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();

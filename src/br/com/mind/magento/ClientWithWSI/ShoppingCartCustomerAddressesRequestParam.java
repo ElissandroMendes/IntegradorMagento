@@ -170,7 +170,7 @@ public class ShoppingCartCustomerAddressesRequestParam  implements java.io.Seria
         new org.apache.axis.description.TypeDesc(ShoppingCartCustomerAddressesRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">shoppingCartCustomerAddressesRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">shoppingCartCustomerAddressesRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -186,7 +186,7 @@ public class ShoppingCartCustomerAddressesRequestParam  implements java.io.Seria
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("customerAddressData");
         elemField.setXmlName(new javax.xml.namespace.QName("", "customerAddressData"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartCustomerAddressEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCustomerAddressEntity"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

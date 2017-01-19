@@ -136,7 +136,7 @@ public class SalesOrderShipmentSendInfoRequestParam  implements java.io.Serializ
         new org.apache.axis.description.TypeDesc(SalesOrderShipmentSendInfoRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">salesOrderShipmentSendInfoRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">salesOrderShipmentSendInfoRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));

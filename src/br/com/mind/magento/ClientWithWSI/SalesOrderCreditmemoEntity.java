@@ -2222,7 +2222,7 @@ public class SalesOrderCreditmemoEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SalesOrderCreditmemoEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("updated_at");
         elemField.setXmlName(new javax.xml.namespace.QName("", "updated_at"));
@@ -2716,7 +2716,7 @@ public class SalesOrderCreditmemoEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("items");
         elemField.setXmlName(new javax.xml.namespace.QName("", "items"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoItemEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoItemEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
@@ -2724,7 +2724,7 @@ public class SalesOrderCreditmemoEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("comments");
         elemField.setXmlName(new javax.xml.namespace.QName("", "comments"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoCommentEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoCommentEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));

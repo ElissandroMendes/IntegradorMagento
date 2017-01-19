@@ -152,6 +152,8 @@ public class SalesOrderEntity  implements java.io.Serializable {
 
     private br.com.mind.magento.ClientWithoutWSI.SalesOrderStatusHistoryEntity[] status_history;
 
+    private br.com.mind.magento.ClientWithoutWSI.AssociativeEntity[] deliverydate;
+
     public SalesOrderEntity() {
     }
 
@@ -227,7 +229,8 @@ public class SalesOrderEntity  implements java.io.Serializable {
            br.com.mind.magento.ClientWithoutWSI.SalesOrderAddressEntity billing_address,
            br.com.mind.magento.ClientWithoutWSI.SalesOrderItemEntity[] items,
            br.com.mind.magento.ClientWithoutWSI.SalesOrderPaymentEntity payment,
-           br.com.mind.magento.ClientWithoutWSI.SalesOrderStatusHistoryEntity[] status_history) {
+           br.com.mind.magento.ClientWithoutWSI.SalesOrderStatusHistoryEntity[] status_history,
+           br.com.mind.magento.ClientWithoutWSI.AssociativeEntity[] deliverydate) {
            this.increment_id = increment_id;
            this.parent_id = parent_id;
            this.store_id = store_id;
@@ -300,6 +303,7 @@ public class SalesOrderEntity  implements java.io.Serializable {
            this.items = items;
            this.payment = payment;
            this.status_history = status_history;
+           this.deliverydate = deliverydate;
     }
 
 
@@ -1742,6 +1746,26 @@ public class SalesOrderEntity  implements java.io.Serializable {
         this.status_history = status_history;
     }
 
+
+    /**
+     * Gets the deliverydate value for this SalesOrderEntity.
+     * 
+     * @return deliverydate
+     */
+    public br.com.mind.magento.ClientWithoutWSI.AssociativeEntity[] getDeliverydate() {
+        return deliverydate;
+    }
+
+
+    /**
+     * Sets the deliverydate value for this SalesOrderEntity.
+     * 
+     * @param deliverydate
+     */
+    public void setDeliverydate(br.com.mind.magento.ClientWithoutWSI.AssociativeEntity[] deliverydate) {
+        this.deliverydate = deliverydate;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof SalesOrderEntity)) return false;
@@ -1969,7 +1993,10 @@ public class SalesOrderEntity  implements java.io.Serializable {
               this.payment.equals(other.getPayment()))) &&
             ((this.status_history==null && other.getStatus_history()==null) || 
              (this.status_history!=null &&
-              java.util.Arrays.equals(this.status_history, other.getStatus_history())));
+              java.util.Arrays.equals(this.status_history, other.getStatus_history()))) &&
+            ((this.deliverydate==null && other.getDeliverydate()==null) || 
+             (this.deliverydate!=null &&
+              java.util.Arrays.equals(this.deliverydate, other.getDeliverydate())));
         __equalsCalc = null;
         return _equals;
     }
@@ -2213,6 +2240,17 @@ public class SalesOrderEntity  implements java.io.Serializable {
                 }
             }
         }
+        if (getDeliverydate() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getDeliverydate());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getDeliverydate(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -2222,7 +2260,7 @@ public class SalesOrderEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SalesOrderEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("increment_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "increment_id"));
@@ -2695,35 +2733,42 @@ public class SalesOrderEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipping_address");
         elemField.setXmlName(new javax.xml.namespace.QName("", "shipping_address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderAddressEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderAddressEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("billing_address");
         elemField.setXmlName(new javax.xml.namespace.QName("", "billing_address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderAddressEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderAddressEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("items");
         elemField.setXmlName(new javax.xml.namespace.QName("", "items"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderItemEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderItemEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payment");
         elemField.setXmlName(new javax.xml.namespace.QName("", "payment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderPaymentEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderPaymentEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("status_history");
         elemField.setXmlName(new javax.xml.namespace.QName("", "status_history"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderStatusHistoryEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderStatusHistoryEntity"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("deliverydate");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "deliverydate"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

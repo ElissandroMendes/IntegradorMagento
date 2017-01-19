@@ -136,7 +136,7 @@ public class CatalogProductGetSpecialPriceRequestParam  implements java.io.Seria
         new org.apache.axis.description.TypeDesc(CatalogProductGetSpecialPriceRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductGetSpecialPriceRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductGetSpecialPriceRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));

@@ -2222,7 +2222,7 @@ public class SalesOrderEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SalesOrderEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("increment_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "increment_id"));
@@ -2695,21 +2695,21 @@ public class SalesOrderEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipping_address");
         elemField.setXmlName(new javax.xml.namespace.QName("", "shipping_address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderAddressEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderAddressEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("billing_address");
         elemField.setXmlName(new javax.xml.namespace.QName("", "billing_address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderAddressEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderAddressEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("items");
         elemField.setXmlName(new javax.xml.namespace.QName("", "items"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderItemEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderItemEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
@@ -2717,14 +2717,14 @@ public class SalesOrderEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payment");
         elemField.setXmlName(new javax.xml.namespace.QName("", "payment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderPaymentEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderPaymentEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("status_history");
         elemField.setXmlName(new javax.xml.namespace.QName("", "status_history"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderStatusHistoryEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderStatusHistoryEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));

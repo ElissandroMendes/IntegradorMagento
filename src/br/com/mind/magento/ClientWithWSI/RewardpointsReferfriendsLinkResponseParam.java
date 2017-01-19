@@ -76,7 +76,7 @@ public class RewardpointsReferfriendsLinkResponseParam  implements java.io.Seria
         new org.apache.axis.description.TypeDesc(RewardpointsReferfriendsLinkResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">rewardpointsReferfriendsLinkResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">rewardpointsReferfriendsLinkResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

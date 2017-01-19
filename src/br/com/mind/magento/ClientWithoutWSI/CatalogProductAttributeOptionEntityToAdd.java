@@ -136,11 +136,11 @@ public class CatalogProductAttributeOptionEntityToAdd  implements java.io.Serial
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeOptionEntityToAdd.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeOptionEntityToAdd"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeOptionEntityToAdd"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("label");
         elemField.setXmlName(new javax.xml.namespace.QName("", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeOptionLabelEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeOptionLabelEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();

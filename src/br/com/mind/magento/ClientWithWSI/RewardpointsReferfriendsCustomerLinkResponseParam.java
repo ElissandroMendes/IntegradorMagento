@@ -76,11 +76,11 @@ public class RewardpointsReferfriendsCustomerLinkResponseParam  implements java.
         new org.apache.axis.description.TypeDesc(RewardpointsReferfriendsCustomerLinkResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">rewardpointsReferfriendsCustomerLinkResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">rewardpointsReferfriendsCustomerLinkResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

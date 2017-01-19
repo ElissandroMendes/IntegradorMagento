@@ -1,7 +1,13 @@
 package br.com.mind.integrador.core;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.rmi.RemoteException;
+import java.util.Scanner;
 
 import javax.xml.rpc.ServiceException;
 
@@ -40,44 +46,79 @@ import br.com.mind.magento.ClientWithoutWSI.RewardpointsTransactionAdd;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderEntity;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderInvoiceEntity;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderListEntity;
+import br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentEntity;
 import br.com.mind.magento.ClientWithoutWSI.StoreEntity;
 
 public class MageAPIWithoutWSI {
 	
+	final Class<?> referenceClass = MageAPIWithoutWSI.class;
+	final URL url = referenceClass.getProtectionDomain().getCodeSource().getLocation();
+	
 	private String sessionId = null;
+	private String user = null;
+	private String password = null;
 	private Mage_Api_Model_Server_V2_HandlerPortType mageService;
 	
-	public MageAPIWithoutWSI(String sessionId) throws RemoteException, ServiceException {
+	public MageAPIWithoutWSI(String user, String password) throws RemoteException, ServiceException {
+		this.user = user;
+		this.password = password;
+		
 		MagentoServiceLocator locator = new MagentoServiceLocator();
 		this.mageService = locator.getMage_Api_Model_Server_V2_HandlerPort();
-		this.sessionId = sessionId;
+		
+		this.initializeSessionId();
 	}
 	
-	@SuppressWarnings("unused")
-	private boolean isValidSession() throws RemoteException {
-		System.out.println("Validating Session");
-		boolean isValid = true;
-		try {
-			this.mageService.magentoInfo(sessionId);
-		} catch(AxisFault e) {
-			System.out.println(e.getFaultCode().toString());
-			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
-				System.out.println("Session Expired");
-				isValid = false;
-			} else {
-				e.printStackTrace();
-			}
+	private File getSessionFile() {
+		File f = null;
+		String sessionFileName = null;
+		try{
+		    f = new File(url.toURI()).getParentFile();
+		    sessionFileName = f.getPath() + File.separator + "session.txt";
+		} catch(final URISyntaxException e){
+			System.out.println("Erro!!!");
 		}
-		return isValid;
+		return new File(sessionFileName);
 	}
+	
+	private void initializeSessionId() {
+		File sessionFile = getSessionFile();
+		
+		String actualSessionId = "";
+		Scanner scanner;
+		try {
+			scanner = new Scanner(sessionFile);
+			actualSessionId = scanner.next();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		this.sessionId = actualSessionId;  
+		System.out.println("Current session ID: " + actualSessionId);
+	}
+	
+	private void renewSessionId() {
+		File sessionFile = getSessionFile();
+		try {
+			System.out.println("Session Expired - Getting new Session.");
+			String newSessionId = this.mageLogin(this.user, this.password);
+			PrintWriter writer = new PrintWriter(sessionFile);
+			writer.println(newSessionId);
+			writer.close();
+			
+			this.sessionId = newSessionId;
+			
+		} catch (RemoteException | FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
 	public String mageLogin(String user, String password) throws RemoteException {
 		return this.mageService.login(user, password);
 	}	
 
 	public int createCategory(int parentId, CatalogCategoryEntityCreate categoryData) throws RemoteException {
 		System.out.println("Creating category.");
-		int result = this.mageService
-				.catalogCategoryCreate(sessionId, parentId, categoryData, null); 
+		int result = this.mageService.catalogCategoryCreate(sessionId, parentId, categoryData, null); 
 		System.out.println("Creating category. DONE. Category ID: " + result);
 		return result;
 	}
@@ -104,11 +145,30 @@ public class MageAPIWithoutWSI {
 		Filters filters = new Filters();
 		filters.setFilter(new AssociativeEntity[] { filter });
 		
-		CatalogProductEntity[] listResult = this.mageService.catalogProductList(sessionId, filters, null);
+		CatalogProductEntity[] listResult = null;
+		try {
+			listResult = this.mageService.catalogProductList(sessionId, filters, null);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				listResult = this.mageService.catalogProductList(sessionId, filters, null);
+			} else {
+				throw e;
+			}
+		}
 
-		int result;
+		int result = -1;
 		if( listResult.length == 0 ) {
-			result = this.mageService.catalogProductCreate(sessionId, product.type, product.set, product.sku, product.productData, product.storeView); 
+			try {
+				result = this.mageService.catalogProductCreate(sessionId, product.type, product.set, product.sku, product.productData, product.storeView); 
+			} catch(AxisFault e) {
+				if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+					renewSessionId();
+					listResult = this.mageService.catalogProductList(sessionId, filters, null);
+				} else {
+					throw e;
+				}
+			}
 			System.out.println("Creating product. DONE. Product ID: " + result);
 		} else {
 			System.out.println("Product already exists. SKU " + product.sku + " - ID " + listResult[0].getProduct_id());
@@ -119,22 +179,39 @@ public class MageAPIWithoutWSI {
 	
 	public String updateProducts(ProductUpdateCommand product) throws RemoteException {
 		System.out.println("Updating product. ID " + product.sku);
-		String result = String.valueOf(this.mageService.catalogProductUpdate(sessionId, product.sku, product.productData, product.storeView, "sku")); 
+		String result = null;
+		try {
+			result = String.valueOf(this.mageService.catalogProductUpdate(sessionId, product.sku, product.productData, product.storeView, "sku")); 
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = String.valueOf(this.mageService.catalogProductUpdate(sessionId, product.sku, product.productData, product.storeView, "sku"));
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Updating product. DONE. " + result);
 		return result;
 	}
 
 	public boolean uploadProductImages(ProductImageUploadCommand imageInfo) throws RemoteException {
 		System.out.println("Uploading product Images. SKU: " + imageInfo.getProduct());
-		CatalogProductImageEntity[] imageList = getProductImageList(imageInfo.getProduct());
+
+		CatalogProductImageEntity[] imageList = null;
+		try {
+			imageList = this.mageService.catalogProductAttributeMediaList(sessionId, imageInfo.getProduct(), null, "sku"); 
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				imageList = this.mageService.catalogProductAttributeMediaList(sessionId, imageInfo.getProduct(), null, "sku");
+			} else {
+				throw e;
+			}
+		}
+		
 		CatalogProductAttributeMediaCreateEntity[] imagesData = imageInfo.getData();
 		
 		for (CatalogProductAttributeMediaCreateEntity imageData : imagesData) {
-
-//			if (imageData.getTypes().length == 0) {
-//				imageData.setTypes(new String[] {"image"});
-//			}
-			
 			boolean imageExists = false;
 			if (imageList != null) {
 				for (CatalogProductImageEntity image : imageList) {
@@ -147,7 +224,16 @@ public class MageAPIWithoutWSI {
 			
 			if ( !imageExists ) {
 				System.out.println("Uploading Image: " + imageData.getLabel());
-				this.mageService.catalogProductAttributeMediaCreate(sessionId, imageInfo.getProduct(), imageData, imageInfo.getStoreView(), "sku");
+				try {
+					this.mageService.catalogProductAttributeMediaCreate(sessionId, imageInfo.getProduct(), imageData, imageInfo.getStoreView(), "sku");
+				} catch(AxisFault e) {
+					if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+						renewSessionId();
+						this.mageService.catalogProductAttributeMediaCreate(sessionId, imageInfo.getProduct(), imageData, imageInfo.getStoreView(), "sku");
+					} else {
+						throw e;
+					}
+				}
 			} else {
 				System.out.println("Image already exists: " + imageData.getLabel());
 			}
@@ -158,69 +244,104 @@ public class MageAPIWithoutWSI {
 
 	public boolean createProductLink(String product, String linkedProduct) throws RemoteException {
 		System.out.println("Assign product link.");
-		boolean result = this.mageService.catalogProductLinkAssign(sessionId, "grouped", product, linkedProduct, null, "sku"); 
+		boolean result = false; 
+		try {
+			result = this.mageService.catalogProductLinkAssign(sessionId, "grouped", product, linkedProduct, null, "sku"); 
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.catalogProductLinkAssign(sessionId, "grouped", product, linkedProduct, null, "sku");
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Assign product link. DONE. Link created (" + product + " -> " + linkedProduct + "): " + result);
 		return result;
 	}
 		
 	public boolean addAttributeOption(AttributeAddOptionCommand attributeOption) throws RemoteException {
-		System.out.println("Adding Attribute Option. Attr: " + 
-				attributeOption.getAttribute() + " Option: " + 
-				attributeOption.getData().getLabel()[0].getValue());
-		
-		boolean result = this.mageService.catalogProductAttributeAddOption(sessionId, attributeOption.getAttribute(), attributeOption.getData());
-		
+		System.out.println("Adding Attribute Option. Attr: " + attributeOption.getAttribute() + " Option: " + attributeOption.getData().getLabel()[0].getValue());
+		boolean result = false; 
+		try {
+			result = this.mageService.catalogProductAttributeAddOption(sessionId, attributeOption.getAttribute(), attributeOption.getData()); 
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.catalogProductAttributeAddOption(sessionId, attributeOption.getAttribute(), attributeOption.getData());
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Adding Attribute Option. DONE.");
 		return result;
 	}
 
 	public CatalogProductReturnEntity getProductInfo(String idOrSku) throws RemoteException {
 		System.out.println("Getting product Info SKU: " + idOrSku);
-		CatalogProductReturnEntity result = this.mageService.catalogProductInfo(sessionId, idOrSku, null, null, "sku");
+		CatalogProductReturnEntity result = null;
+		try {
+			result = this.mageService.catalogProductInfo(sessionId, idOrSku, null, null, "sku"); 
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.catalogProductInfo(sessionId, idOrSku, null, null, "sku");
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Getting product Info SKU: " + idOrSku + ". DONE.");
 		return result;
 	}
 	
-	public CatalogProductImageEntity[] getProductImageList(String skuOrIdProduct) throws RemoteException {
-		return this.mageService
-				.catalogProductAttributeMediaList(sessionId, skuOrIdProduct, null, "sku"); 
-	}
-	public CatalogProductImageEntity getProductImageInfo(String skuOrIdProduct, String fileName) throws RemoteException {
-		return this.mageService
-				.catalogProductAttributeMediaInfo(sessionId, skuOrIdProduct, fileName, null, "sku"); 
-	}
-	
-	public CatalogProductTypeEntity[] listProductTypes() throws RemoteException {
-		return this.mageService.catalogProductTypeList(sessionId);
-	}
-
-	public CatalogProductAttributeSetEntity[] listProductAttributeSet() throws RemoteException {
-		return this.mageService.catalogProductAttributeSetList(sessionId);
-	}
-	
 	public CatalogAttributeOptionEntity[] listAttributeOptions( String attribute, String storeView ) throws RemoteException {
 		System.out.println("Getting Attribute Options List. Attr: " + attribute);
-		CatalogAttributeOptionEntity[] result = this.mageService.catalogProductAttributeOptions(sessionId, attribute, storeView);
+		CatalogAttributeOptionEntity[] result = null;
+		try {
+			result = this.mageService.catalogProductAttributeOptions(sessionId, attribute, storeView);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.catalogProductAttributeOptions(sessionId, attribute, storeView);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Getting Attribute Options List. DONE.");
 		return result;
 	}
 
-	public CatalogAttributeEntity[] listAttributes () throws RemoteException {
+	public CatalogAttributeEntity[] listAttributes() throws RemoteException {
 		System.out.println("Getting Attribute List.");
-		CatalogAttributeEntity[] result = this.mageService.catalogCategoryAttributeList(sessionId);
+		CatalogAttributeEntity[] result = null;
+		try {
+			result = this.mageService.catalogCategoryAttributeList(sessionId);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.catalogCategoryAttributeList(sessionId);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Getting Attribute List. DONE.");
 		return result;
 	}
 	 	 
 	public CatalogProductEntity[] getProductList( Filters filters ) throws RemoteException {
 		System.out.println("Getting Product List.");
-		CatalogProductEntity[] result = this.mageService.catalogProductList(sessionId, filters, null);
+		CatalogProductEntity[] result = null;
+		try {
+			result = this.mageService.catalogProductList(sessionId, filters, null);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.catalogProductList(sessionId, filters, null);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Getting Product List. DONE.");
 		return result;
-	}
-
-	public CatalogProductEntity[] listAllProducts() throws RemoteException {
-		return this.mageService.catalogProductList(sessionId, null, null);
 	}
 	
 	/**
@@ -240,11 +361,30 @@ public class MageAPIWithoutWSI {
 		Filters filters = new Filters();
 		filters.setFilter(new AssociativeEntity[] { filter });
 		
-		CustomerCustomerEntity[] list = this.mageService.customerCustomerList(sessionId, filters);
+		CustomerCustomerEntity[] list = null;
+		try {
+			list = this.mageService.customerCustomerList(sessionId, filters);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				list = this.mageService.customerCustomerList(sessionId, filters);
+			} else {
+				throw e;
+			}
+		}
+
 		int result;
-		
 		if( list.length == 0 ) {
-			result = this.mageService.customerCustomerCreate(sessionId, customer.getCustomerData()); 
+			try {
+				result = this.mageService.customerCustomerCreate(sessionId, customer.getCustomerData());
+			} catch(AxisFault e) {
+				if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+					renewSessionId();
+					result = this.mageService.customerCustomerCreate(sessionId, customer.getCustomerData());
+				} else {
+					throw e;
+				}
+			}
 			System.out.println("Creating customer. DONE. Customer ID: " + result);
 		} else {
 			System.out.println("Customer already exists. Email " + customer.getCustomerData().getEmail() + " - ID " + list[0].getCustomer_id());
@@ -264,20 +404,50 @@ public class MageAPIWithoutWSI {
 	public int createCustomerAddress(CustomerAddressCreateCommand addr) throws RemoteException {
 		System.out.println("Creating Customer Address.");
 		int result = this.mageService.customerAddressCreate(sessionId, addr.getCustomerId(), addr.getAddressdata()[0]); 
+		try {
+			result = this.mageService.customerAddressCreate(sessionId, addr.getCustomerId(), addr.getAddressdata()[0]);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.customerAddressCreate(sessionId, addr.getCustomerId(), addr.getAddressdata()[0]);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Creating customer. DONE. Customer Addres ID: " + result);
 		return result;
 	}
 	
 	public String createCustomerRewardsPoints(RewardpointsTransactionAdd transactionData) throws RemoteException {
 		System.out.println("Creating Customer Reward Points. Customer ID: ");
-		String result = this.mageService.rewardpointsTransactionAdd(sessionId, transactionData); 
+		String result = null; 
+		try {
+			result = this.mageService.rewardpointsTransactionAdd(sessionId, transactionData);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.rewardpointsTransactionAdd(sessionId, transactionData);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Creating customer. DONE. Customer Addres ID: " + result);
 		return result;
 	}
 	 
 	public boolean updateCustomer(CustomerUpdateCommand customer) throws RemoteException {
 		System.out.println("Updating customer. ID " + customer.getCustomer_id());
-		boolean result = this.mageService.customerCustomerUpdate(sessionId, customer.getCustomer_id(), customer.getCustomerData());
+		boolean result = false;
+		try {
+			result = this.mageService.customerCustomerUpdate(sessionId, customer.getCustomer_id(), customer.getCustomerData());
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.customerCustomerUpdate(sessionId, customer.getCustomer_id(), customer.getCustomerData());
+			} else {
+				throw e;
+			}
+		}
 
 		if (customer.getRewardpoints() > 0) {
 			RewardpointsTransactionAdd data = new RewardpointsTransactionAdd();
@@ -293,7 +463,17 @@ public class MageAPIWithoutWSI {
 
 	public boolean updateCustomerAddress(CustomerAddressUpdateCommand address) throws RemoteException {
 		System.out.println("Updating customer address.");
-		boolean result = this.mageService.customerAddressUpdate(sessionId, address.getAddressId(), address.getAddressdata());
+		boolean result = false;
+		try {
+			result = this.mageService.customerAddressUpdate(sessionId, address.getAddressId(), address.getAddressdata());
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.customerAddressUpdate(sessionId, address.getAddressId(), address.getAddressdata());
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Updating customer address. DONE.");
 		return result;
 	}
@@ -301,6 +481,17 @@ public class MageAPIWithoutWSI {
 	public CustomerInfo[] getCustomerList( Filters filters ) throws RemoteException {
 		System.out.println("Getting Customer List.");
 		CustomerCustomerEntity[] customerList = this.mageService.customerCustomerList(sessionId, filters);
+		try {
+			customerList = this.mageService.customerCustomerList(sessionId, filters);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				customerList = this.mageService.customerCustomerList(sessionId, filters);
+			} else {
+				throw e;
+			}
+		}
+
 		CustomerInfo[] result = new CustomerInfo[customerList.length];
 		
 		System.out.println(customerList.length + " customer selected.");
@@ -318,31 +509,55 @@ public class MageAPIWithoutWSI {
 	
 	public CustomerCustomerEntity getCustomerInfo( int customerId ) throws RemoteException {
 		System.out.println("Getting Customer Info. ID " + customerId);
-		CustomerCustomerEntity result = 
-				this.mageService.customerCustomerInfo(sessionId, customerId, null);
+		CustomerCustomerEntity result = null;
+		try {
+			result = this.mageService.customerCustomerInfo(sessionId, customerId, null);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.customerCustomerInfo(sessionId, customerId, null);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Getting Customer Info. DONE.");
 		return result;
 	}
 
 	public CustomerAddressEntityItem[] getCustomerAddress( int customerId ) throws RemoteException {
 		System.out.println("Getting Customer Address. ID " + customerId);
-		CustomerAddressEntityItem[] result = this.mageService.customerAddressList(sessionId, customerId);
+		CustomerAddressEntityItem[] result = null;
+		try {
+			result = this.mageService.customerAddressList(sessionId, customerId);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.customerAddressList(sessionId, customerId);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Getting Customer Address. DONE.");
 		return result;
 	}
 
-	public StoreEntity[] listStore() throws RemoteException {
-		return this.mageService.storeList(sessionId);
-	}
-	
-	
 	/**
 	 * BEGIN - API´s relacionadas a VENDAS
 	 */
 	 
 	public SalesOrderInfo[] listSalesOrders( Filters filters ) throws RemoteException {
 		System.out.println("Getting Sales Orders List.");
-		SalesOrderListEntity[] orderList = this.mageService.salesOrderList(sessionId, filters);
+		SalesOrderListEntity[] orderList = null;
+		try {
+			orderList = this.mageService.salesOrderList(sessionId, filters);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				orderList = this.mageService.salesOrderList(sessionId, filters);
+			} else {
+				throw e;
+			}
+		}
 
 		SalesOrderInfo[] result = new SalesOrderInfo[orderList.length];
 		for (int i = 0; i < orderList.length; i++) {
@@ -388,65 +603,140 @@ public class MageAPIWithoutWSI {
 	
 	public  SalesOrderEntity getOrderInfo( String orderIncrementId ) throws RemoteException {
 		System.out.println("Getting Sale Order Info. OrderIncrementId " + orderIncrementId);
-		SalesOrderEntity result = this.mageService.salesOrderInfo(sessionId, orderIncrementId);
+		SalesOrderEntity result = null;
+		try {
+			result = this.mageService.salesOrderInfo(sessionId, orderIncrementId); 
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.salesOrderInfo(sessionId, orderIncrementId);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Getting Sale Order Info. DONE.");
-		return result;
-	}
-	
-	public MagentoInfoEntity getMagentoInfo() throws RemoteException {
-		System.out.println("Getting Sales Orders List.");
-		MagentoInfoEntity result = this.mageService.magentoInfo(sessionId);
-		System.out.println("Getting Sales Orders List. DONE.");
 		return result;
 	}
 	
 	public SalesOrderInvoiceEntity getInvoceInfo( String orderIncrementId ) throws RemoteException {
 		System.out.println("Getting Invoice Info. OrderIncrementId " + orderIncrementId);
-		SalesOrderInvoiceEntity result = this.mageService.salesOrderInvoiceInfo(sessionId, orderIncrementId);
+		SalesOrderInvoiceEntity result = null;
+		try {
+			result = this.mageService.salesOrderInvoiceInfo(sessionId, orderIncrementId);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.salesOrderInvoiceInfo(sessionId, orderIncrementId);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Getting Invoice Info. DONE.");
 		return result;
 	}
 	
 	public boolean addOrderComment( String orderIncrementId, String status, String comment ) throws RemoteException {
 		System.out.println("Adding Order Comment. OrderIncrementId " + orderIncrementId);
-		boolean result = this.mageService.salesOrderAddComment(sessionId, orderIncrementId, status, comment, null);
+		boolean result = false;
+		try {
+			result = this.mageService.salesOrderAddComment(sessionId, orderIncrementId, status, comment, null);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.salesOrderAddComment(sessionId, orderIncrementId, status, comment, null);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Adding Order Comment. DONE.");
 		return result;
 	}
 	
 	public String addOrderShipment( String orderIncrementId, String comment ) throws RemoteException {
 		System.out.println("Adding Order Shipment. OrderIncrementId " + orderIncrementId);
-		String result = this.mageService.salesOrderShipmentCreate(sessionId, orderIncrementId, null, comment, 1, 1);
+		String result = null;
+		try {
+			result = this.mageService.salesOrderShipmentCreate(sessionId, orderIncrementId, null, comment, 1, 1);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.salesOrderShipmentCreate(sessionId, orderIncrementId, null, comment, 1, 1);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Adding Order Shipment. DONE.");
 		return result;
 	}
 
 	public int addOrderTrack( String shipmentId, String courier, String trackNumber ) throws RemoteException {
 		System.out.println("Adding Order Shipment Track. Shipment ID " + shipmentId);
-		int result = this.mageService.salesOrderShipmentAddTrack(sessionId, shipmentId, courier, courier, trackNumber);
+		int result = -1;
+		try {
+			result = this.mageService.salesOrderShipmentAddTrack(sessionId, shipmentId, courier, "", trackNumber);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.salesOrderShipmentAddTrack(sessionId, shipmentId, courier, "", trackNumber);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Adding Order Shipment Track. DONE.");
 		return result;
 	}
 	
+	public SalesOrderShipmentEntity[] getOrderShipmentList( String orderId ) throws RemoteException {
+		Filters filters = new Filters();
+		AssociativeEntity filter = new AssociativeEntity("order_id", orderId);
+		filters.setFilter(new AssociativeEntity[] { filter });
+		
+		SalesOrderShipmentEntity[] result = null;
+		try {
+			result = this.mageService.salesOrderShipmentList(sessionId, filters);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.salesOrderShipmentList(sessionId, filters);
+			} else {
+				throw e;
+			}
+		}
+		return result;
+	}
+
 	public AssociativeEntity[] getCarriersInfo( String orderIncrementId ) throws RemoteException {
 		System.out.println("Getting Carriers Info. OrderIncrementId " + orderIncrementId);
-		AssociativeEntity[] result = this.mageService.salesOrderShipmentGetCarriers(sessionId, orderIncrementId);
+		AssociativeEntity[] result = null;
+		try {
+			result = this.mageService.salesOrderShipmentGetCarriers(sessionId, orderIncrementId);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.salesOrderShipmentGetCarriers(sessionId, orderIncrementId);
+			} else {
+				throw e;
+			}
+		}
 		System.out.println("Getting Carriers Info. DONE.");
 		return result;
 	}
 	 
 
 	public static void main(String[] args) throws IOException, ServiceException {
-		MageAPIWithoutWSI magento = new MageAPIWithoutWSI("08a543b1c66881275268151568bba9a3");
-//		String sessionId = magento.mageLogin("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
-//		System.out.println(sessionId);
+		
+		MageAPIWithoutWSI magento = new MageAPIWithoutWSI("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
 
 		Gson json = new Gson();
+		SalesOrderEntity b = magento.getOrderInfo("100000113");
+		System.out.println(json.toJson(b));
 		
 //		String c = magento.addOrderShipment("100000115", "Envio pedido 100000115");
-		int c = magento.addOrderTrack("100000008", "signativa_correios", "1000ABCD");
+//		int s = magento.addOrderTrack(c, "signativa_correios", "1000ABCD");
+		
+//		SalesOrderShipmentEntity[] s = magento.getOrderShipmentList("76");
 //		AssociativeEntity[] c = magento.getCarriersInfo("100000115");
-		System.out.println(json.toJson(c));
+//		System.out.println(json.toJson(s));
 		
 
 //		CatalogProductReturnEntity c = magento.getProductInfo("409602336");
@@ -460,18 +750,20 @@ public class MageAPIWithoutWSI {
 //		filter1.setKey("increment_id");
 //		filter1.setValue("100000097");
 		
-//		AssociativeEntity filter2 = new AssociativeEntity();
-//		filter2.setKey("status");
-//		filter2.setValue("processing");
+//		AssociativeEntity filter = new AssociativeEntity();
+//		filter.setKey("gt");
+//		filter.setValue("0");
+//		
+//		ComplexFilter complex_filter = new ComplexFilter("special_price", filter);
 //
 //		Filters filters = new Filters();
-//		filters.setFilter(new AssociativeEntity[] { filter2 });
+//		filters.setComplex_filter(new ComplexFilter[] { complex_filter });
 //		
+//		CatalogProductEntity[] c = magento.getProductList(filters);
+//		System.out.println(json.toJson(c));
+		
 //		SalesOrderInfo[] c = magento.listSalesOrders(filters);
 //		System.out.println(json.toJson(c));
-
-//		SalesOrderEntity b = magento.getOrderInfo("100000097");
-//		System.out.println(json.toJson(b));
 
 //		System.out.println(json.toJson(magento.getCustomerInfo(38)));
 		

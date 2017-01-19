@@ -72,7 +72,7 @@ public class ShoppingCartProductUpdateResponseParam  implements java.io.Serializ
         new org.apache.axis.description.TypeDesc(ShoppingCartProductUpdateResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">shoppingCartProductUpdateResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">shoppingCartProductUpdateResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

@@ -79,7 +79,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("resources");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfApis"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfApis"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.ApiEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "resourcesReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -90,7 +90,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("globalFaults");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfExistsFaltures"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfExistsFaltures"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.ExistsFaltureEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "globalFaultsReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -103,7 +103,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfExistsFaltures"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfExistsFaltures"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.ExistsFaltureEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "resourceFaultsReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -114,7 +114,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("storeList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "storeEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "storeEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.StoreEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "stores"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -127,7 +127,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "storeEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "storeEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.StoreEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "info"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -138,7 +138,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("magentoInfo");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "magentoInfoEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "magentoInfoEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.MagentoInfoEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "info"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -149,7 +149,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("directoryCountryList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "directoryCountryEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "directoryCountryEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.DirectoryCountryEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "countries"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -167,7 +167,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "country"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "directoryRegionEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "directoryRegionEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.DirectoryRegionEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "countries"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -178,9 +178,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("customerCustomerList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "customerCustomerEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CustomerCustomerEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "storeView"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -191,7 +191,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("customerCustomerCreate");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customerData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "customerCustomerEntityToCreate"), br.com.mind.magento.ClientWithoutWSI.CustomerCustomerEntityToCreate.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customerData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerEntityToCreate"), br.com.mind.magento.ClientWithoutWSI.CustomerCustomerEntityToCreate.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         oper.setReturnClass(int.class);
@@ -206,9 +206,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customerId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "attributes"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"), java.lang.String[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "attributes"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"), java.lang.String[].class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "customerCustomerEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CustomerCustomerEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "customerInfo"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -221,7 +221,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customerId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customerData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "customerCustomerEntityToCreate"), br.com.mind.magento.ClientWithoutWSI.CustomerCustomerEntityToCreate.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customerData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerEntityToCreate"), br.com.mind.magento.ClientWithoutWSI.CustomerCustomerEntityToCreate.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         oper.setReturnClass(boolean.class);
@@ -247,7 +247,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("customerGroupList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "customerGroupEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerGroupEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CustomerGroupEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -260,7 +260,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customerId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "customerAddressEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityItem[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -273,7 +273,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customerId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addressData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "customerAddressEntityCreate"), br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityCreate.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addressData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressEntityCreate"), br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityCreate.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         oper.setReturnClass(int.class);
@@ -288,7 +288,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addressId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "customerAddressEntityItem"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressEntityItem"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityItem.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "info"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -306,7 +306,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addressId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addressData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "customerAddressEntityCreate"), br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityCreate.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addressData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressEntityCreate"), br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityCreate.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         oper.setReturnClass(boolean.class);
@@ -349,7 +349,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryTree"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryTree"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogCategoryTree.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "tree"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -366,7 +366,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "parentCategory"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfCatalogCategoryEntitiesNoChildren"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfCatalogCategoryEntitiesNoChildren"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogCategoryEntityNoChildren[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "tree"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -381,9 +381,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "attributes"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"), java.lang.String[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "attributes"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"), java.lang.String[].class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryInfo"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryInfo"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogCategoryInfo.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "info"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -396,7 +396,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "parentId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "categoryData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogCategoryEntityCreate"), br.com.mind.magento.ClientWithoutWSI.CatalogCategoryEntityCreate.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "categoryData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryEntityCreate"), br.com.mind.magento.ClientWithoutWSI.CatalogCategoryEntityCreate.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -413,7 +413,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "categoryId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "categoryData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogCategoryEntityCreate"), br.com.mind.magento.ClientWithoutWSI.CatalogCategoryEntityCreate.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "categoryData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryEntityCreate"), br.com.mind.magento.ClientWithoutWSI.CatalogCategoryEntityCreate.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -465,7 +465,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "categoryId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogAssignedProductArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAssignedProductArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogAssignedProduct[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -548,7 +548,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "attributeSetId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogAttributeEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogAttributeEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -559,11 +559,11 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogProductList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "storeView"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -578,11 +578,11 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "attributes"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductRequestAttributes"), br.com.mind.magento.ClientWithoutWSI.CatalogProductRequestAttributes.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "attributes"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductRequestAttributes"), br.com.mind.magento.ClientWithoutWSI.CatalogProductRequestAttributes.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "identifierType"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductReturnEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductReturnEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductReturnEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "info"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -599,7 +599,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sku"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductCreateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCreateEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCreateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCreateEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -616,7 +616,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "product"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductCreateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCreateEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCreateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCreateEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -638,9 +638,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogProductMultiUpdate");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"), java.lang.String[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"), java.lang.String[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductCreateEntityArray"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCreateEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCreateEntityArray"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCreateEntity[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -686,7 +686,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "identifierType"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductSpecialPriceReturnEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductSpecialPriceReturnEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductSpecialPriceReturnEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -742,7 +742,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "setId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogAttributeEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogAttributeEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -757,7 +757,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogAttributeOptionEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeOptionEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogAttributeOptionEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -783,7 +783,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogProductAttributeSetList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeSetEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -876,7 +876,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogProductAttributeTypes");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogAttributeOptionEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeOptionEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogAttributeOptionEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -887,7 +887,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogProductAttributeCreate");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeEntityToCreate"), br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeEntityToCreate.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeEntityToCreate"), br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeEntityToCreate.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         oper.setReturnClass(int.class);
@@ -946,7 +946,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "attribute"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -959,7 +959,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "attribute"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeEntityToUpdate"), br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeEntityToUpdate.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeEntityToUpdate"), br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeEntityToUpdate.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         oper.setReturnClass(boolean.class);
@@ -974,7 +974,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "attribute"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeOptionEntityToAdd"), br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeOptionEntityToAdd.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeOptionEntityToAdd"), br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeOptionEntityToAdd.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         oper.setReturnClass(boolean.class);
@@ -1002,7 +1002,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogProductTypeList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductTypeEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTypeEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductTypeEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1017,7 +1017,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "identifierType"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductTierPriceEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTierPriceEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductTierPriceEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1030,7 +1030,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "product"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "tier_price"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductTierPriceEntityArray"), br.com.mind.magento.ClientWithoutWSI.CatalogProductTierPriceEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "tier_price"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTierPriceEntityArray"), br.com.mind.magento.ClientWithoutWSI.CatalogProductTierPriceEntity[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "identifierType"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1045,7 +1045,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogCategoryAttributeList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogAttributeEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogAttributeEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1060,7 +1060,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogAttributeOptionEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeOptionEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogAttributeOptionEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1077,7 +1077,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "identifierType"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductImageEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductImageEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductImageEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1101,7 +1101,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "identifierType"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductImageEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductImageEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductImageEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1114,7 +1114,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "setId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaTypeEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaTypeEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeMediaTypeEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1127,7 +1127,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "product"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaCreateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeMediaCreateEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaCreateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeMediaCreateEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1148,7 +1148,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "file"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaCreateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeMediaCreateEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaCreateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeMediaCreateEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeView"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1188,7 +1188,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "identifierType"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductLinkEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1205,7 +1205,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "linkedProduct"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductLinkEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductLinkEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "identifierType"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1226,7 +1226,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "linkedProduct"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductLinkEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductLinkEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "identifierType"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1260,7 +1260,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogProductLinkTypes");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"));
         oper.setReturnClass(java.lang.String[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1278,7 +1278,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "type"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkAttributeEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkAttributeEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductLinkAttributeEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1291,7 +1291,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionToAdd"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionToAdd.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionToAdd"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionToAdd.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1308,7 +1308,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "optionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionToUpdate"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionToUpdate.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionToUpdate"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionToUpdate.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1327,7 +1327,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionInfoEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionInfoEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionInfoEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1338,7 +1338,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogProductCustomOptionTypes");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionTypesArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionTypesArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionTypesEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1353,7 +1353,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueInfoEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueInfoEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueInfoEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1368,7 +1368,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueListArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueListArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueListEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1381,7 +1381,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "optionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueAddArray"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueAddEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueAddArray"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueAddEntity[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1398,7 +1398,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "valueId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueUpdateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueUpdateEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueUpdateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueUpdateEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1435,7 +1435,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionListArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionListArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionListEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1459,9 +1459,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("salesOrderList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "salesOrderListEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderListEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.SalesOrderListEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1474,7 +1474,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "orderIncrementId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "salesOrderEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.SalesOrderEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1543,9 +1543,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("salesOrderShipmentList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1558,7 +1558,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "shipmentIncrementId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1576,7 +1576,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "orderIncrementId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "itemsQty"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "orderItemIdQtyArray"), br.com.mind.magento.ClientWithoutWSI.OrderItemIdQty[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "itemsQty"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "orderItemIdQtyArray"), br.com.mind.magento.ClientWithoutWSI.OrderItemIdQty[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "comment"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1665,7 +1665,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "orderIncrementId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "associativeArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.AssociativeEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1676,9 +1676,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("salesOrderInvoiceList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.SalesOrderInvoiceEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1691,7 +1691,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "invoiceIncrementId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.SalesOrderInvoiceEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1704,7 +1704,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "invoiceIncrementId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "itemsQty"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "orderItemIdQtyArray"), br.com.mind.magento.ClientWithoutWSI.OrderItemIdQty[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "itemsQty"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "orderItemIdQtyArray"), br.com.mind.magento.ClientWithoutWSI.OrderItemIdQty[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "comment"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1786,9 +1786,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("salesOrderCreditmemoList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.SalesOrderCreditmemoEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1801,7 +1801,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "creditmemoIncrementId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.SalesOrderCreditmemoEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1814,7 +1814,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "orderIncrementId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "creditmemoData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoData"), br.com.mind.magento.ClientWithoutWSI.SalesOrderCreditmemoData.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "creditmemoData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoData"), br.com.mind.magento.ClientWithoutWSI.SalesOrderCreditmemoData.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "comment"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -1867,9 +1867,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogInventoryStockItemList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "products"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"), java.lang.String[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "products"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"), java.lang.String[].class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogInventoryStockItemEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1882,7 +1882,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "product"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemUpdateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogInventoryStockItemUpdateEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemUpdateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogInventoryStockItemUpdateEntity.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         oper.setReturnClass(int.class);
@@ -1900,9 +1900,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogInventoryStockItemMultiUpdate");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"), java.lang.String[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"), java.lang.String[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemUpdateEntityArray"), br.com.mind.magento.ClientWithoutWSI.CatalogInventoryStockItemUpdateEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemUpdateEntityArray"), br.com.mind.magento.ClientWithoutWSI.CatalogInventoryStockItemUpdateEntity[].class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         oper.setReturnClass(boolean.class);
@@ -1932,7 +1932,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartInfoEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartInfoEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.ShoppingCartInfoEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1947,7 +1947,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartTotalsEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartTotalsEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.ShoppingCartTotalsEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1962,7 +1962,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "licenses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"), java.lang.String[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "licenses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"), java.lang.String[].class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
@@ -1979,7 +1979,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartLicenseEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartLicenseEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.ShoppingCartLicenseEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -1992,7 +1992,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "quoteId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "products"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductEntityArray"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartProductEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "products"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductEntityArray"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartProductEntity[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -2009,7 +2009,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "quoteId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "products"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductEntityArray"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartProductEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "products"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductEntityArray"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartProductEntity[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -2026,7 +2026,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "quoteId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "products"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductEntityArray"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartProductEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "products"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductEntityArray"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartProductEntity[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -2045,7 +2045,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductResponseEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductResponseEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2063,7 +2063,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "quoteId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "products"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductEntityArray"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartProductEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "products"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductEntityArray"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartProductEntity[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -2080,7 +2080,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "quoteId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customer"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "shoppingCartCustomerEntity"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartCustomerEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customer"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCustomerEntity"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartCustomerEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -2097,7 +2097,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "quoteId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customer"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "shoppingCartCustomerAddressEntityArray"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartCustomerAddressEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customer"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCustomerAddressEntityArray"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartCustomerAddressEntity[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -2133,7 +2133,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartShippingMethodEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartShippingMethodEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.ShoppingCartShippingMethodEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2146,7 +2146,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "quoteId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "method"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentMethodEntity"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartPaymentMethodEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "method"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentMethodEntity"), br.com.mind.magento.ClientWithoutWSI.ShoppingCartPaymentMethodEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -2165,7 +2165,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentMethodResponseEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentMethodResponseEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.ShoppingCartPaymentMethodResponseEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2212,7 +2212,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductTagListEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagListEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductTagListEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2232,7 +2232,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductTagInfoEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagInfoEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductTagInfoEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2243,9 +2243,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("catalogProductTagAdd");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductTagAddEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductTagAddEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagAddEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductTagAddEntity.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "associativeArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.AssociativeEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2258,7 +2258,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "tagId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductTagUpdateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductTagUpdateEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "data"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagUpdateEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductTagUpdateEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "store"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -2288,11 +2288,11 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "quoteId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "giftMessage"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "giftMessageEntity"), br.com.mind.magento.ClientWithoutWSI.GiftMessageEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "giftMessage"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageEntity"), br.com.mind.magento.ClientWithoutWSI.GiftMessageEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "giftMessageResponse"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageResponse"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.GiftMessageResponse.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2305,11 +2305,11 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "quoteItemId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "giftMessage"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "giftMessageEntity"), br.com.mind.magento.ClientWithoutWSI.GiftMessageEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "giftMessage"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageEntity"), br.com.mind.magento.ClientWithoutWSI.GiftMessageEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "giftMessageResponse"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageResponse"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.GiftMessageResponse.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2322,11 +2322,11 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "quoteId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productsAndMessages"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "giftMessageAssociativeProductsEntityArray"), br.com.mind.magento.ClientWithoutWSI.GiftMessageAssociativeProductsEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productsAndMessages"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageAssociativeProductsEntityArray"), br.com.mind.magento.ClientWithoutWSI.GiftMessageAssociativeProductsEntity[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "giftMessageResponseArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageResponseArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.GiftMessageResponse[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2339,7 +2339,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "productId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "resource"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkAddEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkAddEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "resource"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkAddEntity"), br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkAddEntity.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "resourceType"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
@@ -2364,7 +2364,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "identifierType"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkInfoEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkInfoEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkInfoEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "respons"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2397,7 +2397,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "customerEmail"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.RewardpointsCustomerEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "customerView"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2447,9 +2447,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsCustomerGetcustomersbalance");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.RewardpointsCustomerEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "customersBalance"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2460,9 +2460,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransactionList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.RewardpointsTransactionEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "transactionList"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2473,7 +2473,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransactionAdd");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addTransaction"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionAdd"), br.com.mind.magento.ClientWithoutWSI.RewardpointsTransactionAdd.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addTransaction"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionAdd"), br.com.mind.magento.ClientWithoutWSI.RewardpointsTransactionAdd.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
@@ -2486,9 +2486,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransactionComplete");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transactionIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfInt"), int[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transactionIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfInt"), int[].class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"));
         oper.setReturnClass(java.lang.String[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "transactionComplete"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2499,9 +2499,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransactionCancel");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transactionIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfInt"), int[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transactionIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfInt"), int[].class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"));
         oper.setReturnClass(java.lang.String[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "transactionComplete"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2512,9 +2512,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransactionExpire");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transactionIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfInt"), int[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transactionIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfInt"), int[].class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"));
         oper.setReturnClass(java.lang.String[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "transactionComplete"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2530,7 +2530,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransactionBalanceEmail");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transactionIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfInt"), int[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transactionIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfInt"), int[].class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         oper.setReturnClass(boolean.class);
@@ -2543,7 +2543,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransactionExpireEmail");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transactionIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfInt"), int[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transactionIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfInt"), int[].class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         oper.setReturnClass(boolean.class);
@@ -2584,7 +2584,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "linkKey"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.RewardpointsCustomerEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "linkResponse"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2597,7 +2597,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "couponCode"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.RewardpointsCustomerEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "couponResponse"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2608,9 +2608,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransferList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransferEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransferEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.RewardpointsTransferEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "transferList"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2621,7 +2621,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransferAdd");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transferData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransferAdd"), br.com.mind.magento.ClientWithoutWSI.RewardpointsTransferAdd.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transferData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransferAdd"), br.com.mind.magento.ClientWithoutWSI.RewardpointsTransferAdd.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
@@ -2634,7 +2634,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransferComplete");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transferIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfInt"), int[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transferIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfInt"), int[].class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         oper.setReturnClass(boolean.class);
@@ -2647,7 +2647,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransferCancel");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transferIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfInt"), int[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transferIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfInt"), int[].class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         oper.setReturnClass(boolean.class);
@@ -2665,7 +2665,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("rewardpointsTransferTransferEmail");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transferIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfInt"), int[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "transferIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfInt"), int[].class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         oper.setReturnClass(boolean.class);
@@ -2678,9 +2678,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("integratorOrderListShipments");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "filters"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "filters"), br.com.mind.magento.ClientWithoutWSI.Filters.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2693,9 +2693,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "postcode"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "items"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingItemEntityArray"), br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingItemEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "items"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingItemEntityArray"), br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingItemEntity[].class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingResponseItemEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingResponseItemEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingResponseItemEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "rates"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2708,9 +2708,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "postcode"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "items"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingItemEntityArray"), br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingItemEntity[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "items"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingItemEntityArray"), br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingItemEntity[].class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingPerItemResponseItemEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingPerItemResponseItemEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingPerItemResponseItemEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "rates"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2723,7 +2723,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "orderIncrementId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "integratorOrderEntity"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderEntity"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.IntegratorOrderEntity.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2738,7 +2738,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "status"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"));
         oper.setReturnClass(java.lang.String[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "errors"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2751,9 +2751,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "storeCode"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "order"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "integratorCreateOrderEntity"), br.com.mind.magento.ClientWithoutWSI.IntegratorCreateOrderEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "order"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorCreateOrderEntity"), br.com.mind.magento.ClientWithoutWSI.IntegratorCreateOrderEntity.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"));
         oper.setReturnClass(java.lang.String[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "errors"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2764,9 +2764,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("integratorOrderUpdate");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "order"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "integratorUpdateOrderEntity"), br.com.mind.magento.ClientWithoutWSI.IntegratorUpdateOrderEntity.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "order"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorUpdateOrderEntity"), br.com.mind.magento.ClientWithoutWSI.IntegratorUpdateOrderEntity.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"));
         oper.setReturnClass(java.lang.String[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "errors"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2777,7 +2777,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("integratorOrderListStatus");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "integratorListStatusEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorListStatusEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.IntegratorStatusEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2788,7 +2788,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("integratorOrderPaymentMethods");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "associativeArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.AssociativeEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "paymentMethods"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2804,7 +2804,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("integratorOrderShippingMethods");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "associativeArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.AssociativeEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "shippingMethods"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2819,7 +2819,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "pageSize"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "integratorProductReturnEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductReturnEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.IntegratorProductReturnEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2836,7 +2836,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "attributeSet"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "integratorProductReturnEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductReturnEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.IntegratorProductReturnEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2859,7 +2859,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "getVariationPrices"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "integratorProductReturnEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductReturnEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.IntegratorProductReturnEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2870,9 +2870,9 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("integratorProductUrls");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "skus"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"), java.lang.String[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "skus"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"), java.lang.String[].class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "associativeArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.AssociativeEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "urls"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2887,7 +2887,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "pageSize"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "integratorProductReturnEntityArray"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductReturnEntityArray"));
         oper.setReturnClass(br.com.mind.magento.ClientWithoutWSI.IntegratorProductReturnEntity[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "result"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2902,7 +2902,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "pageSize"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"));
         oper.setReturnClass(java.lang.String[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "deletedSkus"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2917,7 +2917,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "shouldIndex"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"), boolean.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"));
+        oper.setReturnType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"));
         oper.setReturnClass(java.lang.String[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "errors"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -2966,7 +2966,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("integratorProductConfirmListCreatedReceived");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "receivedSkus"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"), java.lang.String[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "receivedSkus"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"), java.lang.String[].class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
@@ -2979,7 +2979,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("integratorProductConfirmListUpdatedReceived");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "receivedSkus"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"), java.lang.String[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "receivedSkus"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"), java.lang.String[].class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
@@ -2992,7 +2992,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         oper.setName("integratorProductConfirmListDeletedReceived");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sessionId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "receivedSkus"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:Magento", "ArrayOfString"), java.lang.String[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "receivedSkus"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString"), java.lang.String[].class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
@@ -3050,66 +3050,66 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
-            qName = new javax.xml.namespace.QName("urn:Magento", "apiEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "apiEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ApiEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "apiMethodEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "apiMethodEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ApiMethodEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "ArrayOfApiMethods");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfApiMethods");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ApiMethodEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "apiMethodEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "apiMethodEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "ArrayOfApis");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfApis");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ApiEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "apiEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "apiEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "ArrayOfCatalogCategoryEntities");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfCatalogCategoryEntities");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogCategoryEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogCategoryEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "ArrayOfCatalogCategoryEntitiesNoChildren");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfCatalogCategoryEntitiesNoChildren");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogCategoryEntityNoChildren[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogCategoryEntityNoChildren");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryEntityNoChildren");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "ArrayOfExistsFaltures");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfExistsFaltures");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ExistsFaltureEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "existsFaltureEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "existsFaltureEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "ArrayOfInt");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfInt");
             cachedSerQNames.add(qName);
             cls = int[].class;
             cachedSerClasses.add(cls);
@@ -3118,7 +3118,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "ArrayOfString");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "ArrayOfString");
             cachedSerQNames.add(qName);
             cls = java.lang.String[].class;
             cachedSerClasses.add(cls);
@@ -3127,699 +3127,699 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "associativeArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.AssociativeEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "associativeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "associativeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.AssociativeEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "associativeMultiArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeMultiArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.AssociativeMultiEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "associativeMultiEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeMultiEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "associativeMultiEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeMultiEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.AssociativeMultiEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogAssignedProduct");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAssignedProduct");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogAssignedProduct.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogAssignedProductArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAssignedProductArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogAssignedProduct[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogAssignedProduct");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAssignedProduct");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogAttributeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogAttributeEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogAttributeEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogAttributeEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogAttributeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogAttributeOptionEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeOptionEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogAttributeOptionEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogAttributeOptionEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeOptionEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogAttributeOptionEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogAttributeOptionEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeOptionEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogCategoryEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogCategoryEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogCategoryEntityCreate");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryEntityCreate");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogCategoryEntityCreate.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogCategoryEntityNoChildren");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryEntityNoChildren");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogCategoryEntityNoChildren.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogCategoryInfo");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryInfo");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogCategoryInfo.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogCategoryTree");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryTree");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogCategoryTree.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogInventoryStockItemEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogInventoryStockItemEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemUpdateEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemUpdateEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogInventoryStockItemUpdateEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemUpdateEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemUpdateEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogInventoryStockItemUpdateEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemUpdateEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemUpdateEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAdditionalAttributesEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAdditionalAttributesEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAdditionalAttributesEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeEntityToCreate");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeEntityToCreate");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeEntityToCreate.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeEntityToUpdate");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeEntityToUpdate");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeEntityToUpdate.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeFrontendLabelArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeFrontendLabelArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeFrontendLabelEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeFrontendLabelEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeFrontendLabelEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeFrontendLabelEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeFrontendLabelEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeFrontendLabelEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaCreateEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaCreateEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeMediaCreateEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaTypeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaTypeEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeMediaTypeEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaTypeEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaTypeEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeMediaTypeEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaTypeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaTypeEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeOptionEntityToAdd");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeOptionEntityToAdd");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeOptionEntityToAdd.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeOptionLabelArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeOptionLabelArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeOptionLabelEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeOptionLabelEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeOptionLabelEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeOptionLabelEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeOptionLabelEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeOptionLabelEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeSetEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductAttributeSetEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCreateEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCreateEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCreateEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCreateEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCreateEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCreateEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCreateEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCreateEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionAdditionalFieldsArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionAdditionalFieldsArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionAdditionalFieldsEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionAdditionalFieldsEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionAdditionalFieldsEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionAdditionalFieldsEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionAdditionalFieldsEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionAdditionalFieldsEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionInfoEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionInfoEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionInfoEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionListArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionListArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionListEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionListEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionListEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionListEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionListEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionListEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionToAdd");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionToAdd");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionToAdd.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionToUpdate");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionToUpdate");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionToUpdate.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionTypesArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionTypesArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionTypesEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionTypesEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionTypesEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionTypesEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionTypesEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionTypesEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueAddArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueAddArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueAddEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueAddEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueAddEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueAddEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueAddEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueAddEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueInfoEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueInfoEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueInfoEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueListArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueListArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueListEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueListEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueListEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueListEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueListEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueListEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueUpdateEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueUpdateEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductCustomOptionValueUpdateEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkAddEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkAddEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkAddEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkAddSampleEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkAddSampleEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkAddSampleEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkFileEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkFileEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkFileEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkFileInfoEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkFileInfoEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkFileInfoEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkFileInfoEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkFileInfoEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkFileInfoEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkFileInfoEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkFileInfoEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkInfoEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkInfoEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkInfoEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkSampleEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkSampleEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkSampleEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkSampleEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkSampleEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductDownloadableLinkSampleEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkSampleEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkSampleEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductGroupPriceEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductGroupPriceEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductGroupPriceEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductGroupPriceEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductGroupPriceEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductGroupPriceEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductGroupPriceEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductGroupPriceEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductImageEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductImageEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductImageEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductImageEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductImageEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductImageEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductImageEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductImageEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductImageFileEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductImageFileEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductImageFileEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkAttributeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkAttributeEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductLinkAttributeEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkAttributeEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkAttributeEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductLinkAttributeEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkAttributeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkAttributeEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductLinkEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductLinkEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductRequestAttributes");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductRequestAttributes");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductRequestAttributes.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductReturnEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductReturnEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductReturnEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductSpecialPriceReturnEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductSpecialPriceReturnEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductSpecialPriceReturnEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTagAddEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagAddEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductTagAddEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTagInfoEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagInfoEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductTagInfoEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTagListEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagListEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductTagListEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTagListEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagListEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductTagListEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTagListEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagListEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTagUpdateEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagUpdateEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductTagUpdateEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTierPriceEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTierPriceEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductTierPriceEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTierPriceEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTierPriceEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductTierPriceEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTierPriceEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTierPriceEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTypeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTypeEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductTypeEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTypeEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTypeEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductTypeEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductTypeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTypeEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "complexFilter");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "complexFilter");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ComplexFilter.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "complexFilterArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "complexFilterArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ComplexFilter[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "complexFilter");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "complexFilter");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "customerAddressEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityItem[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "customerAddressEntityItem");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressEntityItem");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "customerAddressEntityCreate");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressEntityCreate");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityCreate.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "customerAddressEntityItem");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressEntityItem");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityItem.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "customerCustomerEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CustomerCustomerEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "customerCustomerEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CustomerCustomerEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "customerCustomerEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "customerCustomerEntityToCreate");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerEntityToCreate");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CustomerCustomerEntityToCreate.class;
             cachedSerClasses.add(cls);
@@ -3841,782 +3841,782 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
-            qName = new javax.xml.namespace.QName("urn:Magento", "customerGroupEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerGroupEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CustomerGroupEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "customerGroupEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerGroupEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CustomerGroupEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "customerGroupEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerGroupEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "directoryCountryEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "directoryCountryEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.DirectoryCountryEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "directoryCountryEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "directoryCountryEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.DirectoryCountryEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "directoryCountryEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "directoryCountryEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "directoryRegionEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "directoryRegionEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.DirectoryRegionEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "directoryRegionEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "directoryRegionEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.DirectoryRegionEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "directoryRegionEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "directoryRegionEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "existsFaltureEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "existsFaltureEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ExistsFaltureEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "filters");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "filters");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.Filters.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "giftMessageAssociativeProductsEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageAssociativeProductsEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.GiftMessageAssociativeProductsEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "giftMessageAssociativeProductsEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageAssociativeProductsEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.GiftMessageAssociativeProductsEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "giftMessageAssociativeProductsEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageAssociativeProductsEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "giftMessageEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.GiftMessageEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "giftMessageResponse");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageResponse");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.GiftMessageResponse.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "giftMessageResponseArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageResponseArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.GiftMessageResponse[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "giftMessageResponse");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageResponse");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorBundleProductComponent");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorBundleProductComponent");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorBundleProductComponent.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorBundleProductComponentsArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorBundleProductComponentsArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorBundleProductComponent[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorBundleProductComponent");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorBundleProductComponent");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorConfigurableAttribute");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorConfigurableAttribute");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorConfigurableAttribute.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorConfigurableAttributeArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorConfigurableAttributeArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorConfigurableAttribute[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorConfigurableAttribute");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorConfigurableAttribute");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorConfigurableProductVariation");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorConfigurableProductVariation");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorConfigurableProductVariation.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorConfigurableProductVariationArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorConfigurableProductVariationArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorConfigurableProductVariation[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorConfigurableProductVariation");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorConfigurableProductVariation");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorCreateOrderAddressEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorCreateOrderAddressEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorCreateOrderAddressEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorCreateOrderEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorCreateOrderEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorCreateOrderEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorCreateOrderItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorCreateOrderItemEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorCreateOrderItemEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorCreateOrderItemEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorCreateOrderItemEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorCreateOrderItemEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorCreateOrderItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorCreateOrderItemEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingItemEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingItemEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingItemEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingItemEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingItemEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingItemEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingPerItemResponseItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingPerItemResponseItemEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingPerItemResponseItemEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingPerItemResponseItemEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingPerItemResponseItemEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingPerItemResponseItemEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingPerItemResponseItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingPerItemResponseItemEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingResponseItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingResponseItemEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingResponseItemEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingResponseItemEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingResponseItemEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorEstimateShippingResponseItemEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingResponseItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingResponseItemEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorListStatusEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorListStatusEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorStatusEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorStatusEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorStatusEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorOrderAddressEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderAddressEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorOrderAddressEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorOrderEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorOrderEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorPaginationEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorPaginationEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorPaginationEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorProductReturnEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductReturnEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorProductReturnEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorProductReturnEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductReturnEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorProductReturnEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorProductReturnEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductReturnEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorStatusEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorStatusEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorStatusEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "integratorUpdateOrderEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorUpdateOrderEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.IntegratorUpdateOrderEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "magentoInfoEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "magentoInfoEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.MagentoInfoEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "orderItemIdQty");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "orderItemIdQty");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.OrderItemIdQty.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "orderItemIdQtyArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "orderItemIdQtyArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.OrderItemIdQty[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "orderItemIdQty");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "orderItemIdQty");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.RewardpointsCustomerEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.RewardpointsCustomerEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionAdd");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionAdd");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.RewardpointsTransactionAdd.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.RewardpointsTransactionEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.RewardpointsTransactionEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransferAdd");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransferAdd");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.RewardpointsTransferAdd.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransferEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransferEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.RewardpointsTransferEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransferEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransferEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.RewardpointsTransferEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransferEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransferEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderAddressEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderAddressEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderAddressEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoCommentEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoCommentEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderCreditmemoCommentEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoCommentEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoCommentEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderCreditmemoCommentEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoCommentEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoCommentEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoData");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoData");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderCreditmemoData.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderCreditmemoEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderCreditmemoEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoItemEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderCreditmemoItemEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoItemEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoItemEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderCreditmemoItemEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoItemEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceCommentEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceCommentEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderInvoiceCommentEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceCommentEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceCommentEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderInvoiceCommentEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceCommentEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceCommentEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderInvoiceEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderInvoiceEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceItemEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderInvoiceItemEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceItemEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceItemEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderInvoiceItemEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceItemEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderItemEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderItemEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderItemEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderItemEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderItemEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderItemEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderListEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderListEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderListEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderListEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderListEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderListEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderListEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderListEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderPaymentEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderPaymentEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderPaymentEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentCommentEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentCommentEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentCommentEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentCommentEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentCommentEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentCommentEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentCommentEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentCommentEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentItemEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentItemEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentItemEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentItemEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentItemEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentItemEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentTrackEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentTrackEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentTrackEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentTrackEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentTrackEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentTrackEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentTrackEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentTrackEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderStatusHistoryEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderStatusHistoryEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderStatusHistoryEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderStatusHistoryEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderStatusHistoryEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.SalesOrderStatusHistoryEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "salesOrderStatusHistoryEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderStatusHistoryEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartAddressEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartAddressEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartAddressEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartCustomerAddressEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCustomerAddressEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartCustomerAddressEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartCustomerAddressEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCustomerAddressEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartCustomerAddressEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartCustomerAddressEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCustomerAddressEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartCustomerEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCustomerEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartCustomerEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartInfoEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartInfoEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartInfoEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartItemEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartItemEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartItemEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartItemEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartItemEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartItemEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartItemEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartLicenseEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartLicenseEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartLicenseEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartLicenseEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartLicenseEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartLicenseEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartLicenseEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartLicenseEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartPaymentEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentMethodEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentMethodEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartPaymentMethodEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentMethodResponseEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentMethodResponseEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartPaymentMethodResponseEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentMethodResponseEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentMethodResponseEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartPaymentMethodResponseEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentMethodResponseEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentMethodResponseEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartProductEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartProductEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductResponseEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductResponseEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.CatalogProductEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "catalogProductEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartShippingMethodEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartShippingMethodEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartShippingMethodEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartShippingMethodEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartShippingMethodEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartShippingMethodEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartShippingMethodEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartShippingMethodEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartTotalsEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartTotalsEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartTotalsEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartTotalsEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartTotalsEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.ShoppingCartTotalsEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "shoppingCartTotalsEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartTotalsEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "storeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "storeEntity");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.StoreEntity.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:Magento", "storeEntityArray");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "storeEntityArray");
             cachedSerQNames.add(qName);
             cls = br.com.mind.magento.ClientWithoutWSI.StoreEntity[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:Magento", "storeEntity");
+            qName = new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "storeEntity");
             qName2 = null;
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
@@ -4697,7 +4697,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "endSession"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "endSession"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -4728,7 +4728,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "login"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "login"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -4759,7 +4759,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "startSession"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "startSession"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -4790,7 +4790,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "resources"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "resources"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -4821,7 +4821,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "globalFaults"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "globalFaults"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -4852,7 +4852,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "resourceFaults"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "resourceFaults"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -4883,7 +4883,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "storeList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "storeList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -4914,7 +4914,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "storeInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "storeInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -4945,7 +4945,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "magentoInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "magentoInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -4976,7 +4976,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "directoryCountryList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "directoryCountryList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5007,7 +5007,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "directoryRegionList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "directoryRegionList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5038,7 +5038,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "customerCustomerList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5069,7 +5069,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "customerCustomerCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5100,7 +5100,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "customerCustomerInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5131,7 +5131,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "customerCustomerUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5162,7 +5162,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "customerCustomerDelete"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerCustomerDelete"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5193,7 +5193,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "customerGroupList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerGroupList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5224,7 +5224,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "customerAddressList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5255,7 +5255,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "customerAddressCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5286,7 +5286,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "customerAddressInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5317,7 +5317,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "customerAddressUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5348,7 +5348,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "customerAddressDelete"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "customerAddressDelete"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5379,7 +5379,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryCurrentStore"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryCurrentStore"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5410,7 +5410,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryTree"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryTree"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5441,7 +5441,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryLevel"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryLevel"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5472,7 +5472,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5503,7 +5503,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5534,7 +5534,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5565,7 +5565,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryMove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryMove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5596,7 +5596,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryDelete"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryDelete"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5627,7 +5627,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryAssignedProducts"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryAssignedProducts"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5658,7 +5658,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryAssignProduct"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryAssignProduct"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5689,7 +5689,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryUpdateProduct"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryUpdateProduct"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5720,7 +5720,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryRemoveProduct"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryRemoveProduct"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5751,7 +5751,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCurrentStore"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCurrentStore"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5782,7 +5782,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductListOfAdditionalAttributes"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductListOfAdditionalAttributes"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5813,7 +5813,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5844,7 +5844,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5875,7 +5875,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5906,7 +5906,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5937,7 +5937,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductMultiUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductMultiUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5968,7 +5968,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductSetSpecialPrice"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductSetSpecialPrice"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -5999,7 +5999,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductGetSpecialPrice"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductGetSpecialPrice"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6030,7 +6030,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductDelete"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDelete"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6061,7 +6061,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeCurrentStore"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeCurrentStore"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6092,7 +6092,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6123,7 +6123,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6154,7 +6154,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeOptions"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeOptions"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6185,7 +6185,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6216,7 +6216,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6247,7 +6247,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetAttributeAdd"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetAttributeAdd"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6278,7 +6278,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetAttributeRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetAttributeRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6309,7 +6309,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetGroupAdd"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetGroupAdd"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6340,7 +6340,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetGroupRename"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetGroupRename"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6371,7 +6371,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeSetGroupRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeSetGroupRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6402,7 +6402,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeTypes"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeTypes"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6433,7 +6433,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6464,7 +6464,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryAttributeCurrentStore"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryAttributeCurrentStore"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6495,7 +6495,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaCurrentStore"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaCurrentStore"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6526,7 +6526,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6557,7 +6557,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6588,7 +6588,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6619,7 +6619,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeAddOption"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeAddOption"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6650,7 +6650,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeRemoveOption"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeRemoveOption"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6681,7 +6681,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductTypeList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTypeList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6712,7 +6712,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeTierPriceInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeTierPriceInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6743,7 +6743,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeTierPriceUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeTierPriceUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6774,7 +6774,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryAttributeList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryAttributeList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6805,7 +6805,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryAttributeOptions"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryAttributeOptions"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6836,7 +6836,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6867,7 +6867,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6898,7 +6898,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaTypes"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaTypes"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6929,7 +6929,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6960,7 +6960,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -6991,7 +6991,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7022,7 +7022,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7053,7 +7053,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkAssign"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkAssign"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7084,7 +7084,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7115,7 +7115,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7146,7 +7146,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkTypes"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkTypes"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7177,7 +7177,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkAttributes"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkAttributes"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7208,7 +7208,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionAdd"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionAdd"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7239,7 +7239,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7270,7 +7270,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7301,7 +7301,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionTypes"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionTypes"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7332,7 +7332,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7363,7 +7363,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7394,7 +7394,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueAdd"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueAdd"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7425,7 +7425,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7456,7 +7456,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7487,7 +7487,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7518,7 +7518,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7549,7 +7549,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7580,7 +7580,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7611,7 +7611,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderAddComment"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderAddComment"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7642,7 +7642,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderHold"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderHold"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7673,7 +7673,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderUnhold"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderUnhold"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7704,7 +7704,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderCancel"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCancel"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7735,7 +7735,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7766,7 +7766,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7797,7 +7797,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7828,7 +7828,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentAddComment"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentAddComment"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7859,7 +7859,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentAddTrack"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentAddTrack"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7890,7 +7890,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentSendInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentSendInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7921,7 +7921,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentRemoveTrack"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentRemoveTrack"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7952,7 +7952,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentGetCarriers"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentGetCarriers"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -7983,7 +7983,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8014,7 +8014,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8045,7 +8045,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8076,7 +8076,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceAddComment"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceAddComment"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8107,7 +8107,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceCapture"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceCapture"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8138,7 +8138,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceVoid"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceVoid"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8169,7 +8169,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderInvoiceCancel"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderInvoiceCancel"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8200,7 +8200,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8231,7 +8231,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8262,7 +8262,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8293,7 +8293,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoAddComment"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoAddComment"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8324,7 +8324,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoCancel"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoCancel"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8355,7 +8355,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8386,7 +8386,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8417,7 +8417,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemMultiUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemMultiUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8448,7 +8448,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8479,7 +8479,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8510,7 +8510,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartTotals"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartTotals"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8541,7 +8541,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartOrder"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartOrder"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8572,7 +8572,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartLicense"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartLicense"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8603,7 +8603,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductAdd"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductAdd"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8634,7 +8634,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8665,7 +8665,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8696,7 +8696,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8727,7 +8727,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductMoveToCustomerQuote"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductMoveToCustomerQuote"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8758,7 +8758,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartCustomerSet"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCustomerSet"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8789,7 +8789,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartCustomerAddresses"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCustomerAddresses"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8820,7 +8820,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartShippingMethod"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartShippingMethod"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8851,7 +8851,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartShippingList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartShippingList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8882,7 +8882,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentMethod"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentMethod"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8913,7 +8913,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8944,7 +8944,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartCouponAdd"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCouponAdd"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -8975,7 +8975,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "shoppingCartCouponRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCouponRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9006,7 +9006,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductTagList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9037,7 +9037,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductTagInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9068,7 +9068,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductTagAdd"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagAdd"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9099,7 +9099,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductTagUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9130,7 +9130,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductTagRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9161,7 +9161,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "giftMessageSetForQuote"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageSetForQuote"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9192,7 +9192,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "giftMessageSetForQuoteItem"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageSetForQuoteItem"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9223,7 +9223,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "giftMessageSetForQuoteProduct"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageSetForQuoteProduct"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9254,7 +9254,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkAdd"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkAdd"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9285,7 +9285,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9316,7 +9316,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkRemove"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkRemove"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9347,7 +9347,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerGetcustomerbyemail"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerGetcustomerbyemail"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9378,7 +9378,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerGetcustomeridbyemail"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerGetcustomeridbyemail"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9409,7 +9409,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerGetbalancebyemail"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerGetbalancebyemail"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9440,7 +9440,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerGetbalancebyid"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerGetbalancebyid"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9471,7 +9471,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerGetcustomersbalance"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerGetcustomersbalance"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9502,7 +9502,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9533,7 +9533,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionAdd"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionAdd"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9564,7 +9564,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionComplete"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionComplete"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9595,7 +9595,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionCancel"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionCancel"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9626,7 +9626,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionExpire"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionExpire"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9657,7 +9657,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionBalanceEmail"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionBalanceEmail"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9688,7 +9688,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionExpireEmail"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionExpireEmail"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9719,7 +9719,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsReferfriendsCoupon"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsReferfriendsCoupon"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9750,7 +9750,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsReferfriendsLink"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsReferfriendsLink"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9781,7 +9781,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsReferfriendsCustomerLink"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsReferfriendsCustomerLink"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9812,7 +9812,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsReferfriendsCustomerCoupon"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsReferfriendsCustomerCoupon"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9843,7 +9843,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransferList"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransferList"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9874,7 +9874,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransferAdd"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransferAdd"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9905,7 +9905,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransferComplete"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransferComplete"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9936,7 +9936,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransferCancel"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransferCancel"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9967,7 +9967,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransferTransferEmail"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransferTransferEmail"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -9998,7 +9998,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorOrderListShipments"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderListShipments"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10029,7 +10029,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorOrderEstimateShipping"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderEstimateShipping"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10060,7 +10060,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorOrderEstimateShippingPerItem"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderEstimateShippingPerItem"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10091,7 +10091,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorOrderInfo"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderInfo"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10122,7 +10122,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorOrderInvoice"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderInvoice"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10153,7 +10153,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorOrderCreate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderCreate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10184,7 +10184,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorOrderUpdate"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderUpdate"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10215,7 +10215,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorOrderListStatus"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderListStatus"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10246,7 +10246,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorOrderPaymentMethods"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderPaymentMethods"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10277,7 +10277,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorOrderShippingMethods"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorOrderShippingMethods"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10308,7 +10308,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductListCreated"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductListCreated"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10339,7 +10339,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductItems"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductItems"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10370,7 +10370,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductItemsPaged"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductItemsPaged"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10401,7 +10401,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductUrls"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductUrls"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10432,7 +10432,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductListUpdated"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductListUpdated"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10463,7 +10463,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductListDeleted"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductListDeleted"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10494,7 +10494,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductImportCsv"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductImportCsv"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10525,7 +10525,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductListCreatedCount"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductListCreatedCount"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10556,7 +10556,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductListUpdatedCount"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductListUpdatedCount"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10587,7 +10587,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductListDeletedCount"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductListDeletedCount"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10618,7 +10618,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductConfirmListCreatedReceived"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductConfirmListCreatedReceived"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10649,7 +10649,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductConfirmListUpdatedReceived"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductConfirmListUpdatedReceived"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -10680,7 +10680,7 @@ public class Mage_Api_Model_Server_V2_HandlerBindingStub extends org.apache.axis
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("urn:Mage_Api_Model_Server_V2_HandlerAction");
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("urn:Magento", "integratorProductConfirmListDeletedReceived"));
+        _call.setOperationName(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorProductConfirmListDeletedReceived"));
 
         setRequestHeaders(_call);
         setAttachments(_call);

@@ -72,7 +72,7 @@ public class CatalogCategoryCurrentStoreResponseParam  implements java.io.Serial
         new org.apache.axis.description.TypeDesc(CatalogCategoryCurrentStoreResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogCategoryCurrentStoreResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogCategoryCurrentStoreResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

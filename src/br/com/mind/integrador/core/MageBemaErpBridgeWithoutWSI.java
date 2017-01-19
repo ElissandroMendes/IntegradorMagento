@@ -29,20 +29,28 @@ import br.com.mind.magento.ClientWithoutWSI.CatalogProductEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogProductReturnEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogProductTypeEntity;
 import br.com.mind.magento.ClientWithoutWSI.Filters;
+import br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentEntity;
 import br.com.mind.magento.ClientWithoutWSI.StoreEntity;
 
 public class MageBemaErpBridgeWithoutWSI extends Enginelet {
+//	{
+//		PropertyConfigurator.configure("log4j.txt");
+//	}
+//	private static Logger logger = Logger.getLogger(MageBemaErpBridgeWithoutWSI.class);
+	
 	private ArrayList<CommandResult> result = new ArrayList<>();
 	
 	@Override
 	public String handleCommand(String command, String[] commandArgs) {
+		
 		try {
 			String sessionId = null;
 
 			MageOptions options = Command.json.fromJson(commandArgs[0], MageOptions.class);
 			
-			System.out.println("Initializing Magento SOAP API");
-			MageAPIWithoutWSI magento = new MageAPIWithoutWSI(options.getSessionId());
+			System.out.println("Initializing SOAP API");
+//			logger.debug("Initializing br.com.mind.magento.ClientWithoutWSI SOAP API");
+			MageAPIWithoutWSI magento = new MageAPIWithoutWSI(options.getUser(), options.getPassword());
 			
 			System.out.println("Executing: " + command);
 
@@ -79,11 +87,6 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 	
 				for (ProductCreateCommand product : products) {
 					int id = magento.createProducts(product);
-
-//					for (ProductCreateCommand child : product.children) {
-//						magento.createProduct(product);
-//					}
-
 					result.add(new ResultOK(id, product.sku));
 				}
 	
@@ -96,11 +99,6 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 	
 				for (ProductUpdateCommand product : products) {
 					String ok = magento.updateProducts(product);
-
-//					for (ProductCreateCommand child : product.children) {
-//						magento.createProduct(product);
-//					}
-
 					result.add(new ResultOK(ok, product.sku));
 				}
 				
@@ -180,10 +178,6 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 					}
 				}
 
-			} else if (command.equals("listAllProducts")) {
-				CatalogProductEntity[] products = magento.listAllProducts();
-				result.add(new ResultOK(products));
-
 			} else if (command.equals("listProducts")) {
 				String c = commandArgs[1];
 				
@@ -206,18 +200,6 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 				CatalogProductReturnEntity productInfo = magento.getProductInfo(c);
 				result.add(new ResultOK(productInfo));
 				
-			} else if (command.equals("listProductTypes")) {
-				CatalogProductTypeEntity[] t = magento.listProductTypes();
-				result.add(new ResultOK(t));
-
-			} else if (command.equals("listProductAttributeSet")) {
-				CatalogProductAttributeSetEntity[] t = magento.listProductAttributeSet();
-				result.add(new ResultOK(t));
-
-			} else if (command.equals("listStore")) {
-					StoreEntity[] t = magento.listStore();
-					result.add(new ResultOK(t));
-	
 			} else if (command.equals("listSalesOrders")) {
 				String c = commandArgs[1];
 				
@@ -236,12 +218,21 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 				result.add(new ResultOK(r));
 
 			} else if (command.equals("addOrderShipmentAndTrack")) {
-				String incrementID = commandArgs[1];
-				String courier = commandArgs[4];
-				String trackNumber = commandArgs[5];
-				String comment = commandArgs[3];
+				String orderId = commandArgs[1];
+				String incrementId = commandArgs[2];
+				String courier = commandArgs[3];
+				String trackNumber = commandArgs[4];
+				String comment = commandArgs[5];
+				
+				SalesOrderShipmentEntity[] shipments = magento.getOrderShipmentList(orderId);
+				
+				String shipmentId = null;
+				if ( shipments.length == 0 ) {
+					shipmentId = magento.addOrderShipment(incrementId, comment);
+				} else {
+					shipmentId = shipments[0].getIncrement_id();
+				}
 
-				String shipmentId = magento.addOrderShipment(incrementID, comment);
 				int trackNumberId = magento.addOrderTrack(shipmentId, courier, trackNumber);
 				
 				result.add(new ResultOK(trackNumberId));

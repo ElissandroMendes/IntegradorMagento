@@ -736,7 +736,7 @@ public class RewardpointsCustomerEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(RewardpointsCustomerEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "rewardpointsCustomerEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsCustomerEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("customer_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "customer_id"));

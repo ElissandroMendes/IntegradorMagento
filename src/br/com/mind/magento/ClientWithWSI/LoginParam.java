@@ -106,7 +106,7 @@ public class LoginParam  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(LoginParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">loginParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">loginParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("username");
         elemField.setXmlName(new javax.xml.namespace.QName("", "username"));

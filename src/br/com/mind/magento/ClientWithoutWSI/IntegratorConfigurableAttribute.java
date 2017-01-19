@@ -106,7 +106,7 @@ public class IntegratorConfigurableAttribute  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(IntegratorConfigurableAttribute.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorConfigurableAttribute"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorConfigurableAttribute"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("attribute_code");
         elemField.setXmlName(new javax.xml.namespace.QName("", "attribute_code"));

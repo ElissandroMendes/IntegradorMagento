@@ -76,7 +76,7 @@ public class RewardpointsTransferAddResponseParam  implements java.io.Serializab
         new org.apache.axis.description.TypeDesc(RewardpointsTransferAddResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">rewardpointsTransferAddResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">rewardpointsTransferAddResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

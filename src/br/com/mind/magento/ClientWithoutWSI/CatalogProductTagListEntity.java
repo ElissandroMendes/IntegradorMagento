@@ -106,7 +106,7 @@ public class CatalogProductTagListEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogProductTagListEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductTagListEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagListEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("tag_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "tag_id"));

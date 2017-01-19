@@ -182,7 +182,7 @@ public class ApiEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ApiEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "apiEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "apiEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("title");
         elemField.setXmlName(new javax.xml.namespace.QName("", "title"));
@@ -205,7 +205,7 @@ public class ApiEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("methods");
         elemField.setXmlName(new javax.xml.namespace.QName("", "methods"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "apiMethodEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "apiMethodEntity"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

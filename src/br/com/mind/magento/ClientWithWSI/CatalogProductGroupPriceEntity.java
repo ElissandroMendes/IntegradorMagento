@@ -136,7 +136,7 @@ public class CatalogProductGroupPriceEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogProductGroupPriceEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductGroupPriceEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductGroupPriceEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("cust_group");
         elemField.setXmlName(new javax.xml.namespace.QName("", "cust_group"));

@@ -166,7 +166,7 @@ public class IntegratorCreateOrderItemEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(IntegratorCreateOrderItemEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorCreateOrderItemEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorCreateOrderItemEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sku");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sku"));

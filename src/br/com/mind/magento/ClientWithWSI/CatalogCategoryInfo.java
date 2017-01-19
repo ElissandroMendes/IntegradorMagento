@@ -1040,7 +1040,7 @@ public class CatalogCategoryInfo  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogCategoryInfo.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryInfo"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryInfo"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("category_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "category_id"));

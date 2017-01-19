@@ -618,7 +618,7 @@ public class CatalogProductAttributeEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("attribute_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "attribute_id"));
@@ -724,21 +724,21 @@ public class CatalogProductAttributeEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("additional_fields");
         elemField.setXmlName(new javax.xml.namespace.QName("", "additional_fields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "associativeEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("options");
         elemField.setXmlName(new javax.xml.namespace.QName("", "options"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogAttributeOptionEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeOptionEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("frontend_label");
         elemField.setXmlName(new javax.xml.namespace.QName("", "frontend_label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeFrontendLabelEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeFrontendLabelEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

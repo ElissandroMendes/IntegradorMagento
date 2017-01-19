@@ -136,7 +136,7 @@ public class CatalogInventoryStockItemUpdateRequestParam  implements java.io.Ser
         new org.apache.axis.description.TypeDesc(CatalogInventoryStockItemUpdateRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogInventoryStockItemUpdateRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogInventoryStockItemUpdateRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -152,7 +152,7 @@ public class CatalogInventoryStockItemUpdateRequestParam  implements java.io.Ser
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("data");
         elemField.setXmlName(new javax.xml.namespace.QName("", "data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemUpdateEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemUpdateEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

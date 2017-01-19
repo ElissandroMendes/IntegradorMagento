@@ -60,7 +60,7 @@ public interface Mage_Api_Model_Server_Wsi_HandlerPortType extends java.rmi.Remo
     public br.com.mind.magento.ClientWithWSI.StoreInfoResponseParam storeInfo(br.com.mind.magento.ClientWithWSI.StoreInfoRequestParam parameters) throws java.rmi.RemoteException;
 
     /**
-     * Info about current Magento installation
+     * Info about current br.com.mind.magento.ClientWithoutWSI installation
      */
     public br.com.mind.magento.ClientWithWSI.MagentoInfoResponseParam magentoInfo(br.com.mind.magento.ClientWithWSI.MagentoInfoRequestParam parameters) throws java.rmi.RemoteException;
 

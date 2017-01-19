@@ -136,7 +136,7 @@ public class SalesOrderShipmentRemoveTrackRequestParam  implements java.io.Seria
         new org.apache.axis.description.TypeDesc(SalesOrderShipmentRemoveTrackRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">salesOrderShipmentRemoveTrackRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">salesOrderShipmentRemoveTrackRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));

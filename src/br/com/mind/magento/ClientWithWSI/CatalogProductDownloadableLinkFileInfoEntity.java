@@ -162,7 +162,7 @@ public class CatalogProductDownloadableLinkFileInfoEntity  implements java.io.Se
         new org.apache.axis.description.TypeDesc(CatalogProductDownloadableLinkFileInfoEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkFileInfoEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkFileInfoEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("file");
         elemField.setXmlName(new javax.xml.namespace.QName("", "file"));

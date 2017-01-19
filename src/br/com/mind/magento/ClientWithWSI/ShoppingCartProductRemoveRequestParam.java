@@ -170,7 +170,7 @@ public class ShoppingCartProductRemoveRequestParam  implements java.io.Serializa
         new org.apache.axis.description.TypeDesc(ShoppingCartProductRemoveRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">shoppingCartProductRemoveRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">shoppingCartProductRemoveRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -186,7 +186,7 @@ public class ShoppingCartProductRemoveRequestParam  implements java.io.Serializa
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("productsData");
         elemField.setXmlName(new javax.xml.namespace.QName("", "productsData"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductEntity"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

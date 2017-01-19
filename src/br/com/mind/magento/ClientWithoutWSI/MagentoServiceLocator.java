@@ -22,7 +22,7 @@ public class MagentoServiceLocator extends org.apache.axis.client.Service implem
     }
 
     // Use to get a proxy class for Mage_Api_Model_Server_V2_HandlerPort
-    private java.lang.String Mage_Api_Model_Server_V2_HandlerPort_address = "http://handara.signashop.com.br/index.php/api/v2_soap/index/";
+    private java.lang.String Mage_Api_Model_Server_V2_HandlerPort_address = "http://admin.handara.signashop.com.br/index.php/api/v2_soap/index/?SID=qb8h6rjbv49ct9544bg100kof7";
 
     public java.lang.String getMage_Api_Model_Server_V2_HandlerPortAddress() {
         return Mage_Api_Model_Server_V2_HandlerPort_address;
@@ -105,7 +105,7 @@ public class MagentoServiceLocator extends org.apache.axis.client.Service implem
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("urn:Magento", "MagentoService");
+        return new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "MagentoService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class MagentoServiceLocator extends org.apache.axis.client.Service implem
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("urn:Magento", "Mage_Api_Model_Server_V2_HandlerPort"));
+            ports.add(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "Mage_Api_Model_Server_V2_HandlerPort"));
         }
         return ports.iterator();
     }

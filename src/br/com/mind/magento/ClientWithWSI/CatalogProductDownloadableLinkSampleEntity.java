@@ -316,7 +316,7 @@ public class CatalogProductDownloadableLinkSampleEntity  implements java.io.Seri
         new org.apache.axis.description.TypeDesc(CatalogProductDownloadableLinkSampleEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkSampleEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkSampleEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sample_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sample_id"));

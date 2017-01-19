@@ -41,7 +41,7 @@ public class MageBemaErpBridgeWithWSI extends Enginelet {
 
 			MageOptions options = Command.json.fromJson(commandArgs[0], MageOptions.class);
 			
-			System.out.println("Initializing Magento SOAP API");
+			System.out.println("Initializing br.com.mind.magento.ClientWithoutWSI SOAP API");
 			MageAPIWithWSI magento = new MageAPIWithWSI(options.getSessionId());
 			
 			System.out.println("Executing: " + command);

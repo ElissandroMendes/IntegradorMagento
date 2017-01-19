@@ -1884,7 +1884,7 @@ public class ShoppingCartInfoEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ShoppingCartInfoEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartInfoEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartInfoEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("store_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "store_id"));
@@ -2287,21 +2287,21 @@ public class ShoppingCartInfoEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipping_address");
         elemField.setXmlName(new javax.xml.namespace.QName("", "shipping_address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartAddressEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartAddressEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("billing_address");
         elemField.setXmlName(new javax.xml.namespace.QName("", "billing_address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartAddressEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartAddressEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("items");
         elemField.setXmlName(new javax.xml.namespace.QName("", "items"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartItemEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartItemEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
@@ -2309,7 +2309,7 @@ public class ShoppingCartInfoEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payment");
         elemField.setXmlName(new javax.xml.namespace.QName("", "payment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

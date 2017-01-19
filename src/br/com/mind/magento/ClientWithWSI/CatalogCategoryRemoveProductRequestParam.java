@@ -162,7 +162,7 @@ public class CatalogCategoryRemoveProductRequestParam  implements java.io.Serial
         new org.apache.axis.description.TypeDesc(CatalogCategoryRemoveProductRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogCategoryRemoveProductRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogCategoryRemoveProductRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));

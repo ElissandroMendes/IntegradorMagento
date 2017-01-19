@@ -436,7 +436,7 @@ public class SalesOrderShipmentItemEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SalesOrderShipmentItemEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderShipmentItemEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderShipmentItemEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("increment_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "increment_id"));

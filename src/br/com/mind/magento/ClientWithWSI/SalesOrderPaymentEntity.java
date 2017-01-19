@@ -856,7 +856,7 @@ public class SalesOrderPaymentEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SalesOrderPaymentEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderPaymentEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderPaymentEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("increment_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "increment_id"));

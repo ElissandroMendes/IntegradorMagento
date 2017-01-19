@@ -76,11 +76,11 @@ public class MagentoInfoResponseParam  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(MagentoInfoResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">magentoInfoResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">magentoInfoResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "magentoInfoEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "magentoInfoEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

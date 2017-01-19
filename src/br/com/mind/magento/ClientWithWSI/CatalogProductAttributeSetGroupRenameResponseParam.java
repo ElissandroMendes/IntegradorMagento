@@ -72,7 +72,7 @@ public class CatalogProductAttributeSetGroupRenameResponseParam  implements java
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeSetGroupRenameResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductAttributeSetGroupRenameResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductAttributeSetGroupRenameResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

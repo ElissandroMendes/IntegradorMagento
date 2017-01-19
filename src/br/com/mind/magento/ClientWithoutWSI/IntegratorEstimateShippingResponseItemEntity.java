@@ -166,7 +166,7 @@ public class IntegratorEstimateShippingResponseItemEntity  implements java.io.Se
         new org.apache.axis.description.TypeDesc(IntegratorEstimateShippingResponseItemEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingResponseItemEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingResponseItemEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "id"));

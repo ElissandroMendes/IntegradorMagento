@@ -706,7 +706,7 @@ public class RewardpointsTransactionEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(RewardpointsTransactionEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("transaction_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "transaction_id"));

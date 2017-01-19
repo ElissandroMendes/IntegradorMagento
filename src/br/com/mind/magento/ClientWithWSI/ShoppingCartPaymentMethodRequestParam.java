@@ -162,7 +162,7 @@ public class ShoppingCartPaymentMethodRequestParam  implements java.io.Serializa
         new org.apache.axis.description.TypeDesc(ShoppingCartPaymentMethodRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">shoppingCartPaymentMethodRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">shoppingCartPaymentMethodRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -178,7 +178,7 @@ public class ShoppingCartPaymentMethodRequestParam  implements java.io.Serializa
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("paymentData");
         elemField.setXmlName(new javax.xml.namespace.QName("", "paymentData"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartPaymentMethodEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartPaymentMethodEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();

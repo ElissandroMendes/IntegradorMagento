@@ -196,7 +196,7 @@ public class CatalogProductCustomOptionValueUpdateEntity  implements java.io.Ser
         new org.apache.axis.description.TypeDesc(CatalogProductCustomOptionValueUpdateEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueUpdateEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueUpdateEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("title");
         elemField.setXmlName(new javax.xml.namespace.QName("", "title"));

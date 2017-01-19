@@ -106,17 +106,17 @@ public class GiftMessageAssociativeProductsEntity  implements java.io.Serializab
         new org.apache.axis.description.TypeDesc(GiftMessageAssociativeProductsEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "giftMessageAssociativeProductsEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageAssociativeProductsEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("product");
         elemField.setXmlName(new javax.xml.namespace.QName("", "product"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartProductEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartProductEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("message");
         elemField.setXmlName(new javax.xml.namespace.QName("", "message"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "giftMessageEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

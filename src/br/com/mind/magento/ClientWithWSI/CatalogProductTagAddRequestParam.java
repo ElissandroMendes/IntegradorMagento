@@ -106,7 +106,7 @@ public class CatalogProductTagAddRequestParam  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogProductTagAddRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductTagAddRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductTagAddRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -116,7 +116,7 @@ public class CatalogProductTagAddRequestParam  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("data");
         elemField.setXmlName(new javax.xml.namespace.QName("", "data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductTagAddEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTagAddEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

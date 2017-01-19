@@ -106,7 +106,7 @@ public class CatalogProductAttributeMediaTypeEntity  implements java.io.Serializ
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeMediaTypeEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaTypeEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaTypeEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("code");
         elemField.setXmlName(new javax.xml.namespace.QName("", "code"));

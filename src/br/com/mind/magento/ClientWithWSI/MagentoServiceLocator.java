@@ -105,7 +105,7 @@ public class MagentoServiceLocator extends org.apache.axis.client.Service implem
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("urn:Magento", "MagentoService");
+        return new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "MagentoService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class MagentoServiceLocator extends org.apache.axis.client.Service implem
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("urn:Magento", "Mage_Api_Model_Server_Wsi_HandlerPort"));
+            ports.add(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "Mage_Api_Model_Server_Wsi_HandlerPort"));
         }
         return ports.iterator();
     }

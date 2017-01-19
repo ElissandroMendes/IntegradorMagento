@@ -72,7 +72,7 @@ public class CatalogProductDownloadableLinkAddResponseParam  implements java.io.
         new org.apache.axis.description.TypeDesc(CatalogProductDownloadableLinkAddResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductDownloadableLinkAddResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductDownloadableLinkAddResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

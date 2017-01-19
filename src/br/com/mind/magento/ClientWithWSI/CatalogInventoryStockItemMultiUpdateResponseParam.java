@@ -72,7 +72,7 @@ public class CatalogInventoryStockItemMultiUpdateResponseParam  implements java.
         new org.apache.axis.description.TypeDesc(CatalogInventoryStockItemMultiUpdateResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogInventoryStockItemMultiUpdateResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogInventoryStockItemMultiUpdateResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

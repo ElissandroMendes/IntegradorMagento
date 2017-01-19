@@ -174,11 +174,11 @@ public class SalesOrderCreditmemoData  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SalesOrderCreditmemoData.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoData"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoData"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("qtys");
         elemField.setXmlName(new javax.xml.namespace.QName("", "qtys"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "orderItemIdQty"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "orderItemIdQty"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

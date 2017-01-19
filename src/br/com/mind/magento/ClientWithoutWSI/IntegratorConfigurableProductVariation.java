@@ -272,7 +272,7 @@ public class IntegratorConfigurableProductVariation  implements java.io.Serializ
         new org.apache.axis.description.TypeDesc(IntegratorConfigurableProductVariation.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorConfigurableProductVariation"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorConfigurableProductVariation"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("associated_product_sku");
         elemField.setXmlName(new javax.xml.namespace.QName("", "associated_product_sku"));
@@ -315,7 +315,7 @@ public class IntegratorConfigurableProductVariation  implements java.io.Serializ
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("attributes");
         elemField.setXmlName(new javax.xml.namespace.QName("", "attributes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "associativeEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

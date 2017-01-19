@@ -136,7 +136,7 @@ public class CatalogProductDownloadableLinkAddSampleEntity  implements java.io.S
         new org.apache.axis.description.TypeDesc(CatalogProductDownloadableLinkAddSampleEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkAddSampleEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkAddSampleEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("type");
         elemField.setXmlName(new javax.xml.namespace.QName("", "type"));
@@ -147,7 +147,7 @@ public class CatalogProductDownloadableLinkAddSampleEntity  implements java.io.S
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("file");
         elemField.setXmlName(new javax.xml.namespace.QName("", "file"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkFileEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkFileEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

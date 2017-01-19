@@ -346,7 +346,7 @@ public class CatalogProductCustomOptionAdditionalFieldsEntity  implements java.i
         new org.apache.axis.description.TypeDesc(CatalogProductCustomOptionAdditionalFieldsEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionAdditionalFieldsEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionAdditionalFieldsEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("title");
         elemField.setXmlName(new javax.xml.namespace.QName("", "title"));

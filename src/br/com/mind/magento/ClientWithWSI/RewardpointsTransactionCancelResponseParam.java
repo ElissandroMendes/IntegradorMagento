@@ -84,7 +84,7 @@ public class RewardpointsTransactionCancelResponseParam  implements java.io.Seri
         new org.apache.axis.description.TypeDesc(RewardpointsTransactionCancelResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">rewardpointsTransactionCancelResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">rewardpointsTransactionCancelResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

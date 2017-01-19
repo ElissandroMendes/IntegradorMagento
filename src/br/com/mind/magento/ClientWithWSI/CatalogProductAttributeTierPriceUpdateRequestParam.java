@@ -174,7 +174,7 @@ public class CatalogProductAttributeTierPriceUpdateRequestParam  implements java
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeTierPriceUpdateRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductAttributeTierPriceUpdateRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductAttributeTierPriceUpdateRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -190,7 +190,7 @@ public class CatalogProductAttributeTierPriceUpdateRequestParam  implements java
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("tierPrices");
         elemField.setXmlName(new javax.xml.namespace.QName("", "tierPrices"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductTierPriceEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTierPriceEntity"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

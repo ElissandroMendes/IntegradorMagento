@@ -114,7 +114,7 @@ public class CatalogProductAttributeOptionLabelEntity  implements java.io.Serial
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeOptionLabelEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeOptionLabelEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeOptionLabelEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("store_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "store_id"));

@@ -474,7 +474,7 @@ public class CatalogProductDownloadableLinkEntity  implements java.io.Serializab
         new org.apache.axis.description.TypeDesc(CatalogProductDownloadableLinkEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("link_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "link_id"));
@@ -554,7 +554,7 @@ public class CatalogProductDownloadableLinkEntity  implements java.io.Serializab
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("file_save");
         elemField.setXmlName(new javax.xml.namespace.QName("", "file_save"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkFileInfoEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkFileInfoEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
@@ -562,7 +562,7 @@ public class CatalogProductDownloadableLinkEntity  implements java.io.Serializab
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sample_file_save");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sample_file_save"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkFileInfoEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkFileInfoEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));

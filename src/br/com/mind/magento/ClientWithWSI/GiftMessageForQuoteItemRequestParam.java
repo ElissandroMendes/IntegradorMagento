@@ -166,7 +166,7 @@ public class GiftMessageForQuoteItemRequestParam  implements java.io.Serializabl
         new org.apache.axis.description.TypeDesc(GiftMessageForQuoteItemRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">giftMessageForQuoteItemRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">giftMessageForQuoteItemRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -182,7 +182,7 @@ public class GiftMessageForQuoteItemRequestParam  implements java.io.Serializabl
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("giftMessage");
         elemField.setXmlName(new javax.xml.namespace.QName("", "giftMessage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "giftMessageEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "giftMessageEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();

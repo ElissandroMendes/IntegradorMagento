@@ -106,7 +106,7 @@ public class MagentoInfoEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(MagentoInfoEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "magentoInfoEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "magentoInfoEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("magento_version");
         elemField.setXmlName(new javax.xml.namespace.QName("", "magento_version"));

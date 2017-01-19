@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="" basedir="." default="compile">
-    <property name="version" value="0.96"/>
     <property name="directory.source" value="."/>
     <property name="directory.binary" value="bin"/>
     <property name="directory.distribuition" value="dist"/>
     <property name="directory.documentation" value="doc"/>
     <property name="directory.javalibs" value="libs"/>
     <property name="documentation.title" value=""/>
-    <property name="jarfile" value="${directory.distribuition}/magento-${version}.jar"/>
+    <property name="jarfile" value="${directory.distribuition}/magento.jar"/>
     <property name="propsfile" value="${directory.source}/magento.properties"/>
 
     <property name="directory.erp.d" value="C:/Bematech/dhandara/javalibs"/>

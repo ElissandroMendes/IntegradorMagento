@@ -256,7 +256,7 @@ public class SalesOrderCreditmemoCreateRequestParam  implements java.io.Serializ
         new org.apache.axis.description.TypeDesc(SalesOrderCreditmemoCreateRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">salesOrderCreditmemoCreateRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">salesOrderCreditmemoCreateRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -272,7 +272,7 @@ public class SalesOrderCreditmemoCreateRequestParam  implements java.io.Serializ
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("creditmemoData");
         elemField.setXmlName(new javax.xml.namespace.QName("", "creditmemoData"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoData"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoData"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

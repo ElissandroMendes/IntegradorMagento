@@ -76,7 +76,7 @@ public class SalesOrderInvoiceCaptureResponseParam  implements java.io.Serializa
         new org.apache.axis.description.TypeDesc(SalesOrderInvoiceCaptureResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">salesOrderInvoiceCaptureResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">salesOrderInvoiceCaptureResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

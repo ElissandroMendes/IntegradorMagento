@@ -376,7 +376,7 @@ public class CatalogProductDownloadableLinkAddEntity  implements java.io.Seriali
         new org.apache.axis.description.TypeDesc(CatalogProductDownloadableLinkAddEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkAddEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkAddEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("title");
         elemField.setXmlName(new javax.xml.namespace.QName("", "title"));
@@ -414,7 +414,7 @@ public class CatalogProductDownloadableLinkAddEntity  implements java.io.Seriali
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sample");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sample"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkAddSampleEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkAddSampleEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
@@ -428,7 +428,7 @@ public class CatalogProductDownloadableLinkAddEntity  implements java.io.Seriali
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("file");
         elemField.setXmlName(new javax.xml.namespace.QName("", "file"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkFileEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkFileEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

@@ -152,7 +152,7 @@ public class CatalogInventoryStockItemMultiUpdateRequestParam  implements java.i
         new org.apache.axis.description.TypeDesc(CatalogInventoryStockItemMultiUpdateRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogInventoryStockItemMultiUpdateRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogInventoryStockItemMultiUpdateRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -169,7 +169,7 @@ public class CatalogInventoryStockItemMultiUpdateRequestParam  implements java.i
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("productData");
         elemField.setXmlName(new javax.xml.namespace.QName("", "productData"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemUpdateEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemUpdateEntity"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

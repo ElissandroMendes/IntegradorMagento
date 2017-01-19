@@ -122,18 +122,18 @@ public class CatalogProductAdditionalAttributesEntity  implements java.io.Serial
         new org.apache.axis.description.TypeDesc(CatalogProductAdditionalAttributesEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAdditionalAttributesEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAdditionalAttributesEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("multi_data");
         elemField.setXmlName(new javax.xml.namespace.QName("", "multi_data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "associativeMultiEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeMultiEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("single_data");
         elemField.setXmlName(new javax.xml.namespace.QName("", "single_data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "associativeEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

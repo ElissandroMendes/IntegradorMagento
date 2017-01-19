@@ -234,7 +234,7 @@ public class SalesOrderInvoiceCreateRequestParam  implements java.io.Serializabl
         new org.apache.axis.description.TypeDesc(SalesOrderInvoiceCreateRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">salesOrderInvoiceCreateRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">salesOrderInvoiceCreateRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -250,7 +250,7 @@ public class SalesOrderInvoiceCreateRequestParam  implements java.io.Serializabl
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemsQty");
         elemField.setXmlName(new javax.xml.namespace.QName("", "itemsQty"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "orderItemIdQty"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "orderItemIdQty"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

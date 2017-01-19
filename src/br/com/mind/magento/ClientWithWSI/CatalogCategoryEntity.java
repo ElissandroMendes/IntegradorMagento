@@ -244,7 +244,7 @@ public class CatalogCategoryEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogCategoryEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("category_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "category_id"));
@@ -284,7 +284,7 @@ public class CatalogCategoryEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("children");
         elemField.setXmlName(new javax.xml.namespace.QName("", "children"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogCategoryEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogCategoryEntity"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
         typeDesc.addFieldDesc(elemField);

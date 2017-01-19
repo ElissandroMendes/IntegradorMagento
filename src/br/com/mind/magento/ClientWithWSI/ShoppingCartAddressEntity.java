@@ -856,7 +856,7 @@ public class ShoppingCartAddressEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ShoppingCartAddressEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartAddressEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartAddressEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("address_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "address_id"));

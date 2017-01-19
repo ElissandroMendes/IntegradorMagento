@@ -106,7 +106,7 @@ public class CatalogProductAttributeFrontendLabelEntity  implements java.io.Seri
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeFrontendLabelEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeFrontendLabelEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeFrontendLabelEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("store_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "store_id"));

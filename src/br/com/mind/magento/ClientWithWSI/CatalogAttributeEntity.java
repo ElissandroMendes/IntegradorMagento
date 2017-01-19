@@ -196,7 +196,7 @@ public class CatalogAttributeEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogAttributeEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogAttributeEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAttributeEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("attribute_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "attribute_id"));

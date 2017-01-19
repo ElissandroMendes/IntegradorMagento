@@ -234,11 +234,11 @@ public class CatalogProductAttributeMediaCreateEntity  implements java.io.Serial
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeMediaCreateEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeMediaCreateEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeMediaCreateEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("file");
         elemField.setXmlName(new javax.xml.namespace.QName("", "file"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductImageFileEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductImageFileEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

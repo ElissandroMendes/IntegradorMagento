@@ -192,7 +192,7 @@ public class CatalogProductCustomOptionListEntity  implements java.io.Serializab
         new org.apache.axis.description.TypeDesc(CatalogProductCustomOptionListEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionListEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionListEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("option_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "option_id"));

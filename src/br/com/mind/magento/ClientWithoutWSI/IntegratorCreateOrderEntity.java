@@ -414,7 +414,7 @@ public class IntegratorCreateOrderEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(IntegratorCreateOrderEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorCreateOrderEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorCreateOrderEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("skyhub_code");
         elemField.setXmlName(new javax.xml.namespace.QName("", "skyhub_code"));
@@ -467,21 +467,21 @@ public class IntegratorCreateOrderEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipping_address");
         elemField.setXmlName(new javax.xml.namespace.QName("", "shipping_address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorCreateOrderAddressEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorCreateOrderAddressEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("billing_address");
         elemField.setXmlName(new javax.xml.namespace.QName("", "billing_address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorCreateOrderAddressEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorCreateOrderAddressEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("items");
         elemField.setXmlName(new javax.xml.namespace.QName("", "items"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorCreateOrderItemEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorCreateOrderItemEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

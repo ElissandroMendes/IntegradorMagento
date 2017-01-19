@@ -166,7 +166,7 @@ public class CatalogProductCustomOptionValueUpdateRequestParam  implements java.
         new org.apache.axis.description.TypeDesc(CatalogProductCustomOptionValueUpdateRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductCustomOptionValueUpdateRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductCustomOptionValueUpdateRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -182,7 +182,7 @@ public class CatalogProductCustomOptionValueUpdateRequestParam  implements java.
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("data");
         elemField.setXmlName(new javax.xml.namespace.QName("", "data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueUpdateEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueUpdateEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();

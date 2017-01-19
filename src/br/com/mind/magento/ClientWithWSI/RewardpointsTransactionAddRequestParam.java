@@ -106,7 +106,7 @@ public class RewardpointsTransactionAddRequestParam  implements java.io.Serializ
         new org.apache.axis.description.TypeDesc(RewardpointsTransactionAddRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">rewardpointsTransactionAddRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">rewardpointsTransactionAddRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -116,7 +116,7 @@ public class RewardpointsTransactionAddRequestParam  implements java.io.Serializ
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("transactionData");
         elemField.setXmlName(new javax.xml.namespace.QName("", "transactionData"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "rewardpointsTransactionAdd"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "rewardpointsTransactionAdd"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

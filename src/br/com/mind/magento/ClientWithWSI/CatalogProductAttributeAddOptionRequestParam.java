@@ -136,7 +136,7 @@ public class CatalogProductAttributeAddOptionRequestParam  implements java.io.Se
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeAddOptionRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductAttributeAddOptionRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductAttributeAddOptionRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -152,7 +152,7 @@ public class CatalogProductAttributeAddOptionRequestParam  implements java.io.Se
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("data");
         elemField.setXmlName(new javax.xml.namespace.QName("", "data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductAttributeOptionEntityToAdd"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductAttributeOptionEntityToAdd"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -226,7 +226,7 @@ public class SalesOrderCreditmemoCommentEntity  implements java.io.Serializable 
         new org.apache.axis.description.TypeDesc(SalesOrderCreditmemoCommentEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoCommentEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoCommentEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("parent_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "parent_id"));

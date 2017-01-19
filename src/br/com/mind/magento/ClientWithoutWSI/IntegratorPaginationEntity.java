@@ -106,7 +106,7 @@ public class IntegratorPaginationEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(IntegratorPaginationEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorPaginationEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorPaginationEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("curPage");
         elemField.setXmlName(new javax.xml.namespace.QName("", "curPage"));

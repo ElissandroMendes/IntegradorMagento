@@ -106,7 +106,7 @@ public class CatalogProductAttributeMediaCurrentStoreRequestParam  implements ja
         new org.apache.axis.description.TypeDesc(CatalogProductAttributeMediaCurrentStoreRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductAttributeMediaCurrentStoreRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductAttributeMediaCurrentStoreRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));

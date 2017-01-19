@@ -106,7 +106,7 @@ public class IntegratorBundleProductComponent  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(IntegratorBundleProductComponent.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorBundleProductComponent"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorBundleProductComponent"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("associated_product_sku");
         elemField.setXmlName(new javax.xml.namespace.QName("", "associated_product_sku"));

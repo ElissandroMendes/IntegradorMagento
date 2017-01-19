@@ -1036,7 +1036,7 @@ public class SalesOrderCreditmemoItemEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SalesOrderCreditmemoItemEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "salesOrderCreditmemoItemEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "salesOrderCreditmemoItemEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("item_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "item_id"));

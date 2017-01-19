@@ -136,7 +136,7 @@ public class CatalogProductSpecialPriceReturnEntity  implements java.io.Serializ
         new org.apache.axis.description.TypeDesc(CatalogProductSpecialPriceReturnEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductSpecialPriceReturnEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductSpecialPriceReturnEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("special_price");
         elemField.setXmlName(new javax.xml.namespace.QName("", "special_price"));

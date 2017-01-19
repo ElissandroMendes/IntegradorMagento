@@ -436,7 +436,7 @@ public class CatalogProductCustomOptionValueInfoEntity  implements java.io.Seria
         new org.apache.axis.description.TypeDesc(CatalogProductCustomOptionValueInfoEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCustomOptionValueInfoEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCustomOptionValueInfoEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("value_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "value_id"));

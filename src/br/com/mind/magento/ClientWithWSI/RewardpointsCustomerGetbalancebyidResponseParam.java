@@ -72,7 +72,7 @@ public class RewardpointsCustomerGetbalancebyidResponseParam  implements java.io
         new org.apache.axis.description.TypeDesc(RewardpointsCustomerGetbalancebyidResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">rewardpointsCustomerGetbalancebyidResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">rewardpointsCustomerGetbalancebyidResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

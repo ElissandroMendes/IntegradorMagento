@@ -346,7 +346,7 @@ public class ShoppingCartCustomerEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ShoppingCartCustomerEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "shoppingCartCustomerEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "shoppingCartCustomerEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("mode");
         elemField.setXmlName(new javax.xml.namespace.QName("", "mode"));

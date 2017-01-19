@@ -114,7 +114,7 @@ public class IntegratorEstimateShippingPerItemResponseItemEntity  implements jav
         new org.apache.axis.description.TypeDesc(IntegratorEstimateShippingPerItemResponseItemEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingPerItemResponseItemEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingPerItemResponseItemEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("item");
         elemField.setXmlName(new javax.xml.namespace.QName("", "item"));
@@ -125,7 +125,7 @@ public class IntegratorEstimateShippingPerItemResponseItemEntity  implements jav
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipping_info");
         elemField.setXmlName(new javax.xml.namespace.QName("", "shipping_info"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "integratorEstimateShippingResponseItemEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "integratorEstimateShippingResponseItemEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

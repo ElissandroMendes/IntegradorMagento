@@ -226,7 +226,7 @@ public class CatalogProductDownloadableLinkAddRequestParam  implements java.io.S
         new org.apache.axis.description.TypeDesc(CatalogProductDownloadableLinkAddRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductDownloadableLinkAddRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductDownloadableLinkAddRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));
@@ -242,7 +242,7 @@ public class CatalogProductDownloadableLinkAddRequestParam  implements java.io.S
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("resource");
         elemField.setXmlName(new javax.xml.namespace.QName("", "resource"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductDownloadableLinkAddEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductDownloadableLinkAddEntity"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();

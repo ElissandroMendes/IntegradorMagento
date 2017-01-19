@@ -496,7 +496,7 @@ public class CatalogInventoryStockItemUpdateEntity  implements java.io.Serializa
         new org.apache.axis.description.TypeDesc(CatalogInventoryStockItemUpdateEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemUpdateEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemUpdateEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("qty");
         elemField.setXmlName(new javax.xml.namespace.QName("", "qty"));

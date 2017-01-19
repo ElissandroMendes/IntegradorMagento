@@ -226,7 +226,7 @@ public class CatalogProductLinkEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogProductLinkEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductLinkEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductLinkEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("product_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "product_id"));

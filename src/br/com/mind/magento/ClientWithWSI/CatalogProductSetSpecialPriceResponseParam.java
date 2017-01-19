@@ -72,7 +72,7 @@ public class CatalogProductSetSpecialPriceResponseParam  implements java.io.Seri
         new org.apache.axis.description.TypeDesc(CatalogProductSetSpecialPriceResponseParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">catalogProductSetSpecialPriceResponseParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">catalogProductSetSpecialPriceResponseParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("result");
         elemField.setXmlName(new javax.xml.namespace.QName("", "result"));

@@ -10,6 +10,7 @@ package br.com.mind.magento.ClientWithoutWSI;
 public interface Mage_Api_Model_Server_V2_HandlerPortType extends java.rmi.Remote {
 
     /**
+     * End web service session
      */
     public boolean endSession(java.lang.String sessionId) throws java.rmi.RemoteException;
 
@@ -49,7 +50,7 @@ public interface Mage_Api_Model_Server_V2_HandlerPortType extends java.rmi.Remot
     public br.com.mind.magento.ClientWithoutWSI.StoreEntity storeInfo(java.lang.String sessionId, java.lang.String storeId) throws java.rmi.RemoteException;
 
     /**
-     * Info about current Magento installation
+     * Info about current br.com.mind.magento.ClientWithoutWSI installation
      */
     public br.com.mind.magento.ClientWithoutWSI.MagentoInfoEntity magentoInfo(java.lang.String sessionId) throws java.rmi.RemoteException;
 
@@ -900,7 +901,7 @@ public interface Mage_Api_Model_Server_V2_HandlerPortType extends java.rmi.Remot
     public java.lang.String[] integratorOrderUpdate(java.lang.String sessionId, br.com.mind.magento.ClientWithoutWSI.IntegratorUpdateOrderEntity order) throws java.rmi.RemoteException;
 
     /**
-     * Retrieve Magento status list
+     * Retrieve br.com.mind.magento.ClientWithoutWSI status list
      */
     public br.com.mind.magento.ClientWithoutWSI.IntegratorStatusEntity[] integratorOrderListStatus(java.lang.String sessionId) throws java.rmi.RemoteException;
 

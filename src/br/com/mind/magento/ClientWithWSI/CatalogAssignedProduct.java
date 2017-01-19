@@ -184,7 +184,7 @@ public class CatalogAssignedProduct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogAssignedProduct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogAssignedProduct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogAssignedProduct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("product_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "product_id"));

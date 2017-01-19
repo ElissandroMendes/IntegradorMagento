@@ -102,7 +102,7 @@ public class CustomerCustomerDeleteRequestParam  implements java.io.Serializable
         new org.apache.axis.description.TypeDesc(CustomerCustomerDeleteRequestParam.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", ">customerCustomerDeleteRequestParam"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", ">customerCustomerDeleteRequestParam"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "sessionId"));

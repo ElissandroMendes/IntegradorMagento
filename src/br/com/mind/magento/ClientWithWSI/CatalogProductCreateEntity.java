@@ -1086,7 +1086,7 @@ public class CatalogProductCreateEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogProductCreateEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductCreateEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductCreateEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("categories");
         elemField.setXmlName(new javax.xml.namespace.QName("", "categories"));
@@ -1227,7 +1227,7 @@ public class CatalogProductCreateEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("tier_price");
         elemField.setXmlName(new javax.xml.namespace.QName("", "tier_price"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductTierPriceEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTierPriceEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
@@ -1277,7 +1277,7 @@ public class CatalogProductCreateEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("additional_attributes");
         elemField.setXmlName(new javax.xml.namespace.QName("", "additional_attributes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "associativeEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
@@ -1285,7 +1285,7 @@ public class CatalogProductCreateEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("stock_data");
         elemField.setXmlName(new javax.xml.namespace.QName("", "stock_data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogInventoryStockItemUpdateEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogInventoryStockItemUpdateEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
@@ -1308,7 +1308,7 @@ public class CatalogProductCreateEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("price_changes");
         elemField.setXmlName(new javax.xml.namespace.QName("", "price_changes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "complexMultiFilter"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "complexMultiFilter"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));
@@ -1316,7 +1316,7 @@ public class CatalogProductCreateEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("group_price");
         elemField.setXmlName(new javax.xml.namespace.QName("", "group_price"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductGroupPriceEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductGroupPriceEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "complexObjectArray"));

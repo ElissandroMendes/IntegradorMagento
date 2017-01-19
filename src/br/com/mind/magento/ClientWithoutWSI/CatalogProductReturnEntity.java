@@ -1152,7 +1152,7 @@ public class CatalogProductReturnEntity  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(CatalogProductReturnEntity.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductReturnEntity"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductReturnEntity"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("product_id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "product_id"));
@@ -1338,7 +1338,7 @@ public class CatalogProductReturnEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("tier_price");
         elemField.setXmlName(new javax.xml.namespace.QName("", "tier_price"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductTierPriceEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductTierPriceEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
@@ -1387,14 +1387,14 @@ public class CatalogProductReturnEntity  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("additional_attributes");
         elemField.setXmlName(new javax.xml.namespace.QName("", "additional_attributes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "associativeEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "associativeEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("group_price");
         elemField.setXmlName(new javax.xml.namespace.QName("", "group_price"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:Magento", "catalogProductGroupPriceEntity"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:br.com.mind.magento.ClientWithoutWSI", "catalogProductGroupPriceEntity"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
