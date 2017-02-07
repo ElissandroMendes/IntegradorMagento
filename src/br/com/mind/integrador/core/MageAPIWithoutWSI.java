@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.rmi.RemoteException;
+import java.util.HashMap;
 import java.util.Scanner;
 
 import javax.xml.rpc.ServiceException;
@@ -36,13 +37,16 @@ import br.com.mind.magento.ClientWithoutWSI.CatalogProductEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogProductImageEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogProductReturnEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogProductTypeEntity;
+import br.com.mind.magento.ClientWithoutWSI.ComplexFilter;
 import br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityItem;
 import br.com.mind.magento.ClientWithoutWSI.CustomerCustomerEntity;
 import br.com.mind.magento.ClientWithoutWSI.Filters;
 import br.com.mind.magento.ClientWithoutWSI.Mage_Api_Model_Server_V2_HandlerPortType;
 import br.com.mind.magento.ClientWithoutWSI.MagentoInfoEntity;
 import br.com.mind.magento.ClientWithoutWSI.MagentoServiceLocator;
+import br.com.mind.magento.ClientWithoutWSI.RewardpointsCustomerEntity;
 import br.com.mind.magento.ClientWithoutWSI.RewardpointsTransactionAdd;
+import br.com.mind.magento.ClientWithoutWSI.RewardpointsTransactionEntity;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderEntity;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderInvoiceEntity;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderListEntity;
@@ -353,51 +357,28 @@ public class MageAPIWithoutWSI {
 	 */
 	public int createCustomer(CustomerCreateCommand customer) throws RemoteException {
 		System.out.println("Creating customer. Email " + customer.getCustomerData().getEmail());
-		
-		AssociativeEntity filter = new AssociativeEntity();
-		filter.setKey("email");
-		filter.setValue(customer.getCustomerData().getEmail());
-		
-		Filters filters = new Filters();
-		filters.setFilter(new AssociativeEntity[] { filter });
-		
-		CustomerCustomerEntity[] list = null;
+		int result;
+
 		try {
-			list = this.mageService.customerCustomerList(sessionId, filters);
+			result = this.mageService.customerCustomerCreate(sessionId, customer.getCustomerData());
 		} catch(AxisFault e) {
 			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
 				renewSessionId();
-				list = this.mageService.customerCustomerList(sessionId, filters);
+				result = this.mageService.customerCustomerCreate(sessionId, customer.getCustomerData());
 			} else {
 				throw e;
 			}
 		}
 
-		int result;
-		if( list.length == 0 ) {
-			try {
-				result = this.mageService.customerCustomerCreate(sessionId, customer.getCustomerData());
-			} catch(AxisFault e) {
-				if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
-					renewSessionId();
-					result = this.mageService.customerCustomerCreate(sessionId, customer.getCustomerData());
-				} else {
-					throw e;
-				}
-			}
-			System.out.println("Creating customer. DONE. Customer ID: " + result);
-		} else {
-			System.out.println("Customer already exists. Email " + customer.getCustomerData().getEmail() + " - ID " + list[0].getCustomer_id());
-			result = list[0].getCustomer_id();
-		}
-		
 		if (customer.getRewardpoints() > 0) {
 			RewardpointsTransactionAdd data = new RewardpointsTransactionAdd();
+			data.setStoreId("1");
 			data.setCustomerId(String.valueOf(result));
 			data.setPointAmount(String.valueOf(customer.getRewardpoints()));
 			data.setActionCode("api");
-			createCustomerRewardsPoints(data);
+			this.createCustomerRewardsPoints(data);
 		}
+		System.out.println("Creating customer. DONE. Customer ID: " + result);
 		return result;
 	}
 
@@ -440,6 +421,14 @@ public class MageAPIWithoutWSI {
 		boolean result = false;
 		try {
 			result = this.mageService.customerCustomerUpdate(sessionId, customer.getCustomer_id(), customer.getCustomerData());
+			if (customer.getRewardpoints() > 0) {
+				RewardpointsTransactionAdd data = new RewardpointsTransactionAdd();
+				data.setStoreId("1");
+				data.setCustomerId(String.valueOf(customer.getCustomer_id()));
+				data.setPointAmount(String.valueOf(customer.getRewardpoints()));
+				data.setActionCode("api");
+				createCustomerRewardsPoints(data);
+			}
 		} catch(AxisFault e) {
 			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
 				renewSessionId();
@@ -447,14 +436,6 @@ public class MageAPIWithoutWSI {
 			} else {
 				throw e;
 			}
-		}
-
-		if (customer.getRewardpoints() > 0) {
-			RewardpointsTransactionAdd data = new RewardpointsTransactionAdd();
-			data.setCustomerId(String.valueOf(customer.getCustomer_id()));
-			data.setPointAmount(String.valueOf(customer.getRewardpoints()));
-			data.setActionCode("api");
-			createCustomerRewardsPoints(data);
 		}
 
 		System.out.println("Updating customer. DONE.");
@@ -478,9 +459,38 @@ public class MageAPIWithoutWSI {
 		return result;
 	}
 
-	public CustomerInfo[] getCustomerList( Filters filters ) throws RemoteException {
+	public HashMap<String,Integer> getCustomerListByEmail( String[] emails ) throws RemoteException {
+		System.out.println("Getting Customer List by Email List.");
+		
+		StringBuilder emailList = new StringBuilder();
+		for (int i = 0; i < emails.length; i++) {
+			emailList.append(emails[i]).append(","); 
+		}
+		
+		AssociativeEntity filter = new AssociativeEntity();
+		filter.setKey("in");
+		filter.setValue(emailList.toString());
+		
+		ComplexFilter[] filterCpx = { new ComplexFilter() };
+		filterCpx[0].setKey("email");
+		filterCpx[0].setValue(filter);
+		
+		Filters filters = new Filters();
+		filters.setComplex_filter(filterCpx);
+		
+		CustomerInfo[] list = this.getCustomerList( filters, false);
+		HashMap<String, Integer> result = new HashMap<String, Integer>();
+		
+		for (CustomerInfo customerInfo : list) {
+			result.put(customerInfo.getCustomerData().getEmail(), customerInfo.getCustomerData().getCustomer_id());
+		}
+		System.out.println("Getting Customer List by Email List. DONE.");
+		return result;
+		
+	}
+	public CustomerInfo[] getCustomerList( Filters filters, boolean addAddress ) throws RemoteException {
 		System.out.println("Getting Customer List.");
-		CustomerCustomerEntity[] customerList = this.mageService.customerCustomerList(sessionId, filters);
+		CustomerCustomerEntity[] customerList = null;
 		try {
 			customerList = this.mageService.customerCustomerList(sessionId, filters);
 		} catch(AxisFault e) {
@@ -495,13 +505,14 @@ public class MageAPIWithoutWSI {
 		CustomerInfo[] result = new CustomerInfo[customerList.length];
 		
 		System.out.println(customerList.length + " customer selected.");
-		
 		for (int i = 0; i < customerList.length; i++) {
 			result[i] = new CustomerInfo();
-			CustomerAddressEntityItem[] customerAddress = this.getCustomerAddress(customerList[i].getCustomer_id());
-			
 			result[i].setCustomerData(customerList[i]);
-			result[i].setCustomerAddress(customerAddress);
+
+			if (addAddress) {
+				CustomerAddressEntityItem[] customerAddress = this.getCustomerAddress(customerList[i].getCustomer_id());
+				result[i].setCustomerAddress(customerAddress);
+			}
 		}
 		System.out.println("Getting Customer List. DONE.");
 		return result;
@@ -563,7 +574,7 @@ public class MageAPIWithoutWSI {
 		for (int i = 0; i < orderList.length; i++) {
 			SalesOrderListEntity saleEntity = orderList[i];
 			SalesOrderEntity saleEntityInfo = getOrderInfo(saleEntity.getIncrement_id());
-			
+				
 			SalesOrderInfo saleInfo = new SalesOrderInfo();  
 			
 			saleInfo.setOrder_id(saleEntity.getOrder_id());
@@ -577,6 +588,7 @@ public class MageAPIWithoutWSI {
 			saleInfo.setSubtotal(saleEntity.getSubtotal());
 			saleInfo.setGrand_total(saleEntity.getGrand_total());
 			saleInfo.setRemote_ip(saleEntity.getRemote_ip());
+			saleInfo.setRewardpointsUsed(getRewardPointsUsedInOrder(saleInfo.getIncrement_id()));
 			
 			CustomerCustomerEntity c = new CustomerCustomerEntity();
 			c.setCustomer_id(Integer.valueOf(saleEntity.getCustomer_id()));
@@ -586,7 +598,12 @@ public class MageAPIWithoutWSI {
 			c.setDob(saleEntity.getCustomer_dob());
 			c.setEmail(saleEntity.getCustomer_email());
 			c.setTaxvat(saleEntity.getCustomer_taxvat());
-			c.setGroup_id(Integer.valueOf(saleEntity.getCustomer_group_id()));
+
+			String g = saleEntity.getCustomer_group_id();
+			if ( g != null) {
+				c.setGroup_id(Integer.valueOf(saleEntity.getCustomer_group_id()));
+			}
+			
 			saleInfo.setCustomer(c);
 			
 //			saleInfo.setCustomer(getCustomerInfo(Integer.valueOf(saleEntity.getCustomer_id())));
@@ -656,16 +673,33 @@ public class MageAPIWithoutWSI {
 		System.out.println("Adding Order Shipment. OrderIncrementId " + orderIncrementId);
 		String result = null;
 		try {
-			result = this.mageService.salesOrderShipmentCreate(sessionId, orderIncrementId, null, comment, 1, 1);
+			result = this.mageService.salesOrderShipmentCreate(sessionId, orderIncrementId, null, comment, 0, 0);
 		} catch(AxisFault e) {
 			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
 				renewSessionId();
-				result = this.mageService.salesOrderShipmentCreate(sessionId, orderIncrementId, null, comment, 1, 1);
+				result = this.mageService.salesOrderShipmentCreate(sessionId, orderIncrementId, null, comment, 0, 0);
 			} else {
 				throw e;
 			}
 		}
 		System.out.println("Adding Order Shipment. DONE.");
+		return result;
+	}
+
+	public boolean addOrderShipmentComment( String shipmentIncrementId, String comment ) throws RemoteException {
+		System.out.println("Adding Order Shipment Comment. Shipment ID " + shipmentIncrementId);
+		boolean result = false;
+		try {
+			result = this.mageService.salesOrderShipmentAddComment(sessionId, shipmentIncrementId, comment, "1", "1");
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.salesOrderShipmentAddComment(sessionId, shipmentIncrementId, comment, "1", "1");
+			} else {
+				throw e;
+			}
+		}
+		System.out.println("Adding Order Shipment Comment. DONE.");
 		return result;
 	}
 
@@ -721,21 +755,101 @@ public class MageAPIWithoutWSI {
 		System.out.println("Getting Carriers Info. DONE.");
 		return result;
 	}
-	 
+
+	public int getRewardPointsUsedInOrder(String incrementId) throws RemoteException {
+		System.out.println("Getting Rewardpoints Used. Order Increment Id " + incrementId);
+		int result = 0;
+		
+		AssociativeEntity filter = new AssociativeEntity();
+		filter.setKey("order_increment_id");
+		filter.setValue(incrementId);
+		
+		Filters filters = new Filters();
+		filters.setFilter(new AssociativeEntity[] { filter });
+		RewardpointsTransactionEntity[] transactions = getRewardPointsTrasactionList(filters);
+		
+		if ( transactions != null && transactions.length == 1 ) {
+			if ( transactions[0].getAction().equalsIgnoreCase("spending_order") ) { 
+				result = -1 * transactions[0].getPoint_amount();
+			}
+		}
+		System.out.println("Getting Rewardpoints Used. DONE.");
+		return result;
+	}
+	public RewardpointsCustomerEntity[] getRewardPointsBalance() throws RemoteException {
+		AssociativeEntity filter = new AssociativeEntity();
+		filter.setKey("customer_id");
+		filter.setValue("10");
+		
+		Filters filters = new Filters();
+		filters.setFilter(new AssociativeEntity[] { filter });
+		
+		RewardpointsCustomerEntity[] listResult = null;
+		try {
+			listResult = this.mageService.rewardpointsCustomerGetcustomersbalance(sessionId, filters);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				listResult = this.mageService.rewardpointsCustomerGetcustomersbalance(sessionId, filters);
+			} else {
+				throw e;
+			}
+		}
+		return listResult;
+	}
+
+	public RewardpointsTransactionEntity[] getRewardPointsTrasactionList(Filters filters) throws RemoteException {
+		RewardpointsTransactionEntity[] listResult = null;
+		try {
+			listResult = this.mageService.rewardpointsTransactionList(sessionId, filters);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				listResult = this.mageService.rewardpointsTransactionList(sessionId, filters);
+			} else {
+				throw e;
+			}
+		}
+		return listResult;
+	}
 
 	public static void main(String[] args) throws IOException, ServiceException {
 		
 		MageAPIWithoutWSI magento = new MageAPIWithoutWSI("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
 
 		Gson json = new Gson();
-		SalesOrderEntity b = magento.getOrderInfo("100000113");
+
+		HashMap<String, Integer> b = magento.getCustomerListByEmail(new String[] {"barbie_jackmagno@hotmail.com"});
 		System.out.println(json.toJson(b));
+		
+//		RewardpointsCustomerEntity[] b = magento.getRewardPointsBalance();
+//		System.out.println(json.toJson(b));
+		
+//		magento.mageLogin("integrador.noix", "YzU4ODZjNjQwYjI5NTc3YmZi");
+		
+//		SalesOrderEntity b = magento.getOrderInfo("100000150");
+//		System.out.println(json.toJson(b));
+
+//		int b = magento.getRewardPointsUsedInOrder("100000088");
+//		System.out.println(json.toJson(b));
+		
+//		AssociativeEntity filter = new AssociativeEntity();
+//		filter.setKey("increment_id");
+//		filter.setValue("100000140");
+//		Filters filters = new Filters();
+//		filters.setFilter(new AssociativeEntity[] { filter });
+//		SalesOrderInfo[] b = magento.listSalesOrders(filters);
+//		System.out.println(json.toJson(b));
+		
+//		RewardpointsTransactionEntity[] b = magento.getRewardPointsTrasactionList(filters);
+//		System.out.println(json.toJson(b));
 		
 //		String c = magento.addOrderShipment("100000115", "Envio pedido 100000115");
 //		int s = magento.addOrderTrack(c, "signativa_correios", "1000ABCD");
 		
 //		SalesOrderShipmentEntity[] s = magento.getOrderShipmentList("76");
 //		AssociativeEntity[] c = magento.getCarriersInfo("100000115");
+
 //		System.out.println(json.toJson(s));
 		
 

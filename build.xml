@@ -34,7 +34,6 @@
     	<copy file="${jarfile}" toDir="${directory.erp.d}" overwrite="true"></copy>
     	<copy file="${jarfile}" toDir="${directory.erp.p}" overwrite="true"></copy>
     	<copy file="${jarfile}" toDir="${temp}" overwrite="true"></copy>
-    	<copy file="${sessionFile}" toDir="${temp}" overwrite="true"></copy>
     </target>
             
     <target name="clean">

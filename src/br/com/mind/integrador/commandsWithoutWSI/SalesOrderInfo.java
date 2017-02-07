@@ -17,13 +17,13 @@ public class SalesOrderInfo {
 	private String subtotal;
 	private String grand_total;
 	private String remote_ip;
+	private int rewardpointsUsed;
 	
 	private CustomerCustomerEntity customer;
     private SalesOrderAddressEntity shipping_address;
     private SalesOrderAddressEntity billing_address;
 	private SalesOrderItemEntity[] items;
     private SalesOrderPaymentEntity payment;
-
 	
 	public SalesOrderInfo() {
 		
@@ -187,6 +187,16 @@ public class SalesOrderInfo {
 
 	public void setPayment(SalesOrderPaymentEntity payment) {
 		this.payment = payment;
+	}
+
+
+	public int getRewardpointsUsed() {
+		return rewardpointsUsed;
+	}
+
+
+	public void setRewardpointsUsed(int rewardpointsUsed) {
+		this.rewardpointsUsed = rewardpointsUsed;
 	}
 
 }

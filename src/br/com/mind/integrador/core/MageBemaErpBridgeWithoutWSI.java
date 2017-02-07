@@ -2,6 +2,7 @@ package br.com.mind.integrador.core;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.xml.rpc.ServiceException;
 
@@ -118,17 +119,28 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 				CustomerAddressCreateCommand[] addresses = Command.json.fromJson(e, CustomerAddressCreateCommand[].class);
 				
 				System.out.println(customers.length + " Time(s).");
-	
+
+				String[] emails = new String[customers.length];
+				for (int i = 0; i < customers.length; i++) {
+					emails[i] = customers[i].getCustomerData().getEmail();
+				}
+				
+				HashMap<String,Integer> emailList = magento.getCustomerListByEmail(emails);
+
 				for (int i = 0; i < customers.length; i++) {
 					CustomerCreateCommand customer = customers[i];
-					int id = magento.createCustomer(customer);
+					String email = customer.getCustomerData().getEmail();
+					if ( ! emailList.containsKey(email) ) {
+						int id = magento.createCustomer(customer);
 
-					CustomerAddressCreateCommand address = addresses[i];
-					address.setCustomerId(id);
-					int customer_address_id = magento.createCustomerAddress(address);
-					customer.setCustomer_address_id(customer_address_id);
+						addresses[i].setCustomerId(id);
+						int customer_address_id = magento.createCustomerAddress(addresses[i]);
+						customer.setCustomer_address_id(customer_address_id);
 					
-					result.add(new ResultOK(id, customer));
+						result.add(new ResultOK(id, customer));
+					} else {
+						result.add(new ResultOK(emailList.get(email) , customer));
+					}
 				}
 	
 			} else if (command.equals("updateCustomers")) {
@@ -186,7 +198,7 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 				String c = commandArgs[1];
 				
 				Filters filters = Command.json.fromJson(c, Filters.class);
-				CustomerInfo[] t = magento.getCustomerList(filters);
+				CustomerInfo[] t = magento.getCustomerList(filters, true);
 
 				result.add(new ResultOK(t));
 
@@ -201,7 +213,6 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 				
 				Filters filters = Command.json.fromJson(c, Filters.class);
 				SalesOrderInfo[] t = magento.listSalesOrders(filters);
-				
 				for (SalesOrderInfo salesOrderInfo : t) {
 					result.add(new ResultOK(salesOrderInfo));
 				}
@@ -230,6 +241,7 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 				}
 
 				int trackNumberId = magento.addOrderTrack(shipmentId, courier, trackNumber);
+				boolean r = magento.addOrderShipmentComment(shipmentId, "Código Rastreio:" + trackNumber);
 				
 				result.add(new ResultOK(trackNumberId));
 
