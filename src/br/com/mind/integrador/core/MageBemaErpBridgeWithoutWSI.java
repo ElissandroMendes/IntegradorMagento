@@ -27,6 +27,7 @@ import br.com.mind.magento.ClientWithoutWSI.CatalogAttributeOptionEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogCategoryTree;
 import br.com.mind.magento.ClientWithoutWSI.CatalogProductEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogProductReturnEntity;
+import br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityItem;
 import br.com.mind.magento.ClientWithoutWSI.Filters;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentEntity;
 
@@ -119,7 +120,6 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 				CustomerAddressCreateCommand[] addresses = Command.json.fromJson(e, CustomerAddressCreateCommand[].class);
 				
 				System.out.println(customers.length + " Time(s).");
-
 				String[] emails = new String[customers.length];
 				for (int i = 0; i < customers.length; i++) {
 					emails[i] = customers[i].getCustomerData().getEmail();
@@ -139,6 +139,10 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 					
 						result.add(new ResultOK(id, customer));
 					} else {
+						CustomerAddressEntityItem[] address = magento.getCustomerAddress(emailList.get(email));
+						if ( address.length > 0 ) {
+							customer.setCustomer_address_id(address[0].getCustomer_address_id());
+						}
 						result.add(new ResultOK(emailList.get(email) , customer));
 					}
 				}
@@ -270,7 +274,7 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 
 			System.out.println(" ");
 			
-		} catch (IOException | ServiceException e) {
+		} catch (IOException | ServiceException | MageAPIException e) {
 			System.out.println("Executing " + command + " - Error:");
 			System.out.println(Utils.StackTraceToString(e));
 			System.out.println(" ");
