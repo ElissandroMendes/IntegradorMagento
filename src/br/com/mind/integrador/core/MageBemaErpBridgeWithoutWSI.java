@@ -23,10 +23,12 @@ import br.com.mind.integrador.commandsWithoutWSI.ProductUpdateCommand;
 import br.com.mind.integrador.commandsWithoutWSI.ResultERROR;
 import br.com.mind.integrador.commandsWithoutWSI.ResultOK;
 import br.com.mind.integrador.commandsWithoutWSI.SalesOrderInfo;
+import br.com.mind.magento.ClientWithoutWSI.AssociativeEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogAttributeOptionEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogCategoryTree;
 import br.com.mind.magento.ClientWithoutWSI.CatalogProductEntity;
 import br.com.mind.magento.ClientWithoutWSI.CatalogProductReturnEntity;
+import br.com.mind.magento.ClientWithoutWSI.ComplexFilter;
 import br.com.mind.magento.ClientWithoutWSI.CustomerAddressEntityItem;
 import br.com.mind.magento.ClientWithoutWSI.Filters;
 import br.com.mind.magento.ClientWithoutWSI.SalesOrderShipmentEntity;
@@ -83,9 +85,33 @@ public class MageBemaErpBridgeWithoutWSI extends Enginelet {
 				
 				System.out.println(products.length + " Time(s).");
 	
+				StringBuilder productsList = new StringBuilder();
+				for (int i = 0; i < products.length; i++) {
+					productsList.append(products[i].sku).append(","); 
+				}
+				
+				System.out.println("Lista de produtos a pesquisar: " + productsList.toString());
+				
+				AssociativeEntity filter = new AssociativeEntity();
+				filter.setKey("in");
+				filter.setValue(productsList.toString());
+				
+				ComplexFilter[] filterCpx = { new ComplexFilter() };
+				filterCpx[0].setKey("sku");
+				filterCpx[0].setValue(filter);
+				
+				Filters filters = new Filters();
+				filters.setComplex_filter(filterCpx);
+				
+				HashMap<String,String> productsExistsList = magento.getProductExists(filters);
+
 				for (ProductCreateCommand product : products) {
-					int id = magento.createProducts(product);
-					result.add(new ResultOK(id, product.sku));
+					if ( ! productsExistsList.containsKey(product.sku)) {
+						int id = magento.createProducts(product);
+						result.add(new ResultOK(id, product.sku));
+					} else {
+						result.add(new ResultOK(productsExistsList.get(product.sku), product.sku));
+					}
 				}
 	
 			} else if (command.equals("updateProducts")) {

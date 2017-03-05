@@ -143,42 +143,43 @@ public class MageAPIWithoutWSI {
 	public int createProducts(ProductCreateCommand product) throws RemoteException, MageAPIException {
 		System.out.println("Creating product. SKU " + product.sku);
 		
-		AssociativeEntity filter = new AssociativeEntity();
-		filter.setKey("sku");
-		filter.setValue(product.sku);
-		
-		Filters filters = new Filters();
-		filters.setFilter(new AssociativeEntity[] { filter });
-		
-		CatalogProductEntity[] listResult = null;
+//		AssociativeEntity filter = new AssociativeEntity();
+//		filter.setKey("sku");
+//		filter.setValue(product.sku);
+//		
+//		Filters filters = new Filters();
+//		filters.setFilter(new AssociativeEntity[] { filter });
+//		
+//		CatalogProductEntity[] listResult = null;
+//		try {
+//			listResult = this.mageService.catalogProductList(sessionId, filters, null);
+//		} catch(AxisFault e) {
+//			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+//				renewSessionId();
+//				listResult = this.mageService.catalogProductList(sessionId, filters, null);
+//			} else {
+//				throw new MageAPIException("Erro criar produto SKU: " + product.sku, e);
+//			}
+//		}
+
+		int result = -1;
 		try {
-			listResult = this.mageService.catalogProductList(sessionId, filters, null);
+			result = this.mageService.catalogProductCreate(sessionId, product.type, product.set, product.sku, product.productData, product.storeView); 
 		} catch(AxisFault e) {
 			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
 				renewSessionId();
-				listResult = this.mageService.catalogProductList(sessionId, filters, null);
+				result = this.mageService.catalogProductCreate(sessionId, product.type, product.set, product.sku, product.productData, product.storeView);
 			} else {
 				throw new MageAPIException("Erro criar produto SKU: " + product.sku, e);
 			}
 		}
+		System.out.println("Creating product. DONE. Product ID: " + result);
 
-		int result = -1;
-		if( listResult.length == 0 ) {
-			try {
-				result = this.mageService.catalogProductCreate(sessionId, product.type, product.set, product.sku, product.productData, product.storeView); 
-			} catch(AxisFault e) {
-				if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
-					renewSessionId();
-					listResult = this.mageService.catalogProductList(sessionId, filters, null);
-				} else {
-					throw new MageAPIException("Erro criar produto SKU: " + product.sku, e);
-				}
-			}
-			System.out.println("Creating product. DONE. Product ID: " + result);
-		} else {
-			System.out.println("Product already exists. SKU " + product.sku + " - ID " + listResult[0].getProduct_id());
-			result = Integer.parseInt(listResult[0].getProduct_id());
-		}
+//		if( listResult.length == 0 ) {
+//		} else {
+//			System.out.println("Product already exists. SKU " + product.sku + " - ID " + listResult[0].getProduct_id());
+//			result = Integer.parseInt(listResult[0].getProduct_id());
+//		}
 		return result;
 	}
 	
@@ -332,6 +333,30 @@ public class MageAPIWithoutWSI {
 		return result;
 	}
 	 	 
+	public HashMap<String,String> getProductExists( Filters filters ) throws RemoteException, MageAPIException {
+		System.out.println("Getting Product Exists List.");
+		CatalogProductEntity[] result = null;
+		try {
+			result = this.mageService.catalogProductList(sessionId, filters, null);
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.catalogProductList(sessionId, filters, null);
+			} else {
+				throw e;
+			}
+		}
+		
+		HashMap<String,String> r = new HashMap<String,String>();
+		
+		for (CatalogProductEntity catalogProductEntity : result) {
+			r.put(catalogProductEntity.getSku(), catalogProductEntity.getProduct_id());
+		}
+		
+		System.out.println("Getting Product Exists List. DONE.");
+		return r;
+	}
+
 	public CatalogProductEntity[] getProductList( Filters filters ) throws RemoteException, MageAPIException {
 		System.out.println("Getting Product List.");
 		CatalogProductEntity[] result = null;
@@ -806,6 +831,20 @@ public class MageAPIWithoutWSI {
 		MageAPIWithoutWSI magento = new MageAPIWithoutWSI("novointegrador", "c2b5a6544a0357b7557b7b");
 
 		Gson json = new Gson();
+
+		AssociativeEntity filter = new AssociativeEntity();
+		filter.setKey("in");
+		filter.setValue("507435973,507435971");
+		
+		ComplexFilter[] filterCpx = { new ComplexFilter() };
+		filterCpx[0].setKey("sku");
+		filterCpx[0].setValue(filter);
+		
+		Filters filters = new Filters();
+		filters.setComplex_filter(filterCpx);
+		
+		HashMap<String,String> b = magento.getProductExists(filters);
+		System.out.println(json.toJson(b));
 
 //		HashMap<String, Integer> b = magento.getCustomerListByEmail(new String[] {"barbie_jackmagno@hotmail.com"});
 //		System.out.println(json.toJson(b));
