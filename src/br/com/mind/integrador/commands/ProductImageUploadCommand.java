@@ -1,6 +1,6 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.ClientWithWSI.CatalogProductAttributeMediaCreateEntity;
+import br.com.mind.magento.client.CatalogProductAttributeMediaCreateEntity;
 
 public class ProductImageUploadCommand {
 	private String product;

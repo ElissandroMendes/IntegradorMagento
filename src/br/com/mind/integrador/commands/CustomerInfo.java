@@ -1,7 +1,7 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.ClientWithWSI.CustomerAddressEntityItem;
-import br.com.mind.magento.ClientWithWSI.CustomerCustomerEntity;
+import br.com.mind.magento.client.CustomerAddressEntityItem;
+import br.com.mind.magento.client.CustomerCustomerEntity;
 
 public class CustomerInfo {
 	private CustomerCustomerEntity customerData;

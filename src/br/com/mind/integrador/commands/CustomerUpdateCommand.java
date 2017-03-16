@@ -1,9 +1,10 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.ClientWithWSI.CustomerCustomerEntityToCreate;
+import br.com.mind.magento.client.CustomerCustomerEntityToCreate;
 
 public class CustomerUpdateCommand {
 	private int customer_id;
+	private int rewardpoints;
 	private CustomerCustomerEntityToCreate customerData;
 	
 	public CustomerUpdateCommand() {
@@ -24,6 +25,14 @@ public class CustomerUpdateCommand {
 
 	public void setCustomerData(CustomerCustomerEntityToCreate customerData) {
 		this.customerData = customerData;
+	}
+
+	public int getRewardpoints() {
+		return rewardpoints;
+	}
+
+	public void setRewardpoints(int rewardpoints) {
+		this.rewardpoints = rewardpoints;
 	}
 
 }

@@ -1,9 +1,9 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.ClientWithWSI.CustomerCustomerEntity;
-import br.com.mind.magento.ClientWithWSI.SalesOrderAddressEntity;
-import br.com.mind.magento.ClientWithWSI.SalesOrderItemEntity;
-import br.com.mind.magento.ClientWithWSI.SalesOrderPaymentEntity;
+import br.com.mind.magento.client.CustomerCustomerEntity;
+import br.com.mind.magento.client.SalesOrderAddressEntity;
+import br.com.mind.magento.client.SalesOrderItemEntity;
+import br.com.mind.magento.client.SalesOrderPaymentEntity;
 
 public class SalesOrderInfo {
 	private String order_id;
@@ -17,18 +17,18 @@ public class SalesOrderInfo {
 	private String subtotal;
 	private String grand_total;
 	private String remote_ip;
+	private int rewardpointsUsed;
 	
 	private CustomerCustomerEntity customer;
     private SalesOrderAddressEntity shipping_address;
     private SalesOrderAddressEntity billing_address;
 	private SalesOrderItemEntity[] items;
     private SalesOrderPaymentEntity payment;
-
+    private String order_comments; 
 	
 	public SalesOrderInfo() {
 		
 	}
-
 
 	public String getOrder_id() {
 		return order_id;
@@ -187,6 +187,26 @@ public class SalesOrderInfo {
 
 	public void setPayment(SalesOrderPaymentEntity payment) {
 		this.payment = payment;
+	}
+
+
+	public int getRewardpointsUsed() {
+		return rewardpointsUsed;
+	}
+
+
+	public void setRewardpointsUsed(int rewardpointsUsed) {
+		this.rewardpointsUsed = rewardpointsUsed;
+	}
+
+
+	public String getOrder_comments() {
+		return order_comments;
+	}
+
+
+	public void setOrder_comments(String order_comments) {
+		this.order_comments = order_comments;
 	}
 
 }

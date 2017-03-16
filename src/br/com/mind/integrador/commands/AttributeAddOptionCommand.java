@@ -1,6 +1,6 @@
 package br.com.mind.integrador.commands;
 
-import br.com.mind.magento.ClientWithWSI.CatalogProductAttributeOptionEntityToAdd;
+import br.com.mind.magento.client.CatalogProductAttributeOptionEntityToAdd;
 
 public class AttributeAddOptionCommand {
 	private String attribute;
