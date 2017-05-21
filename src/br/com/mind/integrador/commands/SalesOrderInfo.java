@@ -18,6 +18,7 @@ public class SalesOrderInfo {
 	private String grand_total;
 	private String remote_ip;
 	private int rewardpointsUsed;
+	private String shipping_method;
 	
 	private CustomerCustomerEntity customer;
     private SalesOrderAddressEntity shipping_address;
@@ -207,6 +208,14 @@ public class SalesOrderInfo {
 
 	public void setOrder_comments(String order_comments) {
 		this.order_comments = order_comments;
+	}
+
+	public String getShipping_method() {
+		return shipping_method;
+	}
+
+	public void setShipping_method(String shipping_method) {
+		this.shipping_method = shipping_method;
 	}
 
 }

@@ -7,7 +7,6 @@ public class ProductUpdateCommand {
 	public String type;
 	public String storeView;
 	public CatalogProductCreateEntity productData;
-//	public ProductCreateCommand[] children;
 
 	public ProductUpdateCommand() {
 		

@@ -31,6 +31,7 @@ import br.com.mind.magento.client.CatalogProductReturnEntity;
 import br.com.mind.magento.client.ComplexFilter;
 import br.com.mind.magento.client.CustomerAddressEntityItem;
 import br.com.mind.magento.client.Filters;
+import br.com.mind.magento.client.RewardpointsTransactionAdd;
 import br.com.mind.magento.client.SalesOrderShipmentEntity;
 
 public class MageBemaErpBridge extends Enginelet {
@@ -200,11 +201,24 @@ public class MageBemaErpBridge extends Enginelet {
 	
 				for (int i = 0; i < customers.length; i++) {
 					CustomerUpdateCommand customer = customers[i];
-					boolean id = magento.updateCustomer(customer);
+					try {
+						boolean id = magento.updateCustomer(customer);
+						result.add(new ResultOK(id, customer.getCustomerData().getTaxvat()));
+					} catch(MageAPIException ex) {
+						if (ex.getMessage().indexOf("Erro ao atualizar Cliente ID:") != -1) {
+							result.add(new ResultERROR(ex.getCause().getMessage(), customer.getCustomer_id()));
+						} else {
+							throw ex;
+						}
+					}
 
-					magento.updateCustomerAddress(addresses[i]);
-					
-					result.add(new ResultOK(id, customer.getCustomerData().getTaxvat()));
+					if ( addresses != null && addresses.length > 0 ) {
+						try {
+							magento.updateCustomerAddress(addresses[i]);
+						} catch(Exception ex) {
+							//nop -> Endereço no magento não é mandatório estar atualizado...
+						}
+					}
 				}
 
 			} else if (command.equals("createCustomerAddress")) {
@@ -232,6 +246,18 @@ public class MageBemaErpBridge extends Enginelet {
 					}
 				}
 
+			} else if (command.equals("updateRewardpoints")) {
+				String customerId = commandArgs[1];
+				String points = commandArgs[2];
+				
+				RewardpointsTransactionAdd data = new RewardpointsTransactionAdd();
+				data.setCustomerId(customerId);
+				data.setStoreId("1");
+				data.setPointAmount(points);
+				
+				String transactionId = magento.createOrUpdateCustomerRewardsPoints(data);
+				result.add(new ResultOK(customerId, transactionId));
+
 			} else if (command.equals("listProducts")) {
 				String c = commandArgs[1];
 				
@@ -250,7 +276,7 @@ public class MageBemaErpBridge extends Enginelet {
 
 			} else if (command.equals("getProductInfo")) {
 				String c = commandArgs[1];
-				
+				System.out.println("Get product infor: " + c);
 				CatalogProductReturnEntity productInfo = magento.getProductInfo(c);
 				result.add(new ResultOK(productInfo));
 				
@@ -324,6 +350,12 @@ public class MageBemaErpBridge extends Enginelet {
 		}
 		
 		return Command.json.toJson(result);
+	}
+	
+	public static void main(String[] args) throws IOException, ServiceException, MageAPIException {
+		MageBemaErpBridge b = new MageBemaErpBridge();
+		String r = b.handleCommand("getProductInfo", new String[] { "{\"user\":\"novointegrador\",\"password\":\"c2b5a6544a0357b7557b7b\",\"endpointUrl\":null,\"sessionId\":null}", "\"476409492\"" } );	
+		System.out.println(r);
 	}
 	
 }
