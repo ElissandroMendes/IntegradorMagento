@@ -997,13 +997,15 @@ public class MageAPI {
 //		CatalogProductEntity[] c = magento.getProductList(null);
 //		System.out.println(json.toJson(c));
 		
-		AssociativeEntity filter1 = new AssociativeEntity();
-		filter1.setKey("increment_id");
-		filter1.setValue("100000623");
-		Filters filters = new Filters();
-		filters.setFilter(new AssociativeEntity[] { filter1 });
-
-		SalesOrderEntity c = magento.getOrderInfo("100000623"); // listSalesOrders(filters);
+//		AssociativeEntity filter1 = new AssociativeEntity();
+//		filter1.setKey("increment_id");
+//		filter1.setValue("100000459");
+//		Filters filters = new Filters();
+//		filters.setFilter(new AssociativeEntity[] { filter1 });
+//		
+//		SalesOrderInfo[] c = magento.listSalesOrders(filters);
+		
+		SalesOrderEntity c = magento.getOrderInfo("100000794"); 
 		System.out.println(json.toJson(c));
 
 //		System.out.println(json.toJson(magento.getCustomerInfo(38)));
