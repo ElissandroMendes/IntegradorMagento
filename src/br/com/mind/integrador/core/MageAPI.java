@@ -34,6 +34,7 @@ import br.com.mind.magento.client.CatalogCategoryTree;
 import br.com.mind.magento.client.CatalogProductAttributeMediaCreateEntity;
 import br.com.mind.magento.client.CatalogProductEntity;
 import br.com.mind.magento.client.CatalogProductImageEntity;
+import br.com.mind.magento.client.CatalogProductLinkEntity;
 import br.com.mind.magento.client.CatalogProductReturnEntity;
 import br.com.mind.magento.client.ComplexFilter;
 import br.com.mind.magento.client.CustomerAddressEntityItem;
@@ -137,26 +138,6 @@ public class MageAPI {
 
 	public int createProducts(ProductCreateCommand product) throws RemoteException, MageAPIException {
 		System.out.println("Creating product. SKU " + product.sku);
-		
-//		AssociativeEntity filter = new AssociativeEntity();
-//		filter.setKey("sku");
-//		filter.setValue(product.sku);
-//		
-//		Filters filters = new Filters();
-//		filters.setFilter(new AssociativeEntity[] { filter });
-//		
-//		CatalogProductEntity[] listResult = null;
-//		try {
-//			listResult = this.mageService.catalogProductList(sessionId, filters, null);
-//		} catch(AxisFault e) {
-//			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
-//				renewSessionId();
-//				listResult = this.mageService.catalogProductList(sessionId, filters, null);
-//			} else {
-//				throw new MageAPIException("Erro criar produto SKU: " + product.sku, e);
-//			}
-//		}
-
 		int result = -1;
 		try {
 			result = this.mageService.catalogProductCreate(sessionId, product.type, product.set, product.sku, product.productData, product.storeView); 
@@ -169,12 +150,6 @@ public class MageAPI {
 			}
 		}
 		System.out.println("Creating product. DONE. Product ID: " + result);
-
-//		if( listResult.length == 0 ) {
-//		} else {
-//			System.out.println("Product already exists. SKU " + product.sku + " - ID " + listResult[0].getProduct_id());
-//			result = Integer.parseInt(listResult[0].getProduct_id());
-//		}
 		return result;
 	}
 	
@@ -274,6 +249,23 @@ public class MageAPI {
 			}
 		}
 		System.out.println("Assign product link. DONE. Link created (" + product + " -> " + linkedProduct + "): " + result);
+		return result;
+	}
+	
+	public CatalogProductLinkEntity[] getListOfLinks(String sku) throws RemoteException, MageAPIException {
+		System.out.println("Getting product list of links.");
+		CatalogProductLinkEntity[] result; 
+		try {
+			result = this.mageService.catalogProductLinkList(sessionId, "grouped", sku, "sku"); 
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.catalogProductLinkList(sessionId, "grouped", sku, "sku");
+			} else {
+				throw new MageAPIException("Erro criar listar links de produto SKU: " + sku, e);
+			}
+		}
+		System.out.println("Getting product list of links. DONE.");
 		return result;
 	}
 		
@@ -883,7 +875,7 @@ public class MageAPI {
 		}
 		return listResult;
 	}
-
+	
 	public static void main(String[] args) throws IOException, ServiceException, MageAPIException {
 		
 		MageAPI magento = new MageAPI("novointegrador", "c2b5a6544a0357b7557b7b");
@@ -903,32 +895,6 @@ public class MageAPI {
 //		CatalogProductReturnEntity p = magento.getProductInfo("480573288");
 //		System.out.println(json.toJson(p));
 		
-//		StringBuilder l = new StringBuilder();
-//		
-//		AssociativeEntity filter = new AssociativeEntity();
-//		filter.setKey("sku");
-//		filter.setValue("457908208");
-//		Filters filters = new Filters();
-//		filters.setFilter(new AssociativeEntity[] { filter }); 
-//		
-//		CatalogProductEntity[] p = magento.getProductList(filters);
-//		System.out.println(json.toJson(p));
-
-//		int i = 0;
-//		HashMap<String,String> b = magento.getProductExists(filters);
-//		System.out.println("#Simple Products " + b.size());
-//		for (String sku : b.keySet()) {
-//			CatalogProductReturnEntity p = magento.getProductInfo(sku);
-//			
-//			if (p.getTier_price().length == 0) {
-//				System.out.println("Sku has no tier_price");
-//				System.out.println("#N " + (++i));
-//				l.append(sku);
-//				l.append(',');
-//			}
-//		}
-//		System.out.println(l.toString());
-
 //		HashMap<String, Integer> b = magento.getCustomerListByEmail(new String[] {"barbie_jackmagno@hotmail.com"});
 //		System.out.println(json.toJson(b));
 		
@@ -1005,8 +971,8 @@ public class MageAPI {
 //		
 //		SalesOrderInfo[] c = magento.listSalesOrders(filters);
 		
-		SalesOrderEntity c = magento.getOrderInfo("100000794"); 
-		System.out.println(json.toJson(c));
+//		SalesOrderEntity c = magento.getOrderInfo("100001161"); 
+//		System.out.println(json.toJson(c));
 
 //		System.out.println(json.toJson(magento.getCustomerInfo(38)));
 		
@@ -1020,8 +986,23 @@ public class MageAPI {
 //		data.setPointAmount("1");
 //
 //		magento.createOrUpdateCustomerRewardsPoints(data);
-		
-	}
 
+		AssociativeEntity filter = new AssociativeEntity();
+		filter.setKey("type");
+		filter.setValue("grouped");
+		Filters filters = new Filters();
+		filters.setFilter(new AssociativeEntity[] { filter }); 
+		
+		StringBuilder agrupadoSemLinks = new StringBuilder();
+		CatalogProductEntity[] agrupados = magento.getProductList(filters);
+		for (int j = 0; j < agrupados.length; j++) {
+			String skuAgrupado = agrupados[j].getSku();
+			CatalogProductLinkEntity[] simples = magento.getListOfLinks(skuAgrupado);
+			if (simples.length == 0) {
+				agrupadoSemLinks.append(skuAgrupado);
+			}
+		}
+		System.out.println("Agrupados sem links " + agrupadoSemLinks.toString());
+	}
 }
 			
