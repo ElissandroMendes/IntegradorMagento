@@ -18,6 +18,8 @@ public class SalesOrderInfo {
 	private String grand_total;
 	private String remote_ip;
 	private int rewardpointsUsed;
+	private String shipping_name;
+	private String shipping_description;
 	private String shipping_method;
 	
 	private CustomerCustomerEntity customer;
@@ -217,5 +219,22 @@ public class SalesOrderInfo {
 	public void setShipping_method(String shipping_method) {
 		this.shipping_method = shipping_method;
 	}
+
+	public String getShipping_name() {
+		return shipping_name;
+	}
+
+	public void setShipping_name(String shipping_name) {
+		this.shipping_name = shipping_name;
+	}
+
+	public String getShipping_description() {
+		return shipping_description;
+	}
+
+	public void setShipping_description(String shipping_description) {
+		this.shipping_description = shipping_description;
+	}
+
 
 }

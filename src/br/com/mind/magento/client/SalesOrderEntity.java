@@ -155,6 +155,7 @@ public class SalesOrderEntity  implements java.io.Serializable {
     private br.com.mind.magento.client.AssociativeEntity[] deliverydate;
 
     private java.lang.String order_comments;
+    private java.lang.String customer_taxvat;
 
     public SalesOrderEntity() {
     }
@@ -2841,5 +2842,13 @@ public class SalesOrderEntity  implements java.io.Serializable {
           new  org.apache.axis.encoding.ser.BeanDeserializer(
             _javaType, _xmlType, typeDesc);
     }
+
+	public java.lang.String getCustomer_taxvat() {
+		return customer_taxvat;
+	}
+
+	public void setCustomer_taxvat(java.lang.String customer_taxvat) {
+		this.customer_taxvat = customer_taxvat;
+	}
 
 }

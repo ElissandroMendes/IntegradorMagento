@@ -670,6 +670,8 @@ public class MageAPI {
 			saleInfo.setGrand_total(saleEntity.getGrand_total());
 			saleInfo.setRemote_ip(saleEntity.getRemote_ip());
 			saleInfo.setRewardpointsUsed(this.getRewardPointsUsedInOrder(saleInfo.getIncrement_id()));
+			saleInfo.setShipping_description(saleEntity.getShipping_description());
+			saleInfo.setShipping_name(saleEntity.getShipping_name());
 			saleInfo.setShipping_method(saleEntity.getShipping_method());
 			
 			CustomerCustomerEntity c = new CustomerCustomerEntity();
@@ -909,13 +911,16 @@ public class MageAPI {
 //		int b = magento.getRewardPointsUsedInOrder("100000088");
 //		System.out.println(json.toJson(b));
 		
-//		AssociativeEntity filter = new AssociativeEntity();
-//		filter.setKey("increment_id");
-//		filter.setValue("100000156");
-//		Filters filters = new Filters();
-//		filters.setFilter(new AssociativeEntity[] { filter });
-//		SalesOrderInfo[] b = magento.listSalesOrders(filters);
-//		System.out.println(json.toJson(b));
+		AssociativeEntity filter = new AssociativeEntity();
+		filter.setKey("increment_id");
+		//100004496 Lauto
+		//100004437 PAC
+		
+		filter.setValue("100004496");
+		Filters filters = new Filters();
+		filters.setFilter(new AssociativeEntity[] { filter });
+		SalesOrderInfo[] b = magento.listSalesOrders(filters);
+		System.out.println(json.toJson(b));
 		
 //		RewardpointsTransactionEntity[] b = magento.getRewardPointsTrasactionList(filters);
 //		System.out.println(json.toJson(b));
@@ -987,22 +992,22 @@ public class MageAPI {
 //
 //		magento.createOrUpdateCustomerRewardsPoints(data);
 
-		AssociativeEntity filter = new AssociativeEntity();
-		filter.setKey("type");
-		filter.setValue("grouped");
-		Filters filters = new Filters();
-		filters.setFilter(new AssociativeEntity[] { filter }); 
-		
-		StringBuilder agrupadoSemLinks = new StringBuilder();
-		CatalogProductEntity[] agrupados = magento.getProductList(filters);
-		for (int j = 0; j < agrupados.length; j++) {
-			String skuAgrupado = agrupados[j].getSku();
-			CatalogProductLinkEntity[] simples = magento.getListOfLinks(skuAgrupado);
-			if (simples.length == 0) {
-				agrupadoSemLinks.append(skuAgrupado);
-			}
-		}
-		System.out.println("Agrupados sem links " + agrupadoSemLinks.toString());
+//		AssociativeEntity filter = new AssociativeEntity();
+//		filter.setKey("type");
+//		filter.setValue("grouped");
+//		Filters filters = new Filters();
+//		filters.setFilter(new AssociativeEntity[] { filter }); 
+//		
+//		StringBuilder agrupadoSemLinks = new StringBuilder();
+//		CatalogProductEntity[] agrupados = magento.getProductList(filters);
+//		for (int j = 0; j < agrupados.length; j++) {
+//			String skuAgrupado = agrupados[j].getSku();
+//			CatalogProductLinkEntity[] simples = magento.getListOfLinks(skuAgrupado);
+//			if (simples.length == 0) {
+//				agrupadoSemLinks.append(skuAgrupado);
+//			}
+//		}
+//		System.out.println("Agrupados sem links " + agrupadoSemLinks.toString());
 	}
 }
 			
