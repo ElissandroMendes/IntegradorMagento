@@ -9,7 +9,7 @@
     <property name="jarfile" value="${directory.distribuition}/magento.jar"/>
     <property name="sessionFile" value="${directory.source}/session.txt"/>
 
-    <property name="directory.erp.d" value="C:/unum/handara2012/javalibs"/>
+    <property name="directory.erp.d" value="C:/unum/dhandara2012/javalibs"/>
     <property name="directory.erp.p" value="C:/unum/handara/javalibs"/>
     <property name="temp" value="C:/temp/javalibs"/>
 
