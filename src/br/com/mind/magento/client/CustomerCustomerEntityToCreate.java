@@ -35,7 +35,10 @@ public class CustomerCustomerEntityToCreate  implements java.io.Serializable {
     private java.lang.String taxvat;
 
     private java.lang.Integer gender;
-
+    private java.lang.String ie;
+    private java.lang.String rg_atribute;
+    private java.lang.String erp_id;
+    
     public CustomerCustomerEntityToCreate() {
     }
 
@@ -53,7 +56,10 @@ public class CustomerCustomerEntityToCreate  implements java.io.Serializable {
            java.lang.String suffix,
            java.lang.String dob,
            java.lang.String taxvat,
-           java.lang.Integer gender) {
+           java.lang.Integer gender,
+           java.lang.String ie,
+           java.lang.String rg_atribute,
+           java.lang.String erp_id) {
            this.customer_id = customer_id;
            this.email = email;
            this.firstname = firstname;
@@ -68,6 +74,9 @@ public class CustomerCustomerEntityToCreate  implements java.io.Serializable {
            this.dob = dob;
            this.taxvat = taxvat;
            this.gender = gender;
+           this.ie = ie;
+           this.rg_atribute = rg_atribute;
+           this.erp_id = erp_id;
     }
 
 
@@ -350,7 +359,31 @@ public class CustomerCustomerEntityToCreate  implements java.io.Serializable {
         this.gender = gender;
     }
 
-    private java.lang.Object __equalsCalc = null;
+    public java.lang.String getIe() {
+		return ie;
+	}
+
+	public void setIe(java.lang.String ie) {
+		this.ie = ie;
+	}
+
+	public java.lang.String getRg_atribute() {
+		return rg_atribute;
+	}
+
+	public void setRg_atribute(java.lang.String rg_atribute) {
+		this.rg_atribute = rg_atribute;
+	}
+
+	public java.lang.String getErp_id() {
+		return erp_id;
+	}
+
+	public void setErp_id(java.lang.String erp_id) {
+		this.erp_id = erp_id;
+	}
+
+	private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof CustomerCustomerEntityToCreate)) return false;
         CustomerCustomerEntityToCreate other = (CustomerCustomerEntityToCreate) obj;

@@ -123,7 +123,7 @@ public class SalesOrderEntity  implements java.io.Serializable {
     private java.lang.String customer_firstname;
 
     private java.lang.String customer_lastname;
-
+    
     private java.lang.String quote_id;
 
     private java.lang.String is_virtual;
@@ -156,6 +156,7 @@ public class SalesOrderEntity  implements java.io.Serializable {
 
     private java.lang.String order_comments;
     private java.lang.String customer_taxvat;
+    private java.lang.String customer_gender;
 
     public SalesOrderEntity() {
     }
@@ -2849,6 +2850,14 @@ public class SalesOrderEntity  implements java.io.Serializable {
 
 	public void setCustomer_taxvat(java.lang.String customer_taxvat) {
 		this.customer_taxvat = customer_taxvat;
+	}
+
+	public java.lang.String getCustomer_gender() {
+		return customer_gender;
+	}
+
+	public void setCustomer_gender(java.lang.String customer_gender) {
+		this.customer_gender = customer_gender;
 	}
 
 }

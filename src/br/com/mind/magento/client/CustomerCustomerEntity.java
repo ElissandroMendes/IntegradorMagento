@@ -43,6 +43,9 @@ public class CustomerCustomerEntity  implements java.io.Serializable {
     private java.lang.Boolean confirmation;
 
     private java.lang.String password_hash;
+    private java.lang.String ie;
+    private java.lang.String rg_atribute;
+    private java.lang.String erp_id;
 
     public CustomerCustomerEntity() {
     }
@@ -65,7 +68,10 @@ public class CustomerCustomerEntity  implements java.io.Serializable {
            java.lang.String dob,
            java.lang.String taxvat,
            java.lang.Boolean confirmation,
-           java.lang.String password_hash) {
+           java.lang.String password_hash,
+	       java.lang.String ie,
+	       java.lang.String rg_atribute,
+	       java.lang.String erp_id) {
            this.customer_id = customer_id;
            this.created_at = created_at;
            this.updated_at = updated_at;
@@ -84,6 +90,9 @@ public class CustomerCustomerEntity  implements java.io.Serializable {
            this.taxvat = taxvat;
            this.confirmation = confirmation;
            this.password_hash = password_hash;
+           this.ie = ie; 
+           this.rg_atribute = rg_atribute;
+           this.erp_id = erp_id;
     }
 
 
@@ -446,7 +455,31 @@ public class CustomerCustomerEntity  implements java.io.Serializable {
         this.password_hash = password_hash;
     }
 
-    private java.lang.Object __equalsCalc = null;
+    public java.lang.String getIe() {
+		return ie;
+	}
+
+	public void setIe(java.lang.String ie) {
+		this.ie = ie;
+	}
+
+	public java.lang.String getRg_atribute() {
+		return rg_atribute;
+	}
+
+	public void setRg_atribute(java.lang.String rg_atribute) {
+		this.rg_atribute = rg_atribute;
+	}
+
+	public java.lang.String getErp_id() {
+		return erp_id;
+	}
+
+	public void setErp_id(java.lang.String erp_id) {
+		this.erp_id = erp_id;
+	}
+
+	private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof CustomerCustomerEntity)) return false;
         CustomerCustomerEntity other = (CustomerCustomerEntity) obj;

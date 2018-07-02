@@ -670,8 +670,8 @@ public class MageAPI {
 			saleInfo.setGrand_total(saleEntity.getGrand_total());
 			saleInfo.setRemote_ip(saleEntity.getRemote_ip());
 			saleInfo.setRewardpointsUsed(this.getRewardPointsUsedInOrder(saleInfo.getIncrement_id()));
-			saleInfo.setShipping_description(saleEntity.getShipping_description());
 			saleInfo.setShipping_name(saleEntity.getShipping_name());
+			saleInfo.setShipping_description(saleEntity.getShipping_description());
 			saleInfo.setShipping_method(saleEntity.getShipping_method());
 			
 			CustomerCustomerEntity c = new CustomerCustomerEntity();
@@ -885,6 +885,15 @@ public class MageAPI {
 		Gson json = new Gson();
 
 //		AssociativeEntity filter = new AssociativeEntity();
+//		filter.setKey("group_id");
+//		filter.setValue("5");
+//		Filters filters = new Filters();
+//		filters.setFilter(new AssociativeEntity[] { filter });
+		String[] emails = {"janesz1920@gmail.com"};
+		HashMap<String, Integer> b = magento.getCustomerListByEmail(emails);
+		System.out.println(json.toJson(b));
+		
+//		AssociativeEntity filter = new AssociativeEntity();
 //		filter.setKey("in");
 //		filter.setValue("507435973,507435971");
 //		
@@ -911,16 +920,16 @@ public class MageAPI {
 //		int b = magento.getRewardPointsUsedInOrder("100000088");
 //		System.out.println(json.toJson(b));
 		
-		AssociativeEntity filter = new AssociativeEntity();
-		filter.setKey("increment_id");
-		//100004496 Lauto
-		//100004437 PAC
-		
-		filter.setValue("100004496");
-		Filters filters = new Filters();
-		filters.setFilter(new AssociativeEntity[] { filter });
-		SalesOrderInfo[] b = magento.listSalesOrders(filters);
-		System.out.println(json.toJson(b));
+//		AssociativeEntity filter = new AssociativeEntity();
+//		filter.setKey("increment_id");
+//		//100004496 Lauto
+//		//100004437 PAC
+//		
+//		filter.setValue("100004496");
+//		Filters filters = new Filters();
+//		filters.setFilter(new AssociativeEntity[] { filter });
+//		SalesOrderInfo[] b = magento.listSalesOrders(filters);
+//		System.out.println(json.toJson(b));
 		
 //		RewardpointsTransactionEntity[] b = magento.getRewardPointsTrasactionList(filters);
 //		System.out.println(json.toJson(b));
