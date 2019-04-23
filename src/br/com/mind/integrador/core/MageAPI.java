@@ -31,6 +31,7 @@ import br.com.mind.magento.client.CatalogAttributeEntity;
 import br.com.mind.magento.client.CatalogAttributeOptionEntity;
 import br.com.mind.magento.client.CatalogCategoryEntityCreate;
 import br.com.mind.magento.client.CatalogCategoryTree;
+import br.com.mind.magento.client.CatalogInventoryStockItemUpdateEntity;
 import br.com.mind.magento.client.CatalogProductAttributeMediaCreateEntity;
 import br.com.mind.magento.client.CatalogProductEntity;
 import br.com.mind.magento.client.CatalogProductImageEntity;
@@ -164,6 +165,23 @@ public class MageAPI {
 				result = this.mageService.catalogInventoryStockItemUpdate(sessionId, product.sku, product.productData.getStock_data());
 			} else {
 				throw new MageAPIException("Erro atualizar estoque produto SKU: " + product.sku, e);
+			}
+		}
+		System.out.println("Updating product stock. DONE. " + result);
+		return result;
+	}
+
+	public boolean updateStockProductBulk(String[] productIds, CatalogInventoryStockItemUpdateEntity[] productData) throws RemoteException, MageAPIException {
+		System.out.println("Updating product stock in bulk way. #Products " + productIds.length);
+		boolean result;
+		try {
+			result = this.mageService.catalogInventoryStockItemMultiUpdate(sessionId, productIds, productData); 
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.catalogInventoryStockItemMultiUpdate(sessionId, productIds, productData);
+			} else {
+				throw new MageAPIException("Erro atualizar estoque produto (BULK)", e);
 			}
 		}
 		System.out.println("Updating product stock. DONE. " + result);
