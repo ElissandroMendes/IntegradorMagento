@@ -216,7 +216,7 @@ public class MageBemaErpBridge extends Enginelet {
 						try {
 							magento.updateCustomerAddress(addresses[i]);
 						} catch(Exception ex) {
-							//nop -> Endereço no magento não é mandatório estar atualizado...
+							//nop -> Endereï¿½o no magento nï¿½o ï¿½ mandatï¿½rio estar atualizado...
 						}
 					}
 				}
@@ -313,7 +313,7 @@ public class MageBemaErpBridge extends Enginelet {
 				}
 
 				int trackNumberId = magento.addOrderTrack(shipmentId, courier, trackNumber);
-				boolean r = magento.addOrderShipmentComment(shipmentId, "Código Rastreio:" + trackNumber);
+				boolean r = magento.addOrderShipmentComment(shipmentId, "Cï¿½digo Rastreio:" + trackNumber);
 				
 				result.add(new ResultOK(trackNumberId));
 

@@ -108,7 +108,7 @@ public class MageAPI {
 			this.sessionId = newSessionId;
 			
 		} catch (RemoteException | FileNotFoundException e) {
-			throw new MageAPIException("Erro ao tentar renovar sessão.", e);
+			throw new MageAPIException("Erro ao tentar renovar sessï¿½o.", e);
 		}
 	}
 
@@ -132,7 +132,7 @@ public class MageAPI {
 	}
 
 	/**
-	 * BEGIN - API´s relacionadas a PRODUTOS
+	 * BEGIN - APIï¿½s relacionadas a PRODUTOS
 	 * @throws MageAPIException 
 	 */
 
@@ -279,7 +279,7 @@ public class MageAPI {
 				renewSessionId();
 				result = this.mageService.catalogProductAttributeAddOption(sessionId, attributeOption.getAttribute(), attributeOption.getData());
 			} else {
-				throw new MageAPIException("Erro criar opção de atributo AttributeID: " + attributeOption.getAttribute(), e);
+				throw new MageAPIException("Erro criar opï¿½ï¿½o de atributo AttributeID: " + attributeOption.getAttribute(), e);
 			}
 		}
 		System.out.println("Adding Attribute Option. DONE.");
@@ -380,11 +380,11 @@ public class MageAPI {
 	}
 	
 	/**
-	 * END - API´s relacionadas a PRODUTOS
+	 * END - APIï¿½s relacionadas a PRODUTOS
 	 */
 
 	/**
-	 * BEGIN - API´s relacionadas a CLIENTES
+	 * BEGIN - APIï¿½s relacionadas a CLIENTES
 	 * @throws MageAPIException 
 	 * @throws RemoteException 
 	 * @throws Exception 
@@ -427,7 +427,7 @@ public class MageAPI {
 				renewSessionId();
 				result = this.mageService.customerAddressCreate(sessionId, addr.getCustomerId(), addr.getAddressdata()[0]);
 			} else {
-				throw new MageAPIException("Erro ao criar Endereço Cliente ID: " + addr.getCustomerId() , e);
+				throw new MageAPIException("Erro ao criar Endereï¿½o Cliente ID: " + addr.getCustomerId() , e);
 			}
 		}
 		System.out.println("Creating customer. DONE. Customer Addres ID: " + result);
@@ -526,7 +526,7 @@ public class MageAPI {
 				renewSessionId();
 				result = this.mageService.customerAddressUpdate(sessionId, address.getAddressId(), address.getAddressdata());
 			} else {
-				throw new MageAPIException("Erro ao atualizar Endereço ID: " + address.getAddressId() , e);
+				throw new MageAPIException("Erro ao atualizar Endereï¿½o ID: " + address.getAddressId() , e);
 			}
 		}
 		System.out.println("Updating customer address. DONE.");
@@ -602,7 +602,7 @@ public class MageAPI {
 				renewSessionId();
 				result = this.mageService.customerCustomerInfo(sessionId, customerId, null);
 			} else {
-				throw new MageAPIException("Erro obtendo informação Cliente: " + customerId, e);
+				throw new MageAPIException("Erro obtendo informaï¿½ï¿½o Cliente: " + customerId, e);
 			}
 		}
 		System.out.println("Getting Customer Info. DONE.");
@@ -619,7 +619,7 @@ public class MageAPI {
 				renewSessionId();
 				result = this.mageService.customerAddressList(sessionId, customerId);
 			} else {
-				throw new MageAPIException("Erro obtendo endereço Cliente: " + customerId, e);
+				throw new MageAPIException("Erro obtendo endereï¿½o Cliente: " + customerId, e);
 			}
 		}
 		System.out.println("Getting Customer Address. DONE.");
@@ -627,7 +627,7 @@ public class MageAPI {
 	}
 
 	/**
-	 * BEGIN - API´s relacionadas a VENDAS
+	 * BEGIN - APIï¿½s relacionadas a VENDAS
 	 * @throws MageAPIException 
 	 */
 	 
@@ -710,7 +710,7 @@ public class MageAPI {
 				renewSessionId();
 				result = this.mageService.salesOrderInfo(sessionId, orderIncrementId);
 			} else {
-				throw new MageAPIException("Erro obtendo informação Pedido IncrementID: " + orderIncrementId, e);
+				throw new MageAPIException("Erro obtendo informaï¿½ï¿½o Pedido IncrementID: " + orderIncrementId, e);
 			}
 		}
 		System.out.println("Getting Sale Order Info. DONE.");
@@ -727,7 +727,7 @@ public class MageAPI {
 				renewSessionId();
 				result = this.mageService.salesOrderAddComment(sessionId, orderIncrementId, status, comment, null);
 			} else {
-				throw new MageAPIException("Erro adicionando comentário Pedido IncrementID: " + orderIncrementId, e);
+				throw new MageAPIException("Erro adicionando comentï¿½rio Pedido IncrementID: " + orderIncrementId, e);
 			}
 		}
 		System.out.println("Adding Order Comment. DONE.");
@@ -744,7 +744,7 @@ public class MageAPI {
 				renewSessionId();
 				result = this.mageService.salesOrderShipmentCreate(sessionId, orderIncrementId, null, comment, 0, 0);
 			} else {
-				throw new MageAPIException("Erro obtendo informação Embarque Pedido IncrementID: " + orderIncrementId, e);
+				throw new MageAPIException("Erro obtendo informaï¿½ï¿½o Embarque Pedido IncrementID: " + orderIncrementId, e);
 			}
 		}
 		System.out.println("Adding Order Shipment. DONE.");
@@ -761,7 +761,7 @@ public class MageAPI {
 				renewSessionId();
 				result = this.mageService.salesOrderShipmentAddComment(sessionId, shipmentIncrementId, comment, "1", "1");
 			} else {
-				throw new MageAPIException("Erro obtendo comentário no Embarque ID: " + shipmentIncrementId, e);
+				throw new MageAPIException("Erro obtendo comentï¿½rio no Embarque ID: " + shipmentIncrementId, e);
 			}
 		}
 		System.out.println("Adding Order Shipment Comment. DONE.");
