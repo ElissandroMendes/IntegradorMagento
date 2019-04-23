@@ -26,6 +26,7 @@ import br.com.mind.integrador.commands.SalesOrderInfo;
 import br.com.mind.magento.client.AssociativeEntity;
 import br.com.mind.magento.client.CatalogAttributeOptionEntity;
 import br.com.mind.magento.client.CatalogCategoryTree;
+import br.com.mind.magento.client.CatalogInventoryStockItemEntity;
 import br.com.mind.magento.client.CatalogInventoryStockItemUpdateEntity;
 import br.com.mind.magento.client.CatalogProductEntity;
 import br.com.mind.magento.client.CatalogProductReturnEntity;
@@ -109,6 +110,14 @@ public class MageBemaErpBridge extends Enginelet {
 					}
 				}
 	
+			} else if (command.equals("listStockProducts")) {
+				String c = commandArgs[1];
+				
+				String[] productsIds = Command.json.fromJson(c, String[].class);
+				
+				CatalogInventoryStockItemEntity[] ok = magento.listStockProducts(productsIds);
+				result.add(new ResultOK(ok));
+
 			} else if (command.equals("updateStockProducts")) {
 				String c = commandArgs[1];
 				

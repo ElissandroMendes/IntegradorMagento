@@ -31,6 +31,7 @@ import br.com.mind.magento.client.CatalogAttributeEntity;
 import br.com.mind.magento.client.CatalogAttributeOptionEntity;
 import br.com.mind.magento.client.CatalogCategoryEntityCreate;
 import br.com.mind.magento.client.CatalogCategoryTree;
+import br.com.mind.magento.client.CatalogInventoryStockItemEntity;
 import br.com.mind.magento.client.CatalogInventoryStockItemUpdateEntity;
 import br.com.mind.magento.client.CatalogProductAttributeMediaCreateEntity;
 import br.com.mind.magento.client.CatalogProductEntity;
@@ -133,7 +134,7 @@ public class MageAPI {
 	}
 
 	/**
-	 * BEGIN - API�s relacionadas a PRODUTOS
+	 * BEGIN - APIs relacionadas a PRODUTOS
 	 * @throws MageAPIException 
 	 */
 
@@ -154,6 +155,23 @@ public class MageAPI {
 		return result;
 	}
 	
+	public CatalogInventoryStockItemEntity[] listStockProducts(String[] productsIds) throws RemoteException, MageAPIException {
+		System.out.println("Listing product stock position.");
+		CatalogInventoryStockItemEntity[] result;
+		try {
+			result = this.mageService.catalogInventoryStockItemList(sessionId, productsIds); 
+		} catch(AxisFault e) {
+			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+				renewSessionId();
+				result = this.mageService.catalogInventoryStockItemList(sessionId, productsIds);
+			} else {
+				throw new MageAPIException("Erro ao lista posição estoque produto.", e);
+			}
+		}
+		System.out.println("Listing product stock position. DONE.");
+		return result;
+	}
+
 	public int updateStockProduct(ProductUpdateCommand product) throws RemoteException, MageAPIException {
 		System.out.println("Updating product stock. ID " + product.sku);
 		int result;
@@ -901,15 +919,20 @@ public class MageAPI {
 		MageAPI magento = new MageAPI("novointegrador", "c2b5a6544a0357b7557b7b");
 
 		Gson json = new Gson();
-
+		
+		String[] ids = new String[]{"30117", "30113", "30114", "30115"};
+		
+		CatalogInventoryStockItemEntity[] b = magento.listStockProducts(ids);
+		System.out.println(json.toJson(b));
+		
 //		AssociativeEntity filter = new AssociativeEntity();
 //		filter.setKey("group_id");
 //		filter.setValue("5");
 //		Filters filters = new Filters();
 //		filters.setFilter(new AssociativeEntity[] { filter });
-		String[] emails = {"janesz1920@gmail.com"};
-		HashMap<String, Integer> b = magento.getCustomerListByEmail(emails);
-		System.out.println(json.toJson(b));
+//		String[] emails = {"janesz1920@gmail.com"};
+//		HashMap<String, Integer> b = magento.getCustomerListByEmail(emails);
+//		System.out.println(json.toJson(b));
 		
 //		AssociativeEntity filter = new AssociativeEntity();
 //		filter.setKey("in");
