@@ -22,7 +22,7 @@ public class MagentoServiceLocator extends org.apache.axis.client.Service implem
     }
 
     // Use to get a proxy class for Mage_Api_Model_Server_V2_HandlerPort
-    private java.lang.String Mage_Api_Model_Server_V2_HandlerPort_address = "http://admin.handara.signashop.com.br/index.php/api/v2_soap";
+    private java.lang.String Mage_Api_Model_Server_V2_HandlerPort_address = "https://admin.handara.signashop.com.br/index.php/api/v2_soap";
 
     public java.lang.String getMage_Api_Model_Server_V2_HandlerPortAddress() {
         return Mage_Api_Model_Server_V2_HandlerPort_address;
