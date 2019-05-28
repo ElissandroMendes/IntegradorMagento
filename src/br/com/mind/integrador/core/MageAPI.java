@@ -920,10 +920,10 @@ public class MageAPI {
 
 		Gson json = new Gson();
 		
-		String[] ids = new String[]{"30117", "30113", "30114", "30115"};
-		
-		CatalogInventoryStockItemEntity[] b = magento.listStockProducts(ids);
-		System.out.println(json.toJson(b));
+//		String[] ids = new String[]{"30117", "30113", "30114", "30115"};
+//		
+//		CatalogInventoryStockItemEntity[] b = magento.listStockProducts(ids);
+//		System.out.println(json.toJson(b));
 		
 //		AssociativeEntity filter = new AssociativeEntity();
 //		filter.setKey("group_id");
@@ -1018,16 +1018,16 @@ public class MageAPI {
 //		CatalogProductEntity[] c = magento.getProductList(null);
 //		System.out.println(json.toJson(c));
 		
-//		AssociativeEntity filter1 = new AssociativeEntity();
-//		filter1.setKey("increment_id");
-//		filter1.setValue("100000459");
-//		Filters filters = new Filters();
-//		filters.setFilter(new AssociativeEntity[] { filter1 });
-//		
-//		SalesOrderInfo[] c = magento.listSalesOrders(filters);
+		AssociativeEntity filter1 = new AssociativeEntity();
+		filter1.setKey("increment_id");
+		filter1.setValue("100007166");
+		Filters filters = new Filters();
+		filters.setFilter(new AssociativeEntity[] { filter1 });
+		
+		SalesOrderInfo[] c = magento.listSalesOrders(filters);
 		
 //		SalesOrderEntity c = magento.getOrderInfo("100001161"); 
-//		System.out.println(json.toJson(c));
+		System.out.println(json.toJson(c));
 
 //		System.out.println(json.toJson(magento.getCustomerInfo(38)));
 		

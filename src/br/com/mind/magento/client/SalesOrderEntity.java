@@ -164,6 +164,8 @@ public class SalesOrderEntity  implements java.io.Serializable {
 
     private java.lang.String customer_rg;
 
+    private java.lang.String representante_id;
+
     public SalesOrderEntity() {
     }
 
@@ -245,7 +247,8 @@ public class SalesOrderEntity  implements java.io.Serializable {
            java.lang.String customer_taxvat,
            java.lang.String customer_gender,
            java.lang.String customer_ie,
-           java.lang.String customer_rg) {
+           java.lang.String customer_rg, 
+           java.lang.String representante_id) {
            this.increment_id = increment_id;
            this.parent_id = parent_id;
            this.store_id = store_id;
@@ -324,6 +327,7 @@ public class SalesOrderEntity  implements java.io.Serializable {
            this.customer_gender = customer_gender;
            this.customer_ie = customer_ie;
            this.customer_rg = customer_rg;
+           this.representante_id = representante_id;
     }
 
 
@@ -1886,7 +1890,15 @@ public class SalesOrderEntity  implements java.io.Serializable {
         this.customer_rg = customer_rg;
     }
 
-    private java.lang.Object __equalsCalc = null;
+    public java.lang.String getRepresentante_id() {
+		return representante_id;
+	}
+
+	public void setRepresentante_id(java.lang.String representante_id) {
+		this.representante_id = representante_id;
+	}
+
+	private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof SalesOrderEntity)) return false;
         SalesOrderEntity other = (SalesOrderEntity) obj;
