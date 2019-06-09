@@ -6,6 +6,8 @@ import java.util.HashMap;
 
 import javax.xml.rpc.ServiceException;
 
+import org.apache.commons.lang.exception.ExceptionUtils;
+
 import br.com.inteq.engine.enginelet.Enginelet;
 import br.com.mind.integrador.commands.AttributeAddOptionCommand;
 import br.com.mind.integrador.commands.CategoryCreateCommand;
@@ -364,9 +366,11 @@ public class MageBemaErpBridge extends Enginelet {
 			
 		} catch (IOException | ServiceException | MageAPIException e) {
 			System.out.println("Executing " + command + " - Error:");
-			System.out.println(Utils.StackTraceToString(e));
+			System.out.println(ExceptionUtils.getRootCauseMessage(e));
+//			System.out.println(Utils.StackTraceToString(e));
 			System.out.println(" ");
-			result.add(new ResultERROR(Utils.StackTraceToString(e)));
+//			result.add(new ResultERROR(Utils.StackTraceToString(e)));
+			result.add(new ResultERROR(e.getCause() + " - " + ExceptionUtils.getRootCauseMessage(e)));
 		}
 		
 		return Command.json.toJson(result);
@@ -374,7 +378,9 @@ public class MageBemaErpBridge extends Enginelet {
 	
 	public static void main(String[] args) throws IOException, ServiceException, MageAPIException {
 		MageBemaErpBridge b = new MageBemaErpBridge();
-		String r = b.handleCommand("getProductInfo", new String[] { "{\"user\":\"novointegrador\",\"password\":\"c2b5a6544a0357b7557b7b\",\"endpointUrl\":null,\"sessionId\":null}", "\"476409492\"" } );	
+//		String r = b.handleCommand("getProductInfo", new String[] { "{\"user\":\"novointegrador\",\"password\":\"c2b5a6544a0357b7557b7b\",\"endpointUrl\":null,\"sessionId\":null}", "\"476409492\"" } );
+		String r = b.handleCommand("listSalesOrders", new String[] { "{\"user\":\"novointegrador\",\"password\":\"c2b5a6544a0357b7557b7b\",\"endpointUrl\":null,\"sessionId\":null}", "{\"complex_filter\":[{\"value\":{\"value\":\"2018-01-01 00:00:00\",\"key\":\"from\"},\"key\":\"created_at\"},{\"value\":{\"value\":\"2019-05-30 23:59:59\",\"key\":\"to\"},\"key\":\"created_at\"},{\"value\":{\"value\":\"processing,holded\",\"key\":\"in\"},\"key\":\"status\"}]}" } );
+		
 		System.out.println(r);
 	}
 	

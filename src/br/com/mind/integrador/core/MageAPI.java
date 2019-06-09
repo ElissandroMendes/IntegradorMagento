@@ -780,7 +780,7 @@ public class MageAPI {
 				renewSessionId();
 				result = this.mageService.salesOrderShipmentCreate(sessionId, orderIncrementId, null, comment, 0, 0);
 			} else {
-				throw new MageAPIException("Erro obtendo informa��o Embarque Pedido IncrementID: " + orderIncrementId, e);
+				throw new MageAPIException("Erro obtendo informação Embarque Pedido IncrementID: " + orderIncrementId, e);
 			}
 		}
 		System.out.println("Adding Order Shipment. DONE.");
