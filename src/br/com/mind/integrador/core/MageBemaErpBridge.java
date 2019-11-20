@@ -335,7 +335,7 @@ public class MageBemaErpBridge extends Enginelet {
 				}
 
 				int trackNumberId = magento.addOrderTrack(shipmentId, courier, trackNumber);
-				boolean r = magento.addOrderShipmentComment(shipmentId, "C�digo Rastreio:" + trackNumber);
+				boolean r = magento.addOrderShipmentComment(shipmentId, "Codigo Rastreio:" + trackNumber);
 				
 				result.add(new ResultOK(trackNumberId));
 

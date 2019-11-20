@@ -488,23 +488,23 @@ public class MageAPI {
 			}
 		}
 		
-		int pointsToApply = 0;
-		if ( balance > 0 ) {
-			pointsToApply = Integer.valueOf(transactionData.getPointAmount()) - balance;
+		int pointsToApply = 0;		
+		pointsToApply = Integer.valueOf(transactionData.getPointAmount()) - balance;
+		if (pointsToApply != 0) {
 			transactionData.setPointAmount(String.valueOf(pointsToApply));
-		}
-		
-		try {
-			result = this.mageService.rewardpointsTransactionAdd(sessionId, transactionData);
-		} catch(AxisFault e) {
-			if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
-				renewSessionId();
+			
+			try {
 				result = this.mageService.rewardpointsTransactionAdd(sessionId, transactionData);
-			} else {
-				throw new MageAPIException("Erro ao criar Pontos Cliente ID: " + transactionData.getCustomerId() , e);
+			} catch(AxisFault e) {
+				if (e.getFaultCode().toString().equalsIgnoreCase("5")) {
+					renewSessionId();
+					result = this.mageService.rewardpointsTransactionAdd(sessionId, transactionData);
+				} else {
+					throw new MageAPIException("Erro ao criar Pontos Cliente ID: " + transactionData.getCustomerId() , e);
+				}
 			}
 		}
-		System.out.println("Creating/Updating customer. DONE. Customer ID: " + transactionData.getCustomerId());
+		System.out.println("Creating/Updating customer. DONE. Customer ID: " + transactionData.getCustomerId() + " - Applying: " + pointsToApply + " points.");
 		return result;
 	}
 	
@@ -638,7 +638,7 @@ public class MageAPI {
 				renewSessionId();
 				result = this.mageService.customerCustomerInfo(sessionId, customerId, null);
 			} else {
-				throw new MageAPIException("Erro obtendo informa��o Cliente: " + customerId, e);
+				throw new MageAPIException("Erro obtendo informacao Cliente: " + customerId, e);
 			}
 		}
 		System.out.println("Getting Customer Info. DONE.");
@@ -1018,16 +1018,25 @@ public class MageAPI {
 //		CatalogProductEntity[] c = magento.getProductList(null);
 //		System.out.println(json.toJson(c));
 		
-		AssociativeEntity filter1 = new AssociativeEntity();
-		filter1.setKey("increment_id");
-		filter1.setValue("100007166");
-		Filters filters = new Filters();
-		filters.setFilter(new AssociativeEntity[] { filter1 });
+//		AssociativeEntity filter1 = new AssociativeEntity();
+//		filter1.setKey("increment_id");
+//		filter1.setValue("100007552");
+//		Filters filters = new Filters();
+//		filters.setFilter(new AssociativeEntity[] { filter1 });
+//		
+//		SalesOrderInfo[] c = magento.listSalesOrders(filters);
 		
-		SalesOrderInfo[] c = magento.listSalesOrders(filters);
+//		AssociativeEntity filter = new AssociativeEntity();	
+//		filter.setKey("customer_id");
+//		filter.setValue("11406");
+//		Filters filters = new Filters();
+//		filters.setFilter(new AssociativeEntity[] { filter });
+//		CustomerInfo[] b = magento.getCustomerList(filters, false);
+//		System.out.println(json.toJson(b));
+		
 		
 //		SalesOrderEntity c = magento.getOrderInfo("100001161"); 
-		System.out.println(json.toJson(c));
+//		System.out.println(json.toJson(c));
 
 //		System.out.println(json.toJson(magento.getCustomerInfo(38)));
 		
@@ -1035,12 +1044,12 @@ public class MageAPI {
 //		System.out.println(json.toJson(c));
 		
 		
-//		RewardpointsTransactionAdd data = new RewardpointsTransactionAdd();
-//		data.setCustomerId("42932");
-//		data.setStoreId("1");
-//		data.setPointAmount("1");
-//
-//		magento.createOrUpdateCustomerRewardsPoints(data);
+		RewardpointsTransactionAdd data = new RewardpointsTransactionAdd();
+		data.setCustomerId("14596");
+		data.setStoreId("1");
+		data.setPointAmount("80");
+
+		magento.createOrUpdateCustomerRewardsPoints(data);
 
 //		AssociativeEntity filter = new AssociativeEntity();
 //		filter.setKey("type");
